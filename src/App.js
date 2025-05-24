@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronRight, Phone, Mail, MapPin, Facebook, Linkedin, Instagram, Twitter, Edit, Save, Lightbulb } from 'lucide-react';
+import { Menu, X, ChevronRight, Phone, Mail, MapPin, Facebook, Linkedin, Instagram, Edit, Save, Lightbulb } from 'lucide-react';
 
 // Tailwind CSS is assumed to be available in the environment.
 
