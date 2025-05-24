@@ -1,5 +1,5 @@
-import React, { useState } from 'react'; // Removed useEffect
-import { Menu, X, ChevronRight, Phone, Mail, MapPin, Facebook, Linkedin, Instagram, Quote } from 'lucide-react'; // Added Quote icon
+import React, { useState } from 'react';
+import { Menu, X, ChevronRight, Phone, Mail, MapPin, Facebook, Linkedin, Instagram, Quote } from 'lucide-react';
 
 // Tailwind CSS is assumed to be available in the environment.
 
@@ -432,59 +432,79 @@ function ServicesPage() {
 // ProjectsPage Component
 function ProjectsPage() {
   const projects = [
+    
+    // New projects added below
     {
-      title: "Construction du Complexe Résidentiel 'Harmonie'",
-      description: "Un projet résidentiel moderne intégrant des appartements de luxe et des espaces verts, conçu pour le confort et la durabilité.",
-      category: "Génie Civil",
-      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Projet+Résidentiel+Harmonie",
-    },
-    {
-      title: "Développement de l'Application Mobile 'Connect Santé'",
-      description: "Une application mobile innovante facilitant la prise de rendez-vous médicaux et la gestion des dossiers de santé pour les patients.",
-      category: "Développement Mobile",
-      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=App+Connect+Santé",
-    },
-    {
-      title: "Refonte du Site Web 'Artisanat Local'",
-      description: "Modernisation complète et optimisation SEO d'une plateforme e-commerce pour promouvoir les produits artisanaux locaux.",
-      category: "Développement Web",
-      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Site+Artisanat+Local",
-    },
-    {
-      title: "Conception de la Charte Graphique 'Café Gourmand'",
-      description: "Création d'une identité visuelle complète incluant logo, typographie et palette de couleurs pour une nouvelle chaîne de cafés.",
+      title: "Branding GFE Institute - German for Everybody",
+      description: "Branding complet pour GFE Institute, une startup proposant des cours d'allemand et des services de visa pour la Russie, la Belgique et l'Allemagne. Inclut logo, flyers, site web et copywriting.",
       category: "Design Graphique",
-      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Charte+Graphique+Café",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=GFE+Institute",
     },
     {
-      title: "Construction de la Route Nationale 3 - Section Urbaine",
-      description: "Amélioration et extension d'une section critique de la route nationale, incluant des infrastructures de drainage et d'éclairage.",
+      title: "Mise à niveau du branding COMING - Complexe des Ingénieurs",
+      description: "Refonte de l'image de marque pour COMING, une entreprise spécialisée dans le froid et la climatisation depuis plus de 20 ans. Nouveau logo, pack de flyers, vidéo de présentation et copywriting.",
+      category: "Design Graphique",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=COMING+Upgrade",
+    },
+    {
+      title: "Branding Yamo'o Spice",
+      description: "Création de l'identité de marque pour Yamo'o Spice : logo, design produit, stratégie marketing, pack de flyers et vidéo de présentation.",
+      category: "Design Graphique",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Yamo'o+Spice",
+    },
+    {
+      title: "Branding VeriTrust",
+      description: "Branding pour VeriTrust, une startup de vérification de produits et vendeurs pour les achats en ligne au Cameroun. Inclut idéation, logo, vidéo de présentation, pack de flyers et copywriting.",
+      category: "Design Graphique",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=VeriTrust",
+    },
+    {
+      title: "Branding Youm's BTP",
+      description: "Branding pour Youm's BTP, une entreprise de génie civil. Inclut logo, vidéo de présentation et site web.",
       category: "Génie Civil",
-      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Route+Nationale+3",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Youm's+BTP",
     },
     {
-      title: "Campagne de Marketing Digital pour 'Eco Solutions'",
-      description: "Lancement d'une campagne intégrée (SEO, réseaux sociaux, email marketing) pour une entreprise de solutions écologiques.",
-      category: "Marketing Digital",
-      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Campagne+Eco+Solutions",
-    },
-    {
-      title: "Aménagement Paysager du Parc Central",
-      description: "Conception et réalisation d'un espace vert urbain avec des zones de loisirs, des sentiers pédestres et une flore diversifiée.",
-      category: "Génie Civil",
-      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Parc+Central",
-    },
-    {
-      title: "Développement d'une Plateforme E-learning",
-      description: "Création d'une plateforme d'apprentissage en ligne interactive avec des cours vidéo, des quiz et un suivi de progression.",
+      title: "Application de gestion de stock et flyers pour Intersports Cargo",
+      description: "Développement d'une application de gestion de stock et création de flyers pour Intersports Cargo, une entreprise de logistique Chine-Cameroun.",
       category: "Développement Web",
-      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=E-learning+Platform",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Intersports+Cargo",
     },
     {
-      title: "Création d'une Campagne Publicitaire pour 'Fresh Juice'",
-      description: "Développement d'une stratégie publicitaire complète incluant des visuels percutants et des messages ciblés pour une marque de jus de fruits frais.",
-      category: "Marketing Digital",
-      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Fresh+Juice+Ad",
+      title: "Création de l'application web Eduflux",
+      description: "Développement d'Eduflux, une application web à trois niveaux : Educraft (création de plans de cours avec IA), Examfoge (génération de sujets d'examen avec IA) et Quizlab (jeu interactif de 10-20 questions).",
+      category: "Développement Web",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Eduflux+App",
+    },
+    {
+      title: "Création du marché en ligne MyAwesomeShop",
+      description: "Développement de MyAwesomeShop, une plateforme de marché en ligne où les utilisateurs peuvent créer des comptes, publier des produits et recevoir des commandes via un lien WhatsApp direct.",
+      category: "Développement Web",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=MyAwesomeShop",
+    },
+    {
+      title: "Branding WabAlu",
+      description: "Branding pour WabAlu, une startup de construction en aluminium. Inclut logo, flyers et cartes de visite.",
+      category: "Design Graphique",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=WabAlu",
+    },
+    {
+      title: "Conception et supervision d'un immeuble résidentiel R+3 à Cité Shirak, Douala",
+      description: "Conception architecturale et supervision de la construction d'un immeuble résidentiel de quatre étages (R+3) situé à Cité Shirak, Douala.",
+      category: "Génie Civil",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Immeuble+Shirak",
+    },
+    {
+      title: "Conception d'un immeuble résidentiel locatif R+3 à Bafoussam, Tankou",
+      description: "Conception architecturale d'un immeuble résidentiel de quatre étages (R+3) destiné à la location, situé à Tankou, Bafoussam.",
+      category: "Génie Civil",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Immeuble+Bafoussam",
+    },
+    {
+      title: "Architecture Académie : Mise à niveau des compétences",
+      description: "Programme de perfectionnement pour un architecte expérimenté, axé sur les nouveaux logiciels de conception et les flux de travail modernes.",
+      category: "Conseil & Expertise",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Architecture+Academie",
     },
   ];
 
@@ -696,98 +716,246 @@ function BlogPage({ navigateTo }) {
   const articles = [
     {
       id: 1,
-      title: "L'impact de l'IA sur l'industrie du BTP",
-      excerpt: "Découvrez comment l'intelligence artificielle révolutionne la construction, de la planification à l'exécution des projets.",
-      image: "https://placehold.co/600x400/cce5ff/007bff?text=IA+BTP",
-      date: "15 Mai 2025",
+      title: "Pourquoi faire appel à une entreprise locale pour vos projets de construction à Douala ?",
+      excerpt: "Découvrez les avantages indéniables de choisir une entreprise de BTP locale à Douala pour garantir le succès et la pertinence de vos projets de construction. L'expertise locale, la connaissance du terrain et l'engagement communautaire sont des atouts majeurs.",
+      image: "https://placehold.co/600x400/cce5ff/007bff?text=Construction+Locale",
+      date: "24 Mai 2025",
       author: "Naoussi Industries",
+      keywords: "entreprise BTP Douala, construction locale, ingénierie camerounaise",
+      cta: { text: "Contactez-nous pour un devis personnalisé.", page: "contact" },
       content: `
-        <p class="mb-4">L'intelligence artificielle (IA) est en train de transformer radicalement de nombreux secteurs, et l'industrie du Bâtiment et des Travaux Publics (BTP) ne fait pas exception. L'intégration de l'IA promet d'améliorer l'efficacité, la sécurité et la durabilité des projets de construction.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Optimisation de la planification et de la conception</h3>
-        <p class="mb-4">Les algorithmes d'IA peuvent analyser d'énormes quantités de données pour optimiser la conception des bâtiments, identifier les risques potentiels et prédire les coûts avec une précision accrue. Cela permet de réduire les erreurs et les retards, et d'améliorer la prise de décision dès les premières phases du projet.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Amélioration de la sécurité sur les chantiers</h3>
-        <p class="mb-4">L'IA peut être utilisée pour surveiller les chantiers en temps réel, détecter les comportements à risque et anticiper les accidents. Des systèmes de vision par ordinateur peuvent identifier les travailleurs sans équipement de protection individuelle (EPI) ou les zones dangereuses, alertant ainsi les responsables pour une intervention rapide.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Gestion de projet et maintenance prédictive</h3>
-        <p class="mb-4">Les outils basés sur l'IA peuvent suivre l'avancement des projets, gérer les ressources et optimiser les calendriers. En outre, l'IA permet la maintenance prédictive des équipements et des infrastructures, en analysant les données des capteurs pour anticiper les pannes et planifier les interventions avant qu'elles ne surviennent, prolongeant ainsi la durée de vie des actifs et réduisant les coûts de réparation.</p>
-        <p class="mb-4">En conclusion, l'IA n'est plus une technologie futuriste pour le BTP, mais une réalité qui offre des opportunités immenses pour innover et améliorer les pratiques actuelles. Les entreprises qui sauront l'adopter tireront un avantage concurrentiel significatif.</p>
+        <p class="mb-4">Lorsque vous envisagez un projet de construction à Douala, le choix de votre partenaire est crucial. Opter pour une entreprise de BTP locale ne relève pas seulement du patriotisme économique, mais d'une stratégie intelligente qui offre une multitude d'avantages concrets et durables.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Connaissance Approfondie du Contexte Local</h3>
+        <p class="mb-4">Une entreprise locale, ancrée à Douala, possède une connaissance intime des spécificités géotechniques, climatiques et réglementaires de la région. Cela inclut la maîtrise des types de sols, des conditions météorologiques (saison des pluies, humidité), et des normes de construction camerounaises. Cette expertise permet d'anticiper les défis potentiels, de proposer des solutions adaptées et d'éviter des retards coûteux liés à des imprévus.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Réseau Local et Réactivité Accrue</h3>
+        <p class="mb-4">Les entreprises locales ont établi des relations solides avec les fournisseurs de matériaux, les sous-traitants et les autorités administratives. Ce réseau facilite l'approvisionnement en matériaux de qualité à des prix compétitifs et accélère l'obtention des permis et autorisations nécessaires. En cas de problème ou de besoin urgent, la réactivité est incomparable, minimisant ainsi les interruptions de chantier.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Soutien à l'Économie Locale et Création d'Emplois</h3>
+        <p class="mb-4">Choisir une entreprise BTP Douala, c'est investir directement dans l'économie de votre communauté. Cela soutient les emplois locaux, favorise le développement des compétences et contribue à la croissance des petites et moyennes entreprises de la région. C'est un cercle vertueux qui renforce le tissu économique local et crée de la valeur pour tous.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Communication et Suivi Personnalisé</h3>
+        <p class="mb-4">La proximité géographique facilite une communication fluide et régulière entre le client et l'équipe de projet. Les réunions en personne sont plus faciles à organiser, les visites de chantier plus fréquentes, et les ajustements peuvent être discutés et mis en œuvre rapidement. Cette interaction directe garantit que votre vision est comprise et respectée à chaque étape du projet.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Engagement envers la Qualité et la Durabilité</h3>
+        <p class="mb-4">Une entreprise locale a une réputation à maintenir au sein de sa communauté. Cet enjeu local se traduit souvent par un engagement plus fort envers la qualité du travail et la durabilité des constructions. Les projets sont réalisés avec un soin particulier, sachant qu'ils feront partie du paysage local pour les décennies à venir.</p>
+        <p class="mb-4">En résumé, faire appel à une entreprise locale pour vos projets de construction à Douala, c'est choisir l'efficacité, la fiabilité et un partenariat solide. C'est s'assurer que votre investissement contribue non seulement à la réalisation de votre projet, mais aussi au développement harmonieux de votre environnement.</p>
       `
     },
     {
       id: 2,
-      title: "Les tendances du développement web en 2025",
-      excerpt: "Explorez les technologies et les approches qui façonneront le paysage du développement web cette année.",
-      image: "https://placehold.co/600x400/cce5ff/007bff?text=Web+Tendances",
-      date: "10 Mai 2025",
+      title: "Les 5 erreurs à éviter lors de la création de votre site web professionnel",
+      excerpt: "La création d'un site web professionnel est un investissement majeur. Évitez ces erreurs courantes pour garantir un site performant et une présence en ligne réussie au Cameroun.",
+      image: "https://placehold.co/600x400/cce5ff/007bff?text=Website+Errors",
+      date: "20 Mai 2025",
       author: "Naoussi Industries",
+      keywords: "création site web Cameroun, erreurs à éviter, site performant",
+      cta: { text: "Notre équipe peut concevoir un site moderne, sans ces erreurs.", page: "services" },
       content: `
-        <p class="mb-4">L'année 2025 marque une nouvelle ère dans le développement web, avec l'émergence de technologies et de pratiques qui redéfinissent la manière dont nous construisons et interagissons avec le web.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">L'essor des WebAssembly (Wasm)</h3>
-        <p class="mb-4">WebAssembly continue de gagner du terrain, permettant aux développeurs d'exécuter du code à haute performance (écrit en C++, Rust, Go, etc.) directement dans le navigateur. Cela ouvre la porte à des applications web plus complexes et gourmandes en ressources, avec des performances quasi-natives.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">L'omniprésence de l'IA et du Machine Learning</h3>
-        <p class="mb-4">L'intégration de l'IA et du Machine Learning dans les applications web devient la norme. Des chatbots intelligents aux systèmes de recommandation personnalisés, l'IA améliore l'expérience utilisateur et automatise des tâches complexes, rendant les applications plus intuitives et réactives.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Le Serverless et les Edge Functions</h3>
-        <p class="mb-4">L'architecture serverless, combinée aux fonctions "Edge" exécutées au plus près de l'utilisateur, réduit la latence et simplifie le déploiement. Cette approche permet aux développeurs de se concentrer sur le code sans se soucier de la gestion des serveurs, offrant une scalabilité et une résilience accrues.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">L'importance croissante de la cybersécurité</h3>
-        <p class="mb-4">Avec l'augmentation des menaces en ligne, la cybersécurité est plus que jamais une priorité. Les développeurs adoptent des pratiques de sécurité "shift-left", intégrant la sécurité dès les premières étapes du développement, et utilisent des outils avancés pour protéger les données et les applications.</p>
-        <p class="mb-4">Ces tendances ne sont que quelques exemples de l'évolution rapide du web. Rester informé et s'adapter à ces changements est crucial pour tout développeur souhaitant rester pertinent en 2025 et au-delà.</p>
+        <p class="mb-4">Un site web est aujourd'hui la vitrine numérique de votre entreprise. Pour qu'il soit un atout et non un fardeau, il est essentiel d'éviter certaines erreurs fondamentales lors de sa conception. Voici les 5 pièges les plus courants à contourner pour un site web professionnel performant, particulièrement dans le contexte camerounais.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">1. Ignorer le Responsive Design</h3>
+        <p class="mb-4">Avec l'explosion de l'utilisation des smartphones au Cameroun, un site non optimisé pour les mobiles est une erreur fatale. Les utilisateurs accèdent majoritairement à internet via leur téléphone. Si votre site ne s'affiche pas correctement sur tous les écrans, vous perdrez une part considérable de votre audience et votre référencement en souffrira.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">2. Négliger le SEO (Référencement Naturel)</h3>
+        <p class="mb-4">Un beau site sans visibilité est un site inutile. Beaucoup d'entreprises investissent dans le design sans penser au SEO. Sans une bonne stratégie de mots-clés, d'optimisation technique et de contenu, votre site ne sera pas trouvé par les moteurs de recherche, et donc par vos futurs clients. Le référencement est la clé pour attirer du trafic qualifié.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">3. Contenu de Mauvaise Qualité ou Inexistant</h3>
+        <p class="mb-4">Le contenu est roi. Des textes mal écrits, des images de basse résolution ou un manque d'informations pertinentes découragent les visiteurs. Votre contenu doit être clair, concis, informatif et engageant. Il doit répondre aux questions de vos prospects et les inciter à passer à l'action.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">4. Manque d'Appels à l'Action (CTA) Clairs</h3>
+        <p class="mb-4">Votre site doit guider le visiteur vers un objectif : acheter un produit, demander un devis, s'inscrire à une newsletter, etc. Si vos appels à l'action ne sont pas visibles, clairs et incitatifs, vos visiteurs ne sauront pas quoi faire ensuite, et vous manquerez des opportunités de conversion.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">5. Ne Pas Mesurer les Performances</h3>
+        <p class="mb-4">Lancer un site web n'est que la première étape. Sans outils d'analyse (comme Google Analytics), vous ne saurez jamais comment les utilisateurs interagissent avec votre site, d'où ils viennent, ou ce qui fonctionne (ou non). La mesure des performances est essentielle pour identifier les axes d'amélioration et optimiser continuellement votre présence en ligne.</p>
+        <p class="mb-4">Éviter ces erreurs fondamentales vous mettra sur la voie d'un site web professionnel qui non seulement attire les visiteurs, mais les convertit en clients fidèles. Pour une création site web Cameroun sans faille, faites appel à des experts.</p>
       `
     },
     {
       id: 3,
-      title: "Stratégies de branding pour les PME",
-      excerpt: "Construisez une marque forte et mémorable pour votre petite ou moyenne entreprise grâce à ces conseils pratiques.",
-      image: "https://placehold.co/600x400/cce5ff/007bff?text=Branding+PME",
-      date: "01 Mai 2025",
+      title: "Comment le design graphique influence la perception de votre marque",
+      excerpt: "Le design graphique est bien plus qu'une simple esthétique ; il est le langage silencieux de votre marque. Découvrez son pouvoir sur la perception et la reconnaissance de votre entreprise.",
+      image: "https://placehold.co/600x400/cce5ff/007bff?text=Graphic+Design",
+      date: "18 Mai 2025",
       author: "Naoussi Industries",
+      keywords: "branding Cameroun, logo professionnel, identité visuelle",
+      cta: { text: "Découvrez notre service de design graphique sur mesure.", page: "services" },
       content: `
-        <p class="mb-4">Pour les petites et moyennes entreprises (PME), un branding efficace est essentiel pour se démarquer dans un marché concurrentiel. Une marque forte ne se limite pas à un logo ; elle englobe l'ensemble de l'expérience client et la perception de votre entreprise.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Définissez votre identité de marque</h3>
-        <p class="mb-4">Avant de créer des éléments visuels, il est crucial de définir qui vous êtes en tant qu'entreprise. Quelles sont vos valeurs ? Quelle est votre mission ? Quelle est votre proposition de valeur unique ? Comprendre votre identité vous aidera à créer une marque authentique et cohérente.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Connaissez votre public cible</h3>
-        <p class="mb-4">Un branding réussi résonne avec votre audience. Qui sont vos clients idéaux ? Quels sont leurs besoins, leurs désirs et leurs points faibles ? Adaptez votre message et votre esthétique pour qu'ils parlent directement à ce public.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Créez une identité visuelle cohérente</h3>
-        <p class="mb-4">Votre logo, vos couleurs, vos typographies et vos images doivent être cohérents sur tous les points de contact : site web, réseaux sociaux, cartes de visite, emballages, etc. Cette cohérence renforce la reconnaissance de votre marque et la rend plus mémorable.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Racontez votre histoire</h3>
-        <p class="mb-4">Les gens se connectent aux histoires. Partagez l'histoire de votre entreprise, ce qui vous motive, et comment vous aidez vos clients. Une narration authentique crée un lien émotionnel et fidélise votre audience.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Soyez constant et adaptable</h3>
-        <p class="mb-4">Une fois votre stratégie de branding établie, la constance est clé. Cependant, le marché évolue, et votre marque doit être capable de s'adapter. Évaluez régulièrement l'efficacité de votre branding et n'hésitez pas à l'ajuster si nécessaire.</p>
-        <p class="mb-4">En investissant dans un branding solide, les PME peuvent non seulement attirer de nouveaux clients, mais aussi bâtir une réputation durable et une base de clients fidèles.</p>
+        <p class="mb-4">Dans un marché de plus en plus saturé, la première impression est souvent la seule qui compte. Le design graphique est cet élément clé qui façonne la perception de votre marque avant même que le premier mot ne soit lu ou le premier service expérimenté. C'est un investissement stratégique, surtout pour le branding Cameroun, où la différenciation visuelle est cruciale.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">La Première Impression est Visuelle</h3>
+        <p class="mb-4">Le cerveau humain traite les images 60 000 fois plus vite que le texte. Votre logo, la palette de couleurs de votre site web, le style de vos publications sur les réseaux sociaux – tous ces éléments visuels créent une impression instantanée. Un design professionnel et cohérent inspire confiance, tandis qu'un design amateur peut nuire à votre crédibilité, peu importe la qualité de vos produits ou services.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Transmettre les Valeurs de Votre Marque</h3>
+        <p class="mb-4">Chaque couleur, chaque typographie, chaque forme utilisée dans votre identité visuelle communique un message. Un logo professionnel ne se contente pas d'être joli ; il incarne les valeurs, la mission et la personnalité de votre entreprise. Par exemple, des couleurs vives peuvent suggérer l'innovation et l'énergie, tandis que des tons plus sobres peuvent évoquer la fiabilité et la tradition.</p>
+        <h3 class="2xl font-semibold text-gray-800 mb-3">Différenciation et Mémorisation</h3>
+        <p class="mb-4">Un design graphique unique et bien pensé vous permet de vous démarquer de la concurrence. Dans un environnement où les consommateurs sont bombardés d'informations, une identité visuelle forte et mémorable aide votre marque à rester gravée dans l'esprit de vos clients. C'est ce qui rend Coca-Cola reconnaissable instantanément même sans son nom.</p>
+        <h3 class="2xl font-semibold text-gray-800 mb-3">Cohérence à Travers Tous les Canaux</h3>
+        <p class="mb-4">La cohérence visuelle sur tous vos supports (site web, réseaux sociaux, cartes de visite, emballages, publicités) renforce la reconnaissance de votre marque. Cette uniformité crée une expérience client harmonieuse et professionnelle, consolidant ainsi la confiance et la fidélité.</p>
+        <h3 class="2xl font-semibold text-gray-800 mb-3">Impact sur la Décision d'Achat</h3>
+        <p class="mb-4">Un design attrayant et bien structuré rend vos produits ou services plus désirables. Que ce soit l'emballage d'un produit, la mise en page d'une brochure ou l'interface d'une application, le design influence directement la perception de la qualité et, par conséquent, la décision d'achat du consommateur.</p>
+        <p class="mb-4">Investir dans un design graphique de qualité, c'est investir dans l'avenir de votre marque. C'est s'assurer que votre entreprise communique efficacement, se démarque et laisse une impression durable et positive. Pour un logo professionnel et une identité visuelle percutante, faites confiance à des experts du branding.</p>
       `
     },
     {
       id: 4,
-      title: "L'importance de l'UX/UI dans les applications mobiles",
-      excerpt: "Découvrez pourquoi une bonne expérience utilisateur et une interface intuitive sont cruciales pour le succès de votre application.",
-      image: "https://placehold.co/600x400/cce5ff/007bff?text=UX/UI+Mobile",
-      date: "20 Avril 2025",
+      title: "Développement mobile au Cameroun : opportunité ou nécessité ?",
+      excerpt: "Le marché mobile est en pleine expansion au Cameroun. Découvrez pourquoi le développement d'applications mobiles n'est plus un luxe mais une nécessité pour les entreprises qui veulent innover et atteindre de nouveaux clients.",
+      image: "https://placehold.co/600x400/cce5ff/007bff?text=Mobile+Dev+Cameroon",
+      date: "15 Mai 2025",
       author: "Naoussi Industries",
+      keywords: "application mobile Cameroun, développement Android/iOS",
+      cta: { text: "Nous transformons vos idées en applications puissantes.", page: "services" },
       content: `
-        <p class="mb-4">Dans le monde saturé des applications mobiles, l'expérience utilisateur (UX) et l'interface utilisateur (UI) ne sont plus de simples options, mais des piliers fondamentaux du succès. Une application peut offrir des fonctionnalités révolutionnaires, mais si elle est difficile à utiliser ou peu attrayante, les utilisateurs ne resteront pas.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">L'UX : Au-delà de la simple utilisation</h3>
-        <p class="mb-4">L'UX, ou User Experience, englobe l'ensemble des interactions d'un utilisateur avec une application. Il s'agit de s'assurer que l'application est non seulement fonctionnelle, mais aussi agréable, efficace et pertinente pour l'utilisateur. Une bonne UX réduit la frustration, augmente la satisfaction et favorise la rétention.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">L'UI : La première impression compte</h3>
-        <p class="mb-4">L'UI, ou User Interface, est l'aspect visuel et interactif de l'application. C'est ce que l'utilisateur voit et avec quoi il interagit : les boutons, les icônes, les couleurs, les typographies. Une UI bien conçue est esthétiquement plaisante, facile à naviguer et en ligne avec l'identité de la marque. Elle crée la première impression et influence directement la perception de l'utilisateur.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Synergie UX/UI pour le succès</h3>
-        <p class="mb-4">L'UX et l'UI sont intrinsèquement liées et doivent travailler en synergie. Une belle interface sans une bonne expérience utilisateur est comme une voiture de sport sans moteur. Inversement, une application très fonctionnelle mais visuellement repoussante aura du mal à attirer et retenir les utilisateurs.</p>
-        <p class="mb-4">Investir dans un design UX/UI de qualité, c'est investir dans la satisfaction de vos utilisateurs, la fidélisation de votre clientèle et, in fine, le succès de votre application mobile.</p>
+        <p class="mb-4">Le Cameroun, à l'instar de nombreux pays africains, connaît une croissance exponentielle de l'utilisation des smartphones. Ce phénomène n'est pas qu'une statistique ; il représente une transformation profonde des habitudes de consommation et d'accès à l'information. Dans ce contexte, le développement d'applications mobiles n'est plus une simple opportunité, mais une nécessité stratégique pour toute entreprise désireuse de prospérer.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Atteindre une Audience Ciblée et Engagée</h3>
+        <p class="mb-4">Les applications mobiles offrent un canal de communication direct et personnalisé avec vos clients. Elles permettent d'envoyer des notifications push, de proposer des offres exclusives et de recueillir des données précieuses sur les comportements des utilisateurs. Au Cameroun, où l'accès à internet se fait majoritairement via mobile, une application vous positionne au cœur de l'écosystème numérique de vos clients.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Améliorer l'Expérience Client</h3>
+        <p class="mb-4">Une application bien conçue offre une expérience utilisateur fluide et intuitive, souvent supérieure à celle d'un site web mobile. La rapidité d'accès, la personnalisation et la possibilité d'utiliser certaines fonctionnalités hors ligne contribuent à fidéliser les clients et à renforcer leur engagement envers votre marque. Que ce soit pour des services bancaires, du e-commerce ou des informations pratiques, l'application mobile simplifie la vie de l'utilisateur.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Innover et Se Différencier de la Concurrence</h3>
+        <p class="mb-4">Alors que de nombreuses entreprises camerounaises se concentrent encore sur les canaux traditionnels, investir dans le développement Android/iOS vous donne un avantage concurrentiel significatif. Une application mobile peut intégrer des fonctionnalités innovantes (géolocalisation, réalité augmentée, paiement mobile) qui vous distinguent et créent de nouvelles sources de revenus.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Collecte de Données et Prise de Décision Éclairée</h3>
+        <p class="mb-4">Les applications mobiles sont de véritables mines d'or en termes de données. Elles vous permettent de comprendre les préférences de vos utilisateurs, leurs habitudes d'achat, et les fonctionnalités les plus utilisées. Cette intelligence client est inestimable pour affiner vos stratégies marketing, améliorer vos produits et services, et prendre des décisions commerciales éclairées.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Accroître la Visibilité et la Notoriété</h3>
+        <p class="mb-4">Être présent sur les stores d'applications (Google Play Store, Apple App Store) augmente votre visibilité et votre crédibilité. C'est une marque de professionnalisme qui renforce la confiance des consommateurs. Le bouche-à-oreille et les partages sociaux via l'application peuvent également amplifier votre portée de manière organique.</p>
+        <p class="mb-4">En conclusion, le développement mobile au Cameroun n'est plus une question de "si", mais de "quand". Pour les entreprises qui veulent rester pertinentes, innover et capter une part croissante du marché numérique, l'application mobile est une voie incontournable. Transformez dès aujourd'hui vos idées en applications puissantes avec l'expertise de Naoussi Industries.</p>
       `
     },
     {
       id: 5,
-      title: "La cybersécurité : un enjeu majeur pour les entreprises en 2025",
-      excerpt: "Face à l'augmentation des menaces, la cybersécurité est devenue une priorité absolue pour protéger les données et les systèmes.",
-      image: "https://placehold.co/600x400/cce5ff/007bff?text=Cybersecurity",
-      date: "05 Avril 2025",
+      title: "Génie civil et durabilité : notre approche écologique pour vos chantiers",
+      excerpt: "La construction durable n'est plus une option, mais une nécessité. Découvrez comment Naoussi Industries intègre les principes écologiques dans chaque projet de génie civil au Cameroun, pour un avenir plus vert et plus résilient.",
+      image: "https://placehold.co/600x400/cce5ff/007bff?text=Sustainable+Civil+Eng",
+      date: "10 Mai 2025",
       author: "Naoussi Industries",
+      keywords: "génie civil durable, BTP écologique Cameroun, construction responsable",
+      cta: { text: "Faites confiance à notre expertise pour un avenir durable.", page: "services" },
       content: `
-        <p class="mb-4">En 2025, la cybersécurité n'est plus une simple préoccupation technique, mais un enjeu stratégique et économique majeur pour toutes les entreprises, quelle que soit leur taille. Les cyberattaques sont de plus en plus sophistiquées et fréquentes, menaçant la confidentialité des données, l'intégrité des systèmes et la continuité des activités.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">L'évolution des menaces</h3>
-        <p class="mb-4">Les ransomwares, les attaques de phishing, les malwares avancés et les menaces persistantes avancées (APT) sont en constante évolution. Les cybercriminels exploitent les vulnérabilités logicielles, les erreurs humaines et les configurations systèmes faibles pour infiltrer les réseaux et dérober des informations sensibles.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Les conséquences d'une cyberattaque</h3>
-        <p class="mb-4">Les conséquences d'une cyberattaque réussie peuvent être dévastatrices : pertes financières importantes, atteinte à la réputation, interruption des opérations, fuite de données confidentielles et sanctions réglementaires. Pour les entreprises, il est crucial de comprendre que la question n'est plus de savoir *si* elles seront attaquées, mais *quand*.</p>
-        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Stratégies de défense robustes</h3>
-        <p class="mb-4">Pour faire face à ces menaces, les entreprises doivent adopter une approche proactive de la cybersécurité. Cela inclut la mise en œuvre de solutions de sécurité avancées (pare-feu, antivirus, détection d'intrusion), la formation régulière des employés aux bonnes pratiques, la mise à jour des systèmes et des logiciels, et la mise en place de plans de reprise après sinistre.</p>
-        <p class="mb-4">La cybersécurité est un investissement essentiel pour la résilience et la pérennité de toute entreprise à l'ère numérique. Protéger vos actifs numériques, c'est protéger votre avenir.</p>
+        <p class="mb-4">Le secteur du Bâtiment et des Travaux Publics (BTP) est un acteur majeur de l'économie, mais il est également confronté à des défis environnementaux significatifs. Chez Naoussi Industries, nous sommes convaincus que le génie civil durable n'est pas seulement une tendance, mais la seule voie viable pour l'avenir. Notre approche écologique vise à minimiser l'impact environnemental de nos chantiers tout en maximisant la performance et la durabilité de nos constructions au Cameroun.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Conception Bioclimatique et Efficacité Énergétique</h3>
+        <p class="mb-4">Dès la phase de conception, nous privilégions les principes de la conception bioclimatique. Cela signifie optimiser l'orientation des bâtiments pour profiter au maximum de la lumière naturelle et de la ventilation transversale, réduisant ainsi le besoin en éclairage artificiel et en climatisation. Nous intégrons des solutions d'isolation performantes et des systèmes énergétiques renouvelables (panneaux solaires, chauffe-eau solaires) pour minimiser la consommation d'énergie des futurs occupants.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Choix de Matériaux Écologiques et Locaux</h3>
+        <p class="mb-4">La sélection des matériaux est une étape cruciale. Nous favorisons l'utilisation de matériaux locaux et à faible empreinte carbone, tels que la terre stabilisée, le bois certifié, ou des agrégats recyclés. Cela réduit non seulement les coûts de transport, mais aussi l'énergie grise (énergie nécessaire à la production et au transport des matériaux) des constructions. Nous privilégions également les matériaux non toxiques et sains pour les occupants.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Gestion Responsable des Déchets de Chantier</h3>
+        <p class="mb-4">Sur nos chantiers, une gestion rigoureuse des déchets est mise en place. Nous mettons l'accent sur la réduction à la source, le tri sélectif et le recyclage des matériaux (béton, bois, métaux). L'objectif est de minimiser la quantité de déchets envoyée en décharge et de valoriser au maximum les ressources. Cela contribue à un BTP écologique Cameroun.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Optimisation de l'Eau et de l'Énergie sur Site</h3>
+        <p class="mb-4">Nous mettons en œuvre des pratiques pour réduire la consommation d'eau sur les chantiers, comme la récupération des eaux de pluie pour certains usages. L'utilisation d'équipements économes en énergie et la planification logistique pour minimiser les déplacements des engins sont également des priorités pour réduire notre empreinte opérationnelle.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Intégration Paysagère et Biodiversité</h3>
+        <p class="mb-4">Au-delà de la construction, nous portons une attention particulière à l'intégration des projets dans leur environnement naturel. Cela inclut la préservation des espaces verts existants, la plantation d'espèces locales et la création de zones favorisant la biodiversité. Une construction responsable s'inscrit harmonieusement dans son écosystème.</p>
+        <p class="mb-4">Chez Naoussi Industries, nous sommes déterminés à construire non seulement des infrastructures solides, mais aussi un avenir plus respectueux de l'environnement. Notre expertise en génie civil durable est à votre disposition pour vos projets de construction responsable. Faites confiance à notre expertise pour un avenir durable.</p>
+      `
+    },
+    {
+      id: 6,
+      title: "Pourquoi le marketing digital est essentiel pour les PME en 2025",
+      excerpt: "En 2025, la visibilité en ligne n'est plus un luxe mais une nécessité vitale pour les PME. Découvrez comment le marketing digital peut transformer la croissance de votre entreprise au Cameroun.",
+      image: "https://placehold.co/600x400/cce5ff/007bff?text=Digital+Marketing+SME",
+      date: "05 Mai 2025",
+      author: "Naoussi Industries",
+      keywords: "marketing digital PME, visibilité en ligne Cameroun",
+      cta: { text: "Boostez votre entreprise avec notre accompagnement marketing.", page: "services" },
+      content: `
+        <p class="mb-4">Pour les Petites et Moyennes Entreprises (PME) au Cameroun, le paysage commercial a radicalement changé. Ce n'est plus suffisant d'avoir un bon produit ou service ; il faut être visible là où se trouvent vos clients : en ligne. En 2025, le marketing digital n'est pas une option, c'est le moteur indispensable de votre croissance.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Atteindre une Audience Plus Vaste et Ciblée</h3>
+        <p class="mb-4">Contrairement aux méthodes traditionnelles, le marketing digital PME vous permet de toucher des millions de personnes, non seulement au Cameroun mais aussi à l'international. Plus important encore, il offre des outils de ciblage précis pour atteindre exactement les personnes intéressées par vos offres, maximisant ainsi le retour sur investissement de vos campagnes.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Coût-Efficacité et Mesurabilité</h3>
+        <p class="mb-4">Les stratégies de marketing digital sont souvent plus abordables pour les PME que les publicités traditionnelles (TV, radio, affichage). De plus, chaque action est mesurable : nombre de clics, de vues, de conversions. Cette transparence permet d'ajuster rapidement vos campagnes pour optimiser leurs performances et votre budget.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Renforcer votre Crédibilité et Notoriété</h3>
+        <p class="mb-4">Une forte présence en ligne, via un site web professionnel, des réseaux sociaux actifs et des avis clients positifs, renforce la crédibilité de votre entreprise. Les consommateurs d'aujourd'hui recherchent des informations en ligne avant de prendre une décision d'achat. Être visible et avoir une image soignée est essentiel pour gagner leur confiance.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Interagir Directement avec Vos Clients</h3>
+        <p class="mb-4">Le marketing digital offre des opportunités uniques d'interaction directe avec votre clientèle. Les réseaux sociaux, les commentaires de blog et les emails permettent de créer une communauté, de répondre aux questions, de recueillir des feedbacks et de bâtir des relations solides. Cette proximité est un atout précieux pour comprendre les besoins de vos clients et adapter vos offres.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Rester Compétitif sur le Marché Camerounais</h3>
+        <p class="mb-4">Vos concurrents sont déjà en ligne, ou le seront bientôt. Pour ne pas être laissé pour compte, il est impératif d'adopter des stratégies de marketing digital. Cela vous permet non seulement de maintenir votre position sur le marché, mais aussi de conquérir de nouvelles parts de marché en exploitant les opportunités offertes par le numérique.</p>
+        <p class="mb-4">En conclusion, le marketing digital est le levier de croissance le plus puissant pour les PME en 2025. C'est la clé de votre visibilité en ligne Cameroun, de votre crédibilité et de votre capacité à générer des ventes. Ne laissez pas votre entreprise à la traîne. Boostez votre entreprise avec notre accompagnement marketing.</p>
+      `
+    },
+    {
+      id: 7,
+      title: "5 raisons de confier votre projet à Naoussi Industries",
+      excerpt: "Découvrez pourquoi Naoussi Industries est le partenaire idéal pour vos projets de génie civil et de solutions digitales. Notre expertise et notre engagement font la différence.",
+      image: "https://placehold.co/600x400/cce5ff/007bff?text=Why+Naoussi",
+      date: "01 Mai 2025",
+      author: "Naoussi Industries",
+      keywords: "meilleure entreprise BTP Cameroun, services digitaux",
+      cta: { text: "Découvrez pourquoi des dizaines d’entreprises nous font déjà confiance.", page: "contact" },
+      content: `
+        <p class="mb-4">Dans le paysage dynamique du génie civil et des solutions digitales au Cameroun, choisir le bon partenaire est essentiel pour la réussite de vos projets. Naoussi Industries se positionne comme un acteur de confiance, alliant expertise technique, innovation et engagement client. Voici 5 raisons fondamentales de nous confier vos ambitions.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">1. Expertise Polyvalente et Intégrée</h3>
+        <p class="mb-4">Nous ne sommes pas seulement une entreprise de BTP ou une agence digitale ; nous sommes les deux. Cette double expertise nous permet d'offrir des solutions complètes et intégrées, du design architectural à la construction physique, en passant par le développement web et le branding. Cette synergie garantit une cohérence et une efficacité maximales pour vos projets les plus complexes.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">2. Engagement envers l'Innovation et la Qualité</h3>
+        <p class="mb-4">Chez Naoussi Industries, l'innovation est au cœur de notre démarche. Nous adoptons les dernières technologies et méthodologies, que ce soit en génie civil (construction durable, matériaux innovants) ou en digital (IA, développement mobile avancé). Cet engagement, combiné à une recherche constante de la qualité, assure des résultats à la fois modernes, robustes et performants.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">3. Connaissance Approfondie du Marché Local</h3>
+        <p class="mb-4">Notre ancrage au Cameroun nous confère une compréhension unique des spécificités du marché local. Nous maîtrisons les réglementations, les dynamiques culturelles et les attentes des consommateurs camerounais. Cette connaissance est un atout majeur pour concevoir des projets pertinents et des stratégies digitales efficaces qui résonnent avec votre public cible.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">4. Approche Client Centrée et Transparence</h3>
+        <p class="mb-4">Votre satisfaction est notre priorité absolue. Nous adoptons une approche collaborative, en vous impliquant à chaque étape du projet. La transparence est notre maître-mot : nous communiquons clairement sur les délais, les coûts et les avancées, garantissant une relation de confiance et sans surprise. Nous sommes à l'écoute de vos besoins et adaptons nos solutions en conséquence.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">5. Impact Durable et Responsabilité Sociale</h3>
+        <p class="mb-4">Nous sommes conscients de notre rôle dans le développement du Cameroun. Nous nous engageons à des pratiques de construction responsable et à la promotion de solutions digitales qui contribuent positivement à la société. Choisir Naoussi Industries, c'est aussi soutenir une entreprise qui se soucie de son impact environnemental et social.</p>
+        <p class="mb-4">En somme, confier votre projet à Naoussi Industries, c'est opter pour un partenaire fiable, innovant et profondément engagé pour votre succès. Nous sommes la meilleure entreprise BTP Cameroun et votre allié pour des services digitaux de pointe. Découvrez pourquoi des dizaines d’entreprises nous font déjà confiance.</p>
+      `
+    },
+    {
+      id: 8,
+      title: "Comment générer des clients grâce à un site web bien conçu ?",
+      excerpt: "Un site web n'est pas qu'une simple vitrine, c'est un puissant outil de conversion. Découvrez les stratégies clés pour transformer vos visiteurs en clients fidèles grâce à un design web optimisé.",
+      image: "https://placehold.co/600x400/cce5ff/007bff?text=Website+Conversion",
+      date: "28 Avril 2025",
+      author: "Naoussi Industries",
+      keywords: "site web commercial, conversion en ligne, UX/UI design",
+      cta: { text: "Notre agence peut concevoir votre prochain outil de conversion.", page: "services" },
+      content: `
+        <p class="mb-4">Votre site web est bien plus qu'une simple présence en ligne ; c'est un commercial disponible 24h/24, 7j/7. Pour qu'il génère activement des clients, il doit être conçu stratégiquement, en mettant l'accent sur l'expérience utilisateur (UX) et l'interface utilisateur (UI) pour maximiser la conversion en ligne. Voici comment transformer votre site en un véritable outil de croissance.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">1. Une Navigation Intuitive et Fluide</h3>
+        <p class="mb-4">Les visiteurs doivent pouvoir trouver ce qu'ils cherchent rapidement et sans effort. Une structure de navigation claire, des menus bien organisés et une recherche efficace sont essentiels. Si l'utilisateur se perd ou est frustré, il quittera votre site. L'UX design est fondamental pour guider le parcours client.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">2. Contenu Pertinent et de Qualité</h3>
+        <p class="mb-4">Le contenu de votre site doit répondre aux questions de vos prospects, résoudre leurs problèmes et mettre en valeur vos offres. Utilisez des titres accrocheurs, des paragraphes concis et des images ou vidéos de haute qualité. Un contenu optimisé pour le SEO attirera également du trafic qualifié.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">3. Des Appels à l'Action (CTA) Clairs et Visibles</h3>
+        <p class="mb-4">Chaque page de votre site doit avoir un objectif clair et un appel à l'action (CTA) qui incite le visiteur à passer à l'étape suivante. Qu'il s'agisse de "Demander un devis", "Acheter maintenant", "S'inscrire à la newsletter", ou "Télécharger un guide", les CTA doivent être bien visibles, persuasifs et faciles à cliquer.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">4. Optimisation pour la Vitesse et le Mobile (Responsive Design)</h3>
+        <p class="mb-4">Un site lent ou non adapté aux mobiles est un repoussoir. Les utilisateurs sont impatients et la majorité d'entre eux naviguent sur smartphone. Assurez-vous que votre site se charge rapidement et s'affiche parfaitement sur tous les appareils pour offrir une expérience utilisateur optimale et éviter les abandons.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">5. Preuve Sociale et Témoignages Clients</h3>
+        <p class="mb-4">La confiance est un facteur clé de conversion. Intégrez des témoignages de clients satisfaits, des études de cas, des logos de partenaires ou des certifications. La preuve sociale rassure les nouveaux visiteurs et les encourage à faire affaire avec vous.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">6. Formulaires Simplifiés et Faciles à Remplir</h3>
+        <p class="mb-4">Si votre objectif est de collecter des leads, vos formulaires de contact ou d'inscription doivent être aussi simples que possible. Demandez uniquement les informations essentielles et assurez-vous que le processus est rapide et sans friction.</p>
+        <p class="mb-4">En intégrant ces éléments, votre site web commercial deviendra un puissant moteur de croissance pour votre entreprise, transformant les simples visiteurs en clients fidèles. Pour un site web qui convertit, faites confiance à notre expertise en UX/UI design.</p>
+      `
+    },
+    {
+      id: 9,
+      title: "Ce que vous devez savoir avant de lancer un chantier au Cameroun",
+      excerpt: "Lancer un projet de construction au Cameroun implique de naviguer dans un cadre réglementaire spécifique. Découvrez les étapes clés et les considérations essentielles pour assurer le succès de votre chantier.",
+      image: "https://placehold.co/600x400/cce5ff/007bff?text=Construction+Cameroon",
+      date: "25 Avril 2025",
+      author: "Naoussi Industries",
+      keywords: "réglementation BTP Cameroun, préparation chantier",
+      cta: { text: "Nos experts vous accompagnent de l’étude au permis de construire.", page: "services" },
+      content: `
+        <p class="mb-4">Le secteur du Bâtiment et des Travaux Publics (BTP) au Cameroun est en pleine effervescence, offrant de nombreuses opportunités. Cependant, lancer un chantier nécessite une préparation minutieuse et une connaissance approfondie des spécificités locales. Ignorer ces aspects peut entraîner des retards, des coûts supplémentaires et des problèmes juridiques. Voici les points essentiels à considérer avant de démarrer votre projet.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">1. La Réglementation et les Permis de Construire</h3>
+        <p class="mb-4">Avant toute chose, il est impératif de se conformer à la réglementation BTP Cameroun. Cela inclut l'obtention du permis de construire, délivré par les autorités municipales après examen de votre dossier architectural et technique. Les délais peuvent varier, il est donc crucial d'anticiper cette étape. Des études de sol, des plans architecturaux détaillés et des plans d'ingénierie (structure, fluides) sont généralement requis.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">2. L'Étude de Faisabilité et le Budget Prévisionnel</h3>
+        <p class="mb-4">Une étude de faisabilité approfondie est la première pierre angulaire de votre projet. Elle doit inclure une analyse technique (géotechnique, topographie), économique (estimation des coûts, rentabilité) et juridique. Un budget prévisionnel réaliste, incluant toutes les dépenses (matériaux, main-d'œuvre, permis, imprévus), est indispensable pour éviter les mauvaises surprises.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">3. Le Choix des Professionnels Qualifiés</h3>
+        <p class="mb-4">La qualité de votre chantier dépendra grandement des professionnels que vous engagez. Architectes, ingénieurs, chefs de chantier, et ouvriers qualifiés sont essentiels. Vérifiez leurs références, leurs expériences sur des projets similaires au Cameroun, et assurez-vous qu'ils sont inscrits aux ordres professionnels compétents. Une bonne préparation chantier passe par une équipe solide.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">4. La Gestion des Matériaux et de la Logistique</h3>
+        <p class="mb-4">L'approvisionnement en matériaux peut être un défi au Cameroun. Planifiez à l'avance vos besoins, identifiez des fournisseurs fiables et anticipez les délais de livraison. La logistique sur site (stockage, sécurité des matériaux) est également cruciale pour éviter les pertes et les retards.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">5. La Sécurité sur le Chantier</h3>
+        <p class="mb-4">La sécurité des travailleurs est une priorité absolue. Mettez en place des protocoles de sécurité stricts, fournissez les équipements de protection individuelle (EPI) nécessaires et assurez-vous que les normes de sécurité sont respectées en permanence. Un chantier sécurisé est un chantier efficace.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">6. La Gestion des Imprévus et des Risques</h3>
+        <p class="mb-4">Malgré la meilleure planification, des imprévus peuvent survenir (conditions météorologiques, problèmes de main-d'œuvre, fluctuations des prix des matériaux). Prévoyez une marge de manœuvre dans votre budget et votre calendrier, et établissez un plan de gestion des risques pour réagir efficacement.</p>
+        <p class="mb-4">Lancer un chantier au Cameroun est un projet ambitieux mais gratifiant. En vous préparant adéquatement et en vous entourant des bons partenaires, vous maximiserez vos chances de succès. Nos experts vous accompagnent de l’étude au permis de construire pour une réalisation sereine et conforme.</p>
+      `
+    },
+    {
+      id: 10,
+      title: "L'impact des réseaux sociaux sur la croissance des entreprises camerounaises",
+      excerpt: "Les réseaux sociaux sont devenus un levier incontournable pour la croissance des entreprises au Cameroun. Découvrez comment une stratégie social media bien pensée peut transformer votre visibilité et vos ventes.",
+      image: "https://placehold.co/600x400/cce5ff/007bff?text=Social+Media+Cameroon",
+      date: "22 Avril 2025",
+      author: "Naoussi Industries",
+      keywords: "réseaux sociaux entreprises, stratégie social media",
+      cta: { text: "Confiez-nous votre stratégie digitale complète.", page: "services" },
+      content: `
+        <p class="mb-4">Au Cameroun, comme partout ailleurs, les réseaux sociaux ont transcendé leur rôle initial de plateformes de communication personnelle pour devenir des outils stratégiques essentiels au développement des entreprises. Ignorer leur potentiel, c'est se priver d'une opportunité majeure de croissance et de connexion avec une audience toujours plus vaste et engagée.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Accroître la Visibilité et la Notoriété de la Marque</h3>
+        <p class="mb-4">Avec des millions d'utilisateurs actifs sur Facebook, Instagram, LinkedIn, et TikTok au Cameroun, les réseaux sociaux offrent une visibilité inégalée. Une présence bien gérée permet aux entreprises de toucher un public que les canaux traditionnels ne peuvent plus atteindre, augmentant ainsi la notoriété de la marque de manière organique et payante.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Engager Directement avec les Clients</h3>
+        <p class="mb-4">Les réseaux sociaux entreprises ne sont pas à sens unique. Ils facilitent l'interaction directe avec les clients : répondre aux questions, gérer les commentaires, recueillir des avis. Cette communication bidirectionnelle crée un sentiment de proximité, renforce la confiance et permet de bâtir une communauté fidèle autour de votre marque.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Générer des Leads et des Ventes</h3>
+        <p class="mb-4">Au-delà de la simple visibilité, les plateformes sociales sont de puissants générateurs de leads. Grâce à des campagnes publicitaires ciblées, des liens directs vers des boutiques en ligne ou des formulaires de contact intégrés, les entreprises peuvent transformer leurs abonnés en prospects qualifiés et, in fine, en clients. Le social commerce est en plein essor au Cameroun.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Comprendre le Marché et la Concurrence</h3>
+        <p class="mb-4">Les réseaux sociaux sont une mine d'informations sur les tendances du marché, les attentes des consommateurs et les stratégies de vos concurrents. En analysant les conversations et les données démographiques, les entreprises peuvent affiner leurs offres, identifier de nouvelles opportunités et rester compétitives.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Construire une Image de Marque Forte et Authentique</h3>
+        <p class="mb-4">Les réseaux sociaux permettent aux entreprises de raconter leur histoire, de montrer les coulisses de leur activité et de mettre en avant leurs valeurs. Une stratégie social media authentique et transparente humanise la marque, la rend plus accessible et crée un lien émotionnel avec son audience.</p>
+        <p class="mb-4">En conclusion, pour toute entreprise camerounaise soucieuse de sa croissance en 2025, une stratégie social media robuste n'est plus une option, mais une composante essentielle de son plan de développement. Confiez-nous votre stratégie digitale complète pour exploiter pleinement le potentiel des réseaux sociaux et propulser votre entreprise vers de nouveaux sommets.</p>
       `
     }
   ];
@@ -852,6 +1020,16 @@ function ArticlePage({ article, navigateTo }) {
           Par <span className="font-medium text-blue-600">{article.author}</span> le {article.date}
         </p>
         <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: article.content }}></div>
+        {article.cta && (
+          <div className="mt-8 text-center">
+            <button
+              onClick={() => navigateTo(article.cta.page)}
+              className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-full text-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg"
+            >
+              {article.cta.text}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
