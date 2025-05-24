@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronRight, Phone, Mail, MapPin, Facebook, Linkedin, Instagram } from 'lucide-react';
+import { Menu, X, ChevronRight, Phone, Mail, MapPin, Facebook, Linkedin, Instagram, Quote } from 'lucide-react'; // Added Quote icon
 
 // Tailwind CSS is assumed to be available in the environment.
 
@@ -71,7 +71,7 @@ function Header({ navigateTo, isMobileMenuOpen, setIsMobileMenuMenuOpen }) {
         <div className="md:hidden bg-white shadow-lg pb-4">
           <ul className="flex flex-col items-center space-y-4">
             <li><button onClick={() => navigateTo('accueil')} className="text-gray-700 hover:text-blue-600 font-medium text-lg py-2">Accueil</button></li>
-            <li><button onClick={() => navigateTo('a-propos')} className="text-gray-700 hover:text-blue-600 font-medium text-lg py-2">À Propos</button></li>
+            <li><button onClick={() => navigateTo('a-propos')} className="text-gray-700 hover:text-blue-600 font-medium text-lg py-2">Services</button></li>
             <li><button onClick={() => navigateTo('services')} className="text-gray-700 hover:text-blue-600 font-medium text-lg py-2">Services</button></li>
             <li><button onClick={() => navigateTo('projets')} className="text-gray-700 hover:text-blue-600 font-medium text-lg py-2">Projets</button></li>
             <li><button onClick={() => navigateTo('blog')} className="text-gray-700 hover:text-blue-600 font-medium text-lg py-2">Blog</button></li>
@@ -98,7 +98,12 @@ function Footer({ navigateTo }) {
             <a href="https://www.facebook.com/profile.php?id=61568848127921" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition duration-300"><Facebook size={20} /></a>
             <a href="https://www.linkedin.com/in/lionel-naoussi-29a52232b/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition duration-300"><Linkedin size={20} /></a>
             <a href="https://www.instagram.com/t.n.a.l/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition duration-300"><Instagram size={20} /></a>
-            {/* Twitter link removed as per previous instruction */}
+            <a href="https://wa.me/237658120586" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition duration-300">
+              {/* Using a standard inline SVG for WhatsApp icon */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="inline-block">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181 0 6.145 1.24 8.413 3.509 2.268 2.269 3.506 5.235 3.508 8.413 0 6.557-5.336 11.892-11.893 11.892-.073 0-.146 0-.219-.001zm10.602-2.327c-.307 0-1.047-.135-1.747-.463l-.065-.031-1.144.304 3.356-1.104-.04-.023c-1.21-.745-1.92-1.92-1.92-3.143 0-2.613 2.13-4.743 4.746-4.743 1.214 0 2.302.465 3.143 1.292.842.827 1.293 1.914 1.293 3.125 0 2.613-2.13 4.743-4.746 4.743zm-1.8-7.974c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384zm3.333 0c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384zm3.333 0c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384zm3.333 0c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384z" />
+              </svg>
+            </a>
           </div>
         </div>
 
@@ -110,1145 +115,743 @@ function Footer({ navigateTo }) {
             <li><button onClick={() => navigateTo('a-propos')} className="text-gray-400 hover:text-white transition duration-300 text-sm">À Propos</button></li>
             <li><button onClick={() => navigateTo('services')} className="text-gray-400 hover:text-white transition duration-300 text-sm">Services</button></li>
             <li><button onClick={() => navigateTo('projets')} className="text-gray-400 hover:text-white transition duration-300 text-sm">Projets</button></li>
-            <li><button onClick={() => navigateTo('contact')} className="text-gray-400 hover:text-white transition duration-300 text-sm">Contact</button></li>
             <li><button onClick={() => navigateTo('blog')} className="text-gray-400 hover:text-white transition duration-300 text-sm">Blog</button></li>
+            <li><button onClick={() => navigateTo('contact')} className="text-gray-400 hover:text-white transition duration-300 text-sm">Contact</button></li>
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-white text-xl font-semibold mb-4">Contactez-Nous</h3>
-          <p className="flex items-center text-gray-400 text-sm mb-2"><MapPin size={16} className="mr-2" /> Douala, Ndogbong</p>
-          <p className="flex items-center text-gray-400 text-sm mb-2"><Phone size={16} className="mr-2" /> +237 658120586</p>
-          <p className="flex items-center text-gray-400 text-sm"><Mail size={16} className="mr-2" /> naoussilionel8@gmail.com</p>
+          <h3 className="text-white text-xl font-semibold mb-4">Contactez-nous</h3>
+          <p className="flex items-center text-gray-400 text-sm mb-2">
+            <MapPin size={16} className="mr-2 text-blue-400" /> Douala, Cameroun
+          </p>
+          <p className="flex items-center text-gray-400 text-sm mb-2">
+            <Phone size={16} className="mr-2 text-blue-400" /> (+237) 658 120 586
+          </p>
+          <p className="flex items-center text-gray-400 text-sm">
+            <Mail size={16} className="mr-2 text-blue-400" /> contact@naoussiindustries.com
+          </p>
         </div>
       </div>
-      <div className="text-center text-gray-500 text-sm mt-8 pt-6 border-t border-gray-700">
-        &copy; {new Date().getFullYear()} Naoussi Industries. Tous droits réservés.
+      <div className="text-center text-gray-500 text-xs mt-8 pt-6 border-t border-gray-700">
+        © {new Date().getFullYear()} Naoussi Industries. Tous droits réservés.
       </div>
     </footer>
   );
 }
 
-// Home Page Component
+
+// HomePage Component
 function HomePage({ navigateTo }) {
+  const testimonials = [
+    {
+      quote: "Naoussi Industries a transformé notre vision en réalité avec un professionnalisme exceptionnel. Leurs solutions en génie civil sont de première classe !",
+      author: "Jean-Pierre Dupont",
+      role: "Directeur Général, BTP Plus"
+    },
+    {
+      quote: "Le site web qu'ils ont développé pour nous est moderne, intuitif et a considérablement amélioré notre présence en ligne. Un travail remarquable !",
+      author: "Sophie Martin",
+      role: "Fondatrice, Digital Connect"
+    },
+    {
+      quote: "Leur équipe de design graphique a su capturer l'essence de notre marque. Nous sommes ravis du nouveau logo et de la charte graphique !",
+      author: "Marc Olivier",
+      role: "PDG, Café du Monde"
+    }
+  ];
+
   return (
-    <>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20">
-          {/* [Image of Bâtiment en arrière-plan] */}
-          <img src="https://placehold.co/1920x1080/0056b3/ffffff?text=Bâtir+l'Avenir" alt="Background Building" className="w-full h-full object-cover" onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/1920x1080/0056b3/ffffff?text=Bâtir+l'Avenir"; }} />
+    <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20 px-4 rounded-lg shadow-lg">
+      <div className="container mx-auto text-center">
+        <h1 className="text-5xl font-extrabold mb-6 leading-tight">
+          Bâtir l'Avenir, Digitaliser le Présent
+        </h1>
+        <p className="text-xl mb-10 max-w-2xl mx-auto opacity-90">
+          Naoussi Industries est votre partenaire de confiance pour des solutions innovantes en génie civil et une création digitale percutante.
+        </p>
+        <div className="space-x-4">
+          <button
+            onClick={() => navigateTo('services')}
+            className="bg-white text-blue-600 hover:bg-blue-100 px-8 py-3 rounded-full text-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg"
+          >
+            Nos Services
+          </button>
+          <button
+            onClick={() => navigateTo('contact')}
+            className="border border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-full text-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg"
+          >
+            Contactez-nous
+          </button>
         </div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
-            Naoussi Industries : Bâtir l'Avenir, Numériquement.
-          </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto animate-fade-in-up delay-200">
-            Solutions innovantes en génie civil et création de contenu digital pour concrétiser vos projets.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up delay-400">
-            <button
-              onClick={() => navigateTo('services')}
-              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300"
-            >
-              Découvrir Nos Services
-            </button>
-            <button
-              onClick={() => navigateTo('contact')}
-              className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300"
-            >
-              Nous Contacter
+      </div>
+
+      {/* Featured Services Section */}
+      <section className="container mx-auto mt-20">
+        <h2 className="text-4xl font-bold text-center mb-12 text-white">Nos Domaines d'Expertise</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Service Card 1 */}
+          <div className="bg-white rounded-xl shadow-xl p-8 text-gray-800 transform hover:scale-105 transition duration-300">
+            <div className="text-blue-600 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-hard-hat"><path d="M2 18v-1c0-.7.3-1.4.8-2s1.2-.9 2-.8h14.4c.8-.1 1.6.2 2.1.8s.8 1.3.8 2v1"/><path d="M10 10V5c0-1.1.9-2 2-2s2 .9 2 2v5"/><path d="M4 18h16a2 2 0 0 1 2 2v2H2v-2a2 2 0 0 1 2-2z"/></svg>
+            </div>
+            <h3 className="text-2xl font-semibold mb-4">Génie Civil & BTP</h3>
+            <p className="text-gray-600">
+              De la conception à la réalisation, nous construisons des infrastructures solides et durables.
+            </p>
+            <button onClick={() => navigateTo('services')} className="mt-6 text-blue-600 hover:text-blue-800 flex items-center text-sm font-semibold">
+              En savoir plus <ChevronRight size={16} className="ml-1" />
             </button>
           </div>
-        </div>
-      </section>
 
-      {/* Double Expertise Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Notre Double Expertise</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Génie Civil */}
-            <div className="bg-blue-50 rounded-lg shadow-lg p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
-              {/* [Image of Icône Génie Civil] */}
-              <img src="https://placehold.co/100x100/3b82f6/ffffff?text=Génie+Civil" alt="Génie Civil Icon" className="w-24 h-24 mb-6 rounded-full" />
-              <h3 className="text-2xl font-bold text-blue-700 mb-4">Génie Civil</h3>
-              <p className="text-gray-600 mb-6">
-                De la conception à la réalisation, nous bâtissons des infrastructures solides et durables, alliant innovation et respect des normes.
-              </p>
-              <ul className="text-gray-700 text-left list-disc list-inside mb-6">
-                <li>Conception Architecturale</li>
-                <li>Calcul de Structure</li>
-                <li>Gestion de la Construction</li>
-              </ul>
-              <button
-                onClick={() => navigateTo('services')}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300 flex items-center"
-              >
-                En savoir plus <ChevronRight size={18} className="ml-2" />
-              </button>
+          {/* Service Card 2 */}
+          <div className="bg-white rounded-xl shadow-xl p-8 text-gray-800 transform hover:scale-105 transition duration-300">
+            <div className="text-blue-600 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-code"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             </div>
-
-            {/* Création Digitale */}
-            <div className="bg-purple-50 rounded-lg shadow-lg p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
-              {/* [Image of Icône Digital] */}
-              <img src="https://placehold.co/100x100/8b5cf6/ffffff?text=Digital" alt="Création Digitale Icon" className="w-24 h-24 mb-6 rounded-full" />
-              <h3 className="text-2xl font-bold text-purple-700 mb-4">Création de Contenu Digital</h3>
-              <p className="text-gray-600 mb-6">
-                Nous donnons vie à vos idées avec des designs percutants et des stratégies digitales qui captivent votre audience.
-              </p>
-              <ul className="text-gray-700 text-left list-disc list-inside mb-6">
-                <li>Conception Graphique</li>
-                <li>UI/UX Design</li>
-                <li>Production Vidéo</li>
-              </ul>
-              <button
-                onClick={() => navigateTo('services')}
-                className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300 flex items-center"
-              >
-                En savoir plus <ChevronRight size={18} className="ml-2" />
-              </button>
-            </div>
+            <h3 className="text-2xl font-semibold mb-4">Développement Web & Mobile</h3>
+            <p className="text-gray-600">
+              Création de sites web, applications mobiles et solutions logicielles sur mesure.
+            </p>
+            <button onClick={() => navigateTo('services')} className="mt-6 text-blue-600 hover:text-blue-800 flex items-center text-sm font-semibold">
+              En savoir plus <ChevronRight size={16} className="ml-1" />
+            </button>
           </div>
-        </div>
-      </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-16 md:py-24 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Pourquoi Nous Choisir ?</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Point 1 */}
-            <div className="bg-white rounded-lg shadow-md p-6 text-center transform hover:translate-y-2 transition duration-300">
-              {/* [Image of Icône Double Expertise] */}
-              <img src="https://placehold.co/60x60/f97316/ffffff?text=Double" alt="Double Expertise Icon" className="mx-auto mb-4 rounded-full" />
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Expertise Double et Synergique</h3>
-              <p className="text-gray-600 text-sm">
-                Une combinaison unique de compétences pour une approche holistique de vos projets.
-              </p>
+          {/* Service Card 3 */}
+          <div className="bg-white rounded-xl shadow-xl p-8 text-gray-800 transform hover:scale-105 transition duration-300">
+            <div className="text-blue-600 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-palette"><circle cx="12" cy="12" r="10"/><path d="M17.5 6.5l-9 9"/><path d="M13.5 6.5l-7 7"/><path d="M10 10l-4 4"/></svg>
             </div>
-            {/* Point 2 */}
-            <div className="bg-white rounded-lg shadow-md p-6 text-center transform hover:translate-y-2 transition duration-300">
-              {/* [Image of Icône Innovation] */}
-              <img src="https://placehold.co/60x60/f97316/ffffff?text=Innov" alt="Innovation Icon" className="mx-auto mb-4 rounded-full" />
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Solutions Innovantes et Personnalisées</h3>
-              <p className="text-gray-600 text-sm">
-                Des approches créatives et techniques pour répondre à vos besoins spécifiques.
-              </p>
-            </div>
-            {/* Point 3 */}
-            <div className="bg-white rounded-lg shadow-md p-6 text-center transform hover:translate-y-2 transition duration-300">
-              {/* [Image of Icône Qualité] */}
-              <img src="https://placehold.co/60x60/f97316/ffffff?text=Qual" alt="Quality Icon" className="mx-auto mb-4 rounded-full" />
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Engagement envers la Qualité</h3>
-              <p className="text-gray-600 text-sm">
-                Des normes élevées dans tous nos projets, qu'ils soient physiques ou digitaux.
-              </p>
-            </div>
-            {/* Point 4 */}
-            <div className="bg-white rounded-lg shadow-md p-6 text-center transform hover:translate-y-2 transition duration-300">
-              {/* [Image of Icône Impact] */}
-              <img src="https://placehold.co/60x60/f97316/ffffff?text=Impact" alt="Impact Icon" className="mx-auto mb-4 rounded-full" />
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Créativité et Impact Digital</h3>
-              <p className="text-gray-600 text-sm">
-                Contenu percutant qui valorise vos projets et renforce votre présence en ligne.
-              </p>
-            </div>
-            {/* Point 5 */}
-            <div className="bg-white rounded-lg shadow-md p-6 text-center transform hover:translate-y-2 transition duration-300">
-              {/* [Image of Icône Équipe] */}
-              <img src="https://placehold.co/60x60/f97316/ffffff?text=Team" alt="Team Icon" className="mx-auto mb-4 rounded-full" />
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Équipe Passionnée et Expérimentée</h3>
-              <p className="text-gray-600 text-sm">
-                Des professionnels qualifiés et dédiés dans les deux domaines d'expertise.
-              </p>
-            </div>
-            {/* Point 6 */}
-            <div className="bg-white rounded-lg shadow-md p-6 text-center transform hover:translate-y-2 transition duration-300">
-              {/* [Image of Icône Centré Client] */}
-              <img src="https://placehold.co/60x60/f97316/ffffff?text=Client" alt="Client Centric Icon" className="mx-auto mb-4 rounded-full" />
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Approche Centrée sur le Client</h3>
-              <p className="text-gray-600 text-sm">
-                Collaboration étroite et communication transparente pour dépasser vos attentes.
-              </p>
-            </div>
+            <h3 className="text-2xl font-semibold mb-4">Design Graphique & Branding</h3>
+            <p className="text-gray-600">
+              Identité visuelle forte, logos, chartes graphiques et supports de communication.
+            </p>
+            <button onClick={() => navigateTo('services')} className="mt-6 text-blue-600 hover:text-blue-800 flex items-center text-sm font-semibold">
+              En savoir plus <ChevronRight size={16} className="ml-1" />
+            </button>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-blue-700 text-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Ce que disent nos clients</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Testimonial 1: Prof Kegne Jean Bosco */}
-            <div className="bg-white text-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition duration-300">
-              <p className="italic mb-4">"Travailler avec Naoussi Industries, c'est l'assurance d'une synergie parfaite. Nos projets architecturaux ont pris vie avec une rapidité et une précision inégalées. Au-delà de l'efficacité, leur partenariat a été une véritable opportunité d'apprentissage, m'ouvrant aux dernières technologies. Une collaboration qui dépasse les attentes et construit l'avenir !"</p>
-              <p className="font-semibold">- Prof. Kegne Jean Bosco, PLET et Architecte</p>
+      <section className="container mx-auto mt-20 py-12 bg-white rounded-xl shadow-xl">
+        <h2 className="text-4xl font-bold text-center text-blue-700 mb-12">Ce que disent nos clients</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-blue-50 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+              <Quote size={40} className="text-blue-600 mb-4" />
+              <p className="text-gray-700 italic mb-4">"{testimonial.quote}"</p>
+              <p className="font-semibold text-gray-800">{testimonial.author}</p>
+              <p className="text-gray-600 text-sm">{testimonial.role}</p>
             </div>
-            {/* Testimonial 2: Kevin, Veritrust */}
-            <div className="bg-white text-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition duration-300">
-              <p className="italic mb-4">"Avant Naoussi Industries, ma vision n'était qu'un brouillon. Dès notre première rencontre, ils ont su éclairer mes idées, les affiner et les transformer en une stratégie concrète. Ce qui n'était qu'un rêve hier est aujourd'hui une marque vibrante et pleine de vie. Un véritable catalyseur pour Veritrust !"</p>
-              <p className="font-semibold">- Kevin, Créateur de la startup Veritrust</p>
-            </div>
-            {/* Testimonial 3: Mr Engelbert Ngantsop, Coming-Complexe des Ingénieurs */}
-            <div className="bg-white text-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition duration-300">
-              <p className="italic mb-4">"Notre entreprise, forte de plus de 20 ans dans le froid et la climatisation, avait une image vieillissante. Naoussi Industries a réalisé une métamorphose spectaculaire ! Ils ont su insuffler une nouvelle vie à notre marque, nous propulsant dans l'ère moderne. Aujourd'hui, nous sommes comme neufs, prêts à conquérir de nouveaux horizons. Un renouveau qui fait toute la différence !"</p>
-              <p className="font-semibold">- Mr. Engelbert Ngantsop, CEO de Coming-Complexe des Ingénieurs</p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-16 md:py-24 bg-gray-800 text-white text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Prêt à concrétiser votre prochain projet ?</h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto">
-            Que ce soit pour une construction ambitieuse ou une stratégie digitale percutante, notre équipe est prête à vous accompagner.
+      <section className="container mx-auto bg-white rounded-xl shadow-xl p-10 mt-20 text-center text-gray-800">
+        <h2 className="text-3xl font-bold mb-4">Prêt à démarrer votre projet ?</h2>
+        <p className="text-lg mb-8">
+          Contactez-nous dès aujourd'hui pour discuter de vos besoins et obtenir un devis gratuit.
+        </p>
+        <button
+          onClick={() => navigateTo('contact')}
+          className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-full text-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg"
+        >
+          Demander un Devis
+        </button>
+      </section>
+    </div>
+  );
+}
+
+// AboutPage Component
+function AboutPage() {
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-4xl font-bold text-center text-blue-700 mb-12">À Propos de Naoussi Industries</h1>
+
+      <div className="flex flex-col md:flex-row items-center md:space-x-12 mb-16">
+        <div className="md:w-1/2 mb-8 md:mb-0">
+          <img
+            src="https://placehold.co/600x400/e0f2f7/007bff?text=Notre+Histoire"
+            alt="Notre Histoire"
+            className="rounded-xl shadow-lg w-full h-auto object-cover"
+          />
+        </div>
+        <div className="md:w-1/2">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-4">Notre Histoire</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Fondée sur les principes d'excellence et d'innovation, Naoussi Industries a débuté avec une vision claire : transformer les paysages urbains et numériques. Depuis nos humbles débuts, nous avons grandi pour devenir un acteur reconnu dans le génie civil et la création digitale.
           </p>
-          <button
-            onClick={() => navigateTo('contact')}
-            className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300"
-          >
-            Contactez-Nous Aujourd'hui
-          </button>
+          <p className="text-gray-700 leading-relaxed">
+            Notre parcours est marqué par une succession de projets réussis, de partenariats solides et d'une volonté inébranlable de dépasser les attentes de nos clients. Nous sommes fiers de notre héritage et enthousiastes à l'idée de bâtir l'avenir.
+          </p>
+        </div>
+      </div>
+
+      <div className="flex flex-col md:flex-row-reverse items-center md:space-x-reverse md:space-x-12 mb-16">
+        <div className="md:w-1/2 mb-8 md:mb-0">
+          <img
+            src="https://placehold.co/600x400/e0f2f7/007bff?text=Notre+Mission"
+            alt="Notre Mission"
+            className="rounded-xl shadow-lg w-full h-auto object-cover"
+          />
+        </div>
+        <div className="md:w-1/2">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-4">Notre Mission</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Notre mission est de fournir des solutions de pointe qui allient innovation, qualité et durabilité. Que ce soit dans la construction d'infrastructures robustes ou le développement de plateformes numériques intuitives, nous nous engageons à offrir une valeur exceptionnelle.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Nous visons à être le catalyseur de la réussite de nos clients, en les aidant à concrétiser leurs visions grâce à notre expertise technique et notre approche créative.
+          </p>
+        </div>
+      </div>
+
+      <div className="text-center bg-blue-50 rounded-xl p-10 shadow-inner">
+        <h2 className="text-3xl font-semibold text-blue-700 mb-6">Nos Valeurs Fondamentales</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+            <h3 className="text-xl font-bold text-gray-800 mb-3">Innovation</h3>
+            <p className="text-gray-600 text-sm">Nous embrassons les nouvelles technologies et les approches créatives pour offrir des solutions avant-gardistes.</p>
+          </div>
+          <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+            <h3 className="text-xl font-bold text-gray-800 mb-3">Qualité</h3>
+            <p className="text-gray-600 text-sm">Nous nous engageons à maintenir les plus hauts standards de qualité dans tous nos projets et services.</p>
+          </div>
+          <div className="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300">
+            <h3 className="text-xl font-bold text-gray-800 mb-3">Intégrité</h3>
+            <p className="text-gray-600 text-sm">Nous agissons avec honnêteté, transparence et éthique dans toutes nos interactions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ServicesPage Component
+function ServicesPage() {
+  const services = [
+    {
+      title: "Génie Civil & BTP",
+      description: "Conception, construction et réhabilitation d'infrastructures (bâtiments, routes, ponts, etc.). Nous gérons l'ensemble du cycle de vie de vos projets.",
+      icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-hard-hat"><path d="M2 18v-1c0-.7.3-1.4.8-2s1.2-.9 2-.8h14.4c.8-.1 1.6.2 2.1.8s.8 1.3.8 2v1"/><path d="M10 10V5c0-1.1.9-2 2-2s2 .9 2 2v5"/><path d="M4 18h16a2 2 0 0 1 2 2v2H2v-2a2 2 0 0 1 2-2z"/></svg>,
+      image: "https://placehold.co/600x400/a7d9f7/007bff?text=Génie+Civil"
+    },
+    {
+      title: "Développement Web & Mobile",
+      description: "Création de sites web professionnels, applications mobiles (iOS/Android) et solutions logicielles sur mesure pour répondre à vos besoins spécifiques.",
+      icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-code"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>,
+      image: "https://placehold.co/600x400/a7d9f7/007bff?text=Développement+Web"
+    },
+    {
+      title: "Design Graphique & Branding",
+      description: "Conception d'identités visuelles percutantes, logos mémorables, chartes graphiques complètes et tous vos supports de communication visuelle.",
+      icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-palette"><circle cx="12" cy="12" r="10"/><path d="M17.5 6.5l-9 9"/><path d="M13.5 6.5l-7 7"/><path d="M10 10l-4 4"/></svg>,
+      image: "https://placehold.co/600x400/a7d9f7/007bff?text=Design+Graphique"
+    },
+    {
+      title: "Marketing Digital",
+      description: "Stratégies de marketing digital complètes : SEO, SEM, gestion des réseaux sociaux, marketing de contenu et campagnes publicitaires ciblées.",
+      icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-megaphone"><path d="m3 11 18-2v8l-18 2v-8z"/><path d="M7 11v8"/><path d="M22 9v8"/><path d="M11 11v8"/></svg>,
+      image: "https://placehold.co/600x400/a7d9f7/007bff?text=Marketing+Digital"
+    },
+    {
+      title: "Conseil & Expertise",
+      description: "Accompagnement stratégique et expertise technique pour optimiser vos projets et prendre les meilleures décisions.",
+      icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 6c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 14v8"/></svg>,
+      image: "https://placehold.co/600x400/a7d9f7/007bff?text=Conseil"
+    },
+    {
+      title: "Maintenance & Support",
+      description: "Services de maintenance préventive et corrective, ainsi qu'un support technique réactif pour assurer la pérennité de vos installations et plateformes.",
+      icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-wrench"><path d="M14.7 12.7L12 15.4 9.3 12.7 12 10l2.7 2.7z"/><path d="M2 18v-1c0-.7.3-1.4.8-2s1.2-.9 2-.8h14.4c.8-.1 1.6.2 2.1.8s.8 1.3.8 2v1"/><path d="M10 10V5c0-1.1.9-2 2-2s2 .9 2 2v5"/><path d="M4 18h16a2 2 0 0 1 2 2v2H2v-2a2 2 0 0 1 2-2z"/></svg>,
+      image: "https://placehold.co/600x400/a7d9f7/007bff?text=Maintenance"
+    }
+  ];
+
+  const handleWhatsAppQuote = (serviceTitle) => {
+    const message = encodeURIComponent(`Bonjour, je suis intéressé par le service : ${serviceTitle}. J'aimerais obtenir un devis.`);
+    window.open(`https://wa.me/237658120586?text=${message}`, '_blank');
+  };
+
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-4xl font-bold text-center text-blue-700 mb-12">Nos Services</h1>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service, index) => (
+          <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <img src={service.image} alt={service.title} className="w-full h-48 object-cover" />
+            <div className="p-6">
+              <div className="text-blue-600 mb-3">{service.icon}</div>
+              <h2 className="text-2xl font-semibold text-gray-800 mb-3">{service.title}</h2>
+              <p className="text-gray-700 leading-relaxed mb-4">{service.description}</p>
+              <button
+                onClick={() => handleWhatsAppQuote(service.title)}
+                className="bg-green-500 text-white hover:bg-green-600 px-6 py-2 rounded-full text-sm font-semibold transition duration-300 shadow-md flex items-center justify-center"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="mr-2">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181 0 6.145 1.24 8.413 3.509 2.268 2.269 3.506 5.235 3.508 8.413 0 6.557-5.336 11.892-11.893 11.892-.073 0-.146 0-.219-.001zm10.602-2.327c-.307 0-1.047-.135-1.747-.463l-.065-.031-1.144.304 3.356-1.104-.04-.023c-1.21-.745-1.92-1.92-1.92-3.143 0-2.613 2.13-4.743 4.746-4.743 1.214 0 2.302.465 3.143 1.292.842.827 1.293 1.914 1.293 3.125 0 2.613-2.13 4.743-4.746 4.743zm-1.8-7.974c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384zm3.333 0c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384zm3.333 0c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384zm3.333 0c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384z"/>
+                </svg>
+                Demander un devis
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <section className="mt-16 bg-blue-50 rounded-xl p-10 shadow-inner text-center">
+        <h2 className="text-3xl font-bold text-blue-700 mb-6">Pourquoi Choisir Naoussi Industries ?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="p-6 bg-white rounded-lg shadow-md">
+            <h3 className="text-xl font-bold text-gray-800 mb-3">Expertise Polyvalente</h3>
+            <p className="text-gray-600 text-sm">Une équipe expérimentée dans le génie civil et le digital.</p>
+          </div>
+          <div className="p-6 bg-white rounded-lg shadow-md">
+            <h3 className="text-xl font-bold text-gray-800 mb-3">Approche Personnalisée</h3>
+            <p className="text-gray-600 text-sm">Des solutions sur mesure adaptées à vos besoins uniques.</p>
+          </div>
+          <div className="p-6 bg-white rounded-lg shadow-md">
+            <h3 className="text-xl font-bold text-gray-800 mb-3">Qualité et Durabilité</h3>
+            <p className="text-gray-600 text-sm">Engagement envers l'excellence et des résultats durables.</p>
+          </div>
+          <div className="p-6 bg-white rounded-lg shadow-md">
+            <h3 className="text-xl font-bold text-gray-800 mb-3">Support Dévoué</h3>
+            <p className="text-gray-600 text-sm">Un accompagnement continu et un support technique réactif.</p>
+          </div>
         </div>
       </section>
-    </>
-  );
-}
-
-// About Page Component
-function AboutPage() {
-  // Removed teamMembers array
-
-  return (
-    <div className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-blue-700 mb-12">À Propos de Naoussi Industries</h1>
-
-        {/* Our Story */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center md:text-left">Notre Histoire</h2>
-          <div className="flex flex-col md:flex-row items-center md:space-x-8">
-            {/* [Image of Notre Histoire] */}
-            <img src="https://placehold.co/400x250/cccccc/333333?text=Notre+Histoire" alt="Our Story" className="w-full md:w-1/2 rounded-lg shadow-lg mb-6 md:mb-0" />
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Naoussi Industries a été fondée avec une vision audacieuse : fusionner l'ingénierie de pointe avec la créativité digitale pour offrir des solutions complètes et innovantes. Ce qui a commencé comme une entreprise de génie civil s'est rapidement étendu à la création de contenu digital, reconnaissant l'importance cruciale d'une présence en ligne forte et d'une communication percutante dans le monde moderne. Aujourd'hui, nous sommes fiers de bâtir des structures physiques solides tout en construisant des marques digitales mémorables.
-            </p>
-          </div>
-        </section>
-
-        {/* Mission and Vision */}
-        <section className="mb-16 bg-white p-8 rounded-lg shadow-md">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center">{/* [Image of Icône Mission] */}<img src="https://placehold.co/30x30/007bff/ffffff?text=M" alt="Mission Icon" className="mr-3 rounded-full" />Notre Mission</h2>
-              <p className="text-lg text-gray-700">
-                Notre mission est de fournir des solutions d'excellence en génie civil et en création digitale, en dépassant les attentes de nos clients grâce à l'innovation, la qualité et une approche centrée sur leurs besoins. Nous nous engageons à transformer les idées en réalités tangibles et numériques.
-              </p>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center">{/* [Image of Icône Vision] */}<img src="https://placehold.co/30x30/8b5cf6/ffffff?text=V" alt="Vision Icon" className="mr-3 rounded-full" />Notre Vision</h2>
-              <p className="text-lg text-gray-700">
-                Devenir le leader reconnu dans la synergie du génie civil et de la création digitale, en étant le partenaire de choix pour des projets qui façonnent l'avenir, tant dans le monde physique que numérique.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Core Values */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Nos Valeurs Fondamentales</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-blue-100 p-6 rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
-              {/* [Image of Icône Innovation] */}
-              <img src="https://placehold.co/50x50/007bff/ffffff?text=I" alt="Innovation Icon" className="mx-auto mb-4 rounded-full" />
-              <h3 className="text-xl font-semibold text-blue-700 mb-2">Innovation</h3>
-              <p className="text-gray-600 text-sm">Nous embrassons les nouvelles technologies et idées.</p>
-            </div>
-            <div className="bg-blue-100 p-6 rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
-              {/* [Image of Icône Qualité] */}
-              <img src="https://placehold.co/50x50/007bff/ffffff?text=Q" alt="Quality Icon" className="mx-auto mb-4 rounded-full" />
-              <h3 className="text-xl font-semibold text-blue-700 mb-2">Qualité</h3>
-              <p className="text-gray-600 text-sm">L'excellence est au cœur de tout ce que nous faisons.</p>
-            </div>
-            <div className="bg-blue-100 p-6 rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
-              {/* [Image of Icône Collaboration] */}
-              <img src="https://placehold.co/50x50/007bff/ffffff?text=C" alt="Collaboration Icon" className="mx-auto mb-4 rounded-full" />
-              <h3 className="text-xl font-semibold text-blue-700 mb-2">Collaboration</h3>
-              <p className="text-gray-600 text-sm">Travailler ensemble pour des résultats optimaux.</p>
-            </div>
-            <div className="bg-blue-100 p-6 rounded-lg shadow-md text-center transform hover:scale-105 transition duration-300">
-              {/* [Image of Icône Intégrité] */}
-              <img src="https://placehold.co/50x50/007bff/ffffff?text=I" alt="Integrity Icon" className="mx-auto mb-4 rounded-full" />
-              <h3 className="text-xl font-semibold text-blue-700 mb-2">Intégrité</h3>
-              <p className="text-gray-600 text-sm">Transparence et éthique dans toutes nos interactions.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Founder Section */}
-        <section className="mb-16 bg-white p-8 rounded-lg shadow-md text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8">Notre Fondateur</h2>
-          <div className="flex flex-col md:flex-row items-center justify-center md:space-x-8">
-            {/* [Image of Votre Photo] */}
-            <img src="https://placehold.co/200x200/007bff/ffffff?text=Votre+Photo" alt="Photo du Fondateur" className="w-48 h-48 rounded-full mx-auto mb-6 md:mb-0 object-cover shadow-lg" />
-            <div className="text-left max-w-xl">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-2">Ing. Tedjouong Naoussi Ange Lionel</h3>
-              <p className="text-blue-600 font-medium mb-3">Fondateur et Project Manager</p>
-              <p className="text-gray-700 leading-relaxed">
-                Titulaire d'une licence en génie civil et d'une maîtrise en gestion de projet, Ing. Tedjouong Naoussi Ange Lionel a mené à bien plusieurs projets emblématiques, dont Quizforge, Eduflux et Myawesomeshop. Sa passion pour le génie civil et le domaine digital, cultivée depuis l'enfance, le pousse à innover et à transformer les visions en réalités concrètes, alliant la robustesse de l'ingénierie à la créativité du numérique.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section (more detailed) */}
-        <section className="py-16 bg-blue-700 text-white rounded-lg shadow-xl">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Témoignages Détaillés</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Testimonial 1: Prof Kegne Jean Bosco */}
-              <div className="bg-white text-gray-800 rounded-lg shadow-lg p-6">
-                <p className="italic mb-4 text-lg">"Travailler avec Naoussi Industries, c'est l'assurance d'une synergie parfaite. Nos projets architecturaux ont pris vie avec une rapidité et une précision inégalées. Au-delà de l'efficacité, leur partenariat a été une véritable opportunité d'apprentissage, m'ouvrant aux dernières technologies. Une collaboration qui dépasse les attentes et construit l'avenir !"</p>
-                <p className="font-semibold text-blue-700">- Prof. Kegne Jean Bosco, PLET et Architecte</p>
-              </div>
-              {/* Testimonial 2: Kevin, Veritrust */}
-              <div className="bg-white text-gray-800 rounded-lg shadow-lg p-6">
-                <p className="italic mb-4 text-lg">"Avant Naoussi Industries, ma vision n'était qu'un brouillon. Dès notre première rencontre, ils ont su éclairer mes idées, les affiner et les transformer en une stratégie concrète. Ce qui n'était qu'un rêve hier est aujourd'hui une marque vibrante et pleine de vie. Un véritable catalyseur pour Veritrust !"</p>
-                <p className="font-semibold text-purple-700">- Kevin, Créateur de la startup Veritrust</p>
-              </div>
-              {/* Testimonial 3: Mr Engelbert Ngantsop, Coming-Complexe des Ingénieurs */}
-              <div className="bg-white text-gray-800 rounded-lg shadow-lg p-6">
-                <p className="italic mb-4">"Notre entreprise, forte de plus de 20 ans dans le froid et la climatisation, avait une image vieillissante. Naoussi Industries a réalisé une métamorphose spectaculaire ! Ils ont su insuffler une nouvelle vie à notre marque, nous propulsant dans l'ère moderne. Aujourd'hui, nous sommes comme neufs, prêts à conquérir de nouveaux horizons. Un renouveau qui fait toute la différence !"</p>
-                <p className="font-semibold text-blue-700">- Mr. Engelbert Ngantsop, CEO de Coming-Complexe des Ingénieurs</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="text-center mt-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">Discutons de votre projet !</h2>
-          <p className="text-lg text-gray-700 mb-8">
-            Nous sommes impatients de découvrir comment nous pouvons vous aider à atteindre vos objectifs.
-          </p>
-          <button
-            onClick={() => window.location.href = '#contact'} // Simple scroll to contact section
-            className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300"
-          >
-            Contactez Notre Équipe
-          </button>
-        </section>
-      </div>
     </div>
   );
 }
 
-// Services Page Component
-function ServicesPage() {
-  const civilServices = [
-    {
-      title: "Conception Architecturale",
-      description: "Création de plans innovants et fonctionnels pour tous types de bâtiments, en respectant les normes et vos aspirations.",
-      icon: "https://placehold.co/50x50/007bff/ffffff?text=Arch"
-    },
-    {
-      title: "Réalisation d'Ouvrages",
-      description: "Construction et supervision de projets de génie civil, garantissant qualité, sécurité et respect des délais.",
-      icon: "https://placehold.co/50x50/007bff/ffffff?text=Ouv"
-    },
-    {
-      title: "Architecture Académie",
-      description: "Programmes de formation et ateliers pour les professionnels et étudiants en architecture et génie civil.",
-      icon: "https://placehold.co/50x50/007bff/ffffff?text=Acad"
-    },
-    {
-      title: "Calcul de Structure",
-      description: "Analyse et dimensionnement des structures pour assurer la stabilité et la durabilité de vos constructions.",
-      icon: "https://placehold.co/50x50/007bff/ffffff?text=Calc"
-    },
-    {
-      title: "Études Géotechniques",
-      description: "Évaluation des propriétés du sol pour des fondations sûres et adaptées à chaque projet.",
-      icon: "https://placehold.co/50x50/007bff/ffffff?text=Geo"
-    },
-    {
-      title: "Analyse Hydraulique",
-      description: "Conception et optimisation des systèmes de gestion de l'eau pour les infrastructures.",
-      icon: "https://placehold.co/50x50/007bff/ffffff?text=Hyd"
-    },
-    {
-      title: "Planification d'Infrastructures",
-      description: "Développement de plans stratégiques pour les routes, ponts, réseaux et autres infrastructures.",
-      icon: "https://placehold.co/50x50/007bff/ffffff?text=Plan"
-    },
-    {
-      title: "Assistance en Matière de Permis",
-      description: "Accompagnement dans l'obtention des permis de construire et autres autorisations nécessaires.",
-      icon: "https://placehold.co/50x50/007bff/ffffff?text=Permis"
-    },
-    {
-      title: "Gestion de la Construction",
-      description: "Coordination complète des projets de construction, de la planification à la livraison finale.",
-      icon: "https://placehold.co/50x50/007bff/ffffff?text=Gest"
-    },
-  ];
-
-  const digitalServices = [
-    {
-      title: "Conception Graphique",
-      description: "Création de logos, identités visuelles, brochures et tous supports de communication percutants.",
-      icon: "https://placehold.co/50x50/8b5cf6/ffffff?text=Graph"
-    },
-    {
-      title: "Création de Contenu pour les Réseaux Sociaux",
-      description: "Production de visuels et textes optimisés pour engager votre audience sur toutes les plateformes.",
-      icon: "https://placehold.co/50x50/8b5cf6/ffffff?text=Social"
-    },
-    {
-      title: "Conception d'Interfaces Utilisateurs (UI Design)",
-      description: "Design d'interfaces intuitives et esthétiques pour applications web et mobiles.",
-      icon: "https://placehold.co/50x50/8b5cf6/ffffff?text=UI"
-    },
-    {
-      title: "Conception d'Expériences Utilisateurs (UX Design)",
-      description: "Optimisation du parcours utilisateur pour une navigation fluide et satisfaisante.",
-      icon: "https://placehold.co/50x50/8b5cf6/ffffff?text=UX"
-    },
-    {
-      title: "Rédaction de Contenu SEO",
-      description: "Création de textes optimisés pour les moteurs de recherche, augmentant votre visibilité en ligne.",
-      icon: "https://placehold.co/50x50/8b5cf6/ffffff?text=SEO"
-    },
-    {
-      title: "Production Vidéo",
-      description: "Réalisation de vidéos promotionnelles, institutionnelles et de contenu pour le web.",
-      icon: "https://placehold.co/50x50/8b5cf6/ffffff?text=Video"
-    },
-    {
-      title: "Contenu de Marketing par E-mail",
-      description: "Conception de campagnes d'e-mailing engageantes et efficaces pour vos objectifs marketing.",
-      icon: "https://placehold.co/50x50/8b5cf6/ffffff?text=Email"
-    },
-    {
-      title: "Rédaction de Contenu de Site Web",
-      description: "Création de textes clairs, concis et persuasifs pour les pages de votre site internet.",
-      icon: "https://placehold.co/50x50/8b5cf6/ffffff?text=Web"
-    },
-    {
-      title: "Stratégie et Conseil en Marketing Digital",
-      description: "Développement de stratégies digitales complètes pour maximiser votre impact en ligne.",
-      icon: "https://placehold.co/50x50/8b5cf6/ffffff?text=Strat"
-    },
-  ];
-
-  return (
-    <div className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-blue-700 mb-8">Nos Services Complets</h1>
-        <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-16">
-          Naoussi Industries offre une gamme étendue de services, alliant l'ingénierie de précision à la créativité digitale, pour répondre à tous vos besoins.
-        </p>
-
-        {/* Génie Civil Services */}
-        <section className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Solutions en Génie Civil</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {civilServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
-                <img src={service.icon} alt={`${service.title} Icon`} className="w-16 h-16 mb-4 rounded-full" />
-                <h3 className="text-xl font-semibold text-blue-700 mb-3">{service.title}</h3>
-                <p className="text-gray-600 text-sm">{service.description}</p>
-                <button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300">
-                  Demander un devis
-                </button>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Création de Contenu Digital Services */}
-        <section>
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Solutions en Création de Contenu Digital</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {digitalServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
-                <img src={service.icon} alt={`${service.title} Icon`} className="w-16 h-16 mb-4 rounded-full" />
-                <h3 className="text-xl font-semibold text-purple-700 mb-3">{service.title}</h3>
-                <p className="text-gray-600 text-sm">{service.description}</p>
-                <button className="mt-4 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300">
-                  Demander un devis
-                </button>
-              </div>
-            ))}
-          </div>
-        </section>
-      </div>
-    </div>
-  );
-}
-
-// Projects Page Component
+// ProjectsPage Component
 function ProjectsPage() {
   const projects = [
     {
       title: "Construction du Complexe Résidentiel 'Harmonie'",
+      description: "Un projet résidentiel moderne intégrant des appartements de luxe et des espaces verts, conçu pour le confort et la durabilité.",
       category: "Génie Civil",
-      description: "Conception et réalisation d'un complexe résidentiel moderne de 50 appartements, intégrant des solutions écologiques.",
-      image: "https://placehold.co/600x400/007bff/ffffff?text=Projet+Résidentiel",
-      details: "Défis: Optimisation de l'espace urbain, intégration de panneaux solaires. Solutions: Design compact, matériaux durables, gestion de projet agile. Résultats: Livraison dans les délais, satisfaction client élevée, certification environnementale.",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Projet+Résidentiel+Harmonie",
     },
     {
-      title: "Refonte de l'Identité Visuelle pour 'Café Urbain'",
-      category: "Création Digitale",
-      description: "Création d'un nouveau logo, charte graphique et supports de communication pour une chaîne de cafés.",
-      image: "https://placehold.co/600x400/8b5cf6/ffffff?text=Logo+Café",
-      details: "Défis: Moderniser l'image sans perdre l'essence. Solutions: Palette de couleurs chaleureuse, typographie moderne, illustration personnalisée. Résultats: Augmentation de la reconnaissance de la marque, feedback positif des clients.",
+      title: "Développement de l'Application Mobile 'Connect Santé'",
+      description: "Une application mobile innovante facilitant la prise de rendez-vous médicaux et la gestion des dossiers de santé pour les patients.",
+      category: "Développement Mobile",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=App+Connect+Santé",
     },
     {
-      title: "Pont de la Rivière 'Sérénité'",
+      title: "Refonte du Site Web 'Artisanat Local'",
+      description: "Modernisation complète et optimisation SEO d'une plateforme e-commerce pour promouvoir les produits artisanaux locaux.",
+      category: "Développement Web",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Site+Artisanat+Local",
+    },
+    {
+      title: "Conception de la Charte Graphique 'Café Gourmand'",
+      description: "Création d'une identité visuelle complète incluant logo, typographie et palette de couleurs pour une nouvelle chaîne de cafés.",
+      category: "Design Graphique",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Charte+Graphique+Café",
+    },
+    {
+      title: "Construction de la Route Nationale 3 - Section Urbaine",
+      description: "Amélioration et extension d'une section critique de la route nationale, incluant des infrastructures de drainage et d'éclairage.",
       category: "Génie Civil",
-      description: "Conception et construction d'un pont suspendu pour améliorer la connectivité régionale.",
-      image: "https://placehold.co/600x400/007bff/ffffff?text=Projet+Pont",
-      details: "Défis: Conditions géologiques complexes, contraintes environnementales. Solutions: Études géotechniques approfondies, techniques de construction innovantes, minimisation de l'impact écologique. Résultats: Infrastructure clé, circulation améliorée.",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Route+Nationale+3",
     },
     {
-      title: "Campagne Marketing Digital pour 'Fitness Boost'",
-      category: "Création Digitale",
-      description: "Développement d'une stratégie de contenu et de campagnes publicitaires pour une application de fitness.",
-      image: "https://placehold.co/600x400/8b5cf6/ffffff?text=Campagne+Fitness",
-      details: "Défis: Marché concurrentiel, ciblage précis. Solutions: Contenu vidéo engageant, publicités ciblées sur les réseaux sociaux, optimisation SEO. Résultats: Augmentation de 30% des téléchargements de l'application en 3 mois.",
+      title: "Campagne de Marketing Digital pour 'Eco Solutions'",
+      description: "Lancement d'une campagne intégrée (SEO, réseaux sociaux, email marketing) pour une entreprise de solutions écologiques.",
+      category: "Marketing Digital",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Campagne+Eco+Solutions",
     },
     {
-      title: "Rénovation du Bâtiment Historique 'Le Grand Théâtre'",
+      title: "Aménagement Paysager du Parc Central",
+      description: "Conception et réalisation d'un espace vert urbain avec des zones de loisirs, des sentiers pédestres et une flore diversifiée.",
       category: "Génie Civil",
-      description: "Restauration et modernisation d'un théâtre historique, préservant son patrimoine architectural.",
-      image: "https://placehold.co/600x400/007bff/ffffff?text=Théâtre+Rénovation",
-      details: "Défis: Respect des éléments historiques, intégration de technologies modernes. Solutions: Collaboration avec des experts en patrimoine, utilisation de matériaux traditionnels et techniques de pointe. Résultats: Patrimoine préservé, fonctionnalité améliorée.",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Parc+Central",
     },
     {
-      title: "Création d'un Site Web E-commerce pour 'Artisanat Local'",
-      category: "Création Digitale",
-      description: "Conception et développement d'une plateforme de vente en ligne pour des produits artisanaux.",
-      image: "https://placehold.co/600x400/8b5cf6/ffffff?text=Site+E-commerce",
-      details: "Défis: Mettre en valeur l'unicité des produits, expérience utilisateur fluide. Solutions: Design épuré, photographies de haute qualité, processus de commande simplifié. Résultats: Augmentation des ventes en ligne, portée nationale.",
-    },
-    // Nouveaux projets basés sur les témoignages et les applications du fondateur
-    {
-      title: "Projet Architectural d'Envergure : L'Excellence Redéfinie",
-      category: "Génie Civil",
-      description: "Une collaboration fructueuse sur des projets architecturaux complexes, où notre expertise a permis une réalisation d'une rapidité et d'une précision inégalées, intégrant les technologies de pointe.",
-      image: "https://placehold.co/600x400/007bff/ffffff?text=Projet+Architectural",
-      details: "Défis: Intégration de designs audacieux, respect des délais serrés, application de technologies innovantes. Solutions: Méthodologies agiles, modélisation 3D avancée, formation continue de l'équipe. Résultats: Projets livrés avec une qualité exceptionnelle, dépassement des attentes client, transfert de savoir-faire technologique.",
+      title: "Développement d'une Plateforme E-learning",
+      description: "Création d'une plateforme d'apprentissage en ligne interactive avec des cours vidéo, des quiz et un suivi de progression.",
+      category: "Développement Web",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=E-learning+Platform",
     },
     {
-      title: "Veritrust : Du Rêve à la Marque Vibrante",
-      category: "Création Digitale",
-      description: "Accompagnement stratégique pour une startup, transformant une vision initiale floue en une identité de marque percutante et une présence digitale captivante.",
-      image: "https://placehold.co/600x400/8b5cf6/ffffff?text=Veritrust+Brand",
-      details: "Défis: Clarification de la proposition de valeur, création d'une identité visuelle unique, stratégie de lancement. Solutions: Ateliers d'idéation intensifs, branding complet, plan de communication digital sur mesure. Résultats: Lancement réussi, marque forte et reconnaissable, croissance rapide de l'engagement.",
-    },
-    {
-      title: "Coming-Complexe des Ingénieurs : Un Renouveau d'Image Spectaculaire",
-      category: "Création Digitale",
-      description: "Revitalisation complète de l'image d'une entreprise établie, lui offrant une modernité et un dynamisme qui reflètent son expertise de plus de 20 ans.",
-      image: "https://placehold.co/600x400/8b5cf6/ffffff?text=Coming+Complexe",
-      details: "Défis: Moderniser une image vieillissante sans perdre l'héritage, rajeunir la perception de la marque. Solutions: Refonte graphique complète, création de contenu vidéo, stratégie de communication digitale ciblée. Résultats: Image de marque rajeunie, augmentation de l'attractivité, positionnement renforcé sur le marché.",
-    },
-    {
-      title: "Quizforge : L'Apprentissage Ludique Redéfini",
-      category: "Création Digitale",
-      description: "Développement d'une application interactive pour transformer l'apprentissage en une expérience engageante et amusante.",
-      image: "https://placehold.co/600x400/8b5cf6/ffffff?text=Quizforge+App",
-      details: "Défis: Gamification de contenu éducatif, interface utilisateur intuitive, performance multiplateforme. Solutions: Conception UX/UI centrée sur l'utilisateur, développement agile, intégration de feedback en temps réel. Résultats: Engagement accru des utilisateurs, amélioration des performances d'apprentissage, retours positifs.",
-    },
-    {
-      title: "Eduflux : Votre Plateforme d'Éducation Réinventée",
-      category: "Création Digitale",
-      description: "Conception et déploiement d'une plateforme éducative complète, rendant l'accès au savoir plus fluide et interactif que jamais.",
-      image: "https://placehold.co/600x400/8b5cf6/ffffff?text=Eduflux+Platform",
-      details: "Défis: Gestion de contenu riche, parcours d'apprentissage personnalisés, scalabilité de la plateforme. Solutions: Architecture modulaire, intégration de modules interactifs, optimisation des performances. Résultats: Expérience utilisateur enrichie, augmentation de l'accès à l'éducation, flexibilité d'apprentissage.",
-    },
-    {
-      title: "Myawesomeshop : L'E-commerce Simplifié et Performant",
-      category: "Création Digitale",
-      description: "Création d'une solution e-commerce robuste et intuitive, conçue pour maximiser les ventes et offrir une expérience d'achat inégalée.",
-      image: "https://placehold.co/600x400/8b5cf6/ffffff?text=Myawesomeshop",
-      details: "Défis: Optimisation du tunnel de conversion, sécurité des transactions, gestion des stocks. Solutions: Design responsive, intégration de passerelles de paiement sécurisées, tableau de bord de gestion intuitif. Résultats: Augmentation significative des ventes, fidélisation des clients, gestion simplifiée du commerce en ligne.",
+      title: "Création d'une Campagne Publicitaire pour 'Fresh Juice'",
+      description: "Développement d'une stratégie publicitaire complète incluant des visuels percutants et des messages ciblés pour une marque de jus de fruits frais.",
+      category: "Marketing Digital",
+      image: "https://placehold.co/600x400/b3e0ff/0056b3?text=Fresh+Juice+Ad",
     },
   ];
 
-  const [filter, setFilter] = useState('all'); // 'all', 'Génie Civil', 'Création Digitale'
+  const [filter, setFilter] = useState('Tous');
 
-  const filteredProjects = projects.filter(project => {
-    if (filter === 'all') return true;
-    return project.category === filter;
-  });
+  const filteredProjects = projects.filter(project =>
+    filter === 'Tous' ? true : project.category === filter
+  );
+
+  const categories = ['Tous', ...new Set(projects.map(p => p.category))];
 
   return (
-    <div className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-blue-700 mb-8">Notre Portfolio de Projets</h1>
-        <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-12">
-          Découvrez nos réalisations en génie civil et en création digitale qui témoignent de notre expertise et de notre passion.
-        </p>
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-4xl font-bold text-center text-blue-700 mb-12">Nos Réalisations</h1>
 
-        {/* Filter Buttons */}
-        <div className="flex justify-center space-x-4 mb-12">
+      {/* Filter Buttons */}
+      <div className="flex flex-wrap justify-center gap-4 mb-12">
+        {categories.map(cat => (
           <button
-            onClick={() => setFilter('all')}
-            className={`py-2 px-6 rounded-full font-semibold transition duration-300 ${filter === 'all' ? 'bg-orange-500 text-white shadow-md' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+            key={cat}
+            onClick={() => setFilter(cat)}
+            className={`px-6 py-2 rounded-full font-semibold transition duration-300 ${
+              filter === cat
+                ? 'bg-blue-600 text-white shadow-md'
+                : 'bg-gray-200 text-gray-700 hover:bg-blue-100 hover:text-blue-700'
+            }`}
           >
-            Tous les Projets
+            {cat}
           </button>
-          <button
-            onClick={() => setFilter('Génie Civil')}
-            className={`py-2 px-6 rounded-full font-semibold transition duration-300 ${filter === 'Génie Civil' ? 'bg-blue-600 text-white shadow-md' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
-          >
-            Génie Civil
-          </button>
-          <button
-            onClick={() => setFilter('Création Digitale')}
-            className={`py-2 px-6 rounded-full font-semibold transition duration-300 ${filter === 'Création Digitale' ? 'bg-purple-600 text-white shadow-md' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
-          >
-            Création Digitale
-          </button>
-        </div>
-
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-              <img src={project.image} alt={project.title} className="w-full h-48 object-cover" onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/600x400/cccccc/333333?text=Image+Projet"; }} />
-              <div className="p-6">
-                <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 ${project.category === 'Génie Civil' ? 'bg-blue-100 text-blue-700' : 'bg-purple-100 text-purple-700'}`}>
-                  {project.category}
-                </span>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{project.description}</p>
-                <details className="text-gray-700 text-sm cursor-pointer">
-                  <summary className="font-medium text-blue-600 hover:text-blue-800">Voir les détails</summary>
-                  <p className="mt-2">{project.details}</p>
-                </details>
-                <button className="mt-6 bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full shadow-md transition duration-300">
-                  Discuter d'un projet similaire
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {filteredProjects.length === 0 && (
-          <p className="text-center text-gray-600 text-lg mt-8">Aucun projet trouvé pour cette catégorie.</p>
-        )}
+        ))}
       </div>
+
+      {/* Projects Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {filteredProjects.map((project, index) => (
+          <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <img src={project.image} alt={project.title} className="w-full h-56 object-cover" />
+            <div className="p-6">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-2">{project.title}</h2>
+              <p className="text-blue-600 text-sm font-medium mb-4">{project.category}</p>
+              <p className="text-gray-700 leading-relaxed">{project.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {filteredProjects.length === 0 && (
+        <p className="text-center text-gray-600 text-lg mt-8">Aucun projet trouvé pour cette catégorie.</p>
+      )}
     </div>
   );
 }
 
-// Contact Page Component
+// ContactPage Component
 function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
     subject: '',
-    message: '',
+    message: ''
   });
-  const [formStatus, setFormStatus] = useState(''); // 'success', 'error', ''
+  const [statusMessage, setStatusMessage] = useState('');
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData(prevData => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormStatus('sending');
+    setStatusMessage('Envoi en cours...');
+    setIsSuccess(false);
+
     // Simulate API call
-    setTimeout(() => {
-      if (formData.name && formData.email && formData.subject && formData.message) {
-        console.log('Formulaire soumis:', formData);
-        setFormStatus('success');
-        setFormData({ name: '', email: '', phone: '', subject: '', message: '' }); // Clear form
-      } else {
-        setFormStatus('error');
-      }
-    }, 1500);
+    try {
+      // In a real application, you would send this data to a backend server.
+      // For demonstration, we'll just log it and simulate a delay.
+      console.log('Form Data Submitted:', formData);
+      await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate network delay
+
+      setStatusMessage('Votre message a été envoyé avec succès !');
+      setIsSuccess(true);
+      setFormData({ name: '', email: '', subject: '', message: '' }); // Clear form
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setStatusMessage('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
+      setIsSuccess(false);
+    }
   };
 
   return (
-    <div className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-blue-700 mb-8">Contactez-Nous</h1>
-        <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-12">
-          Nous serions ravis de discuter de votre prochain projet. Remplissez le formulaire ci-dessous ou utilisez nos coordonnées directes.
-        </p>
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-4xl font-bold text-center text-blue-700 mb-12">Contactez-nous</h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white rounded-lg shadow-lg p-8 md:p-12">
-          {/* Contact Form */}
-          <div>
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">Envoyez-nous un message</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">Nom Complet</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Adresse E-mail</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="phone" className="block text-gray-700 text-sm font-bold mb-2">Numéro de Téléphone (Optionnel)</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div>
-                <label htmlFor="subject" className="block text-gray-700 text-sm font-bold mb-2">Sujet</label>
-                <select
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                >
-                  <option value="">Sélectionnez un sujet</option>
-                  <option value="Génie Civil">Demande Génie Civil</option>
-                  <option value="Création Digitale">Demande Création Digitale</option>
-                  <option value="Autre">Autre</option>
-                </select>
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">Votre Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows="6"
-                  className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 w-full"
-                disabled={formStatus === 'sending'}
-              >
-                {formStatus === 'sending' ? 'Envoi en cours...' : 'Envoyer le Message'}
-              </button>
-              {formStatus === 'success' && (
-                <p className="text-green-600 text-center mt-4">Votre message a été envoyé avec succès ! Nous vous répondrons sous 24-48 heures.</p>
-              )}
-              {formStatus === 'error' && (
-                <p className="text-red-600 text-center mt-4">Une erreur est survenue. Veuillez remplir tous les champs requis et réessayer.</p>
-              )}
-            </form>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">Informations de Contact Directes</h2>
-            <div className="space-y-6 text-gray-700">
-              <a href="mailto:naoussilionel8@gmail.com" className="flex items-center text-lg text-blue-600 hover:text-blue-800 transition duration-300">
-                <Mail size={24} className="mr-3 text-blue-600" /> naoussilionel8@gmail.com
-              </a>
-              <a href="tel:+237658120586" className="flex items-center text-lg text-blue-600 hover:text-blue-800 transition duration-300">
-                <Phone size={24} className="mr-3 text-blue-600" /> +237 658120586
-              </a>
-              <a href="https://wa.me/237658120586" target="_blank" rel="noopener noreferrer" className="flex items-center text-lg text-green-600 hover:text-green-800 transition duration-300">
-                {/* [Image of WhatsApp] */}
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp" className="w-6 h-6 mr-3" /> Envoyer un message WhatsApp
-              </a>
-              <p className="flex items-center text-lg"><MapPin size={24} className="mr-3 text-blue-600" /> Douala, Ndogbong</p>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* Contact Form */}
+        <div className="bg-white rounded-xl shadow-lg p-8">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-6">Envoyez-nous un message</h2>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">Nom Complet</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
             </div>
-
-            <h3 className="text-2xl font-bold text-gray-800 mt-10 mb-4">Suivez-nous sur les réseaux sociaux</h3>
-            <div className="flex space-x-6">
-              <a href="https://www.facebook.com/profile.php?id=61568848127921" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600 transition duration-300"><Facebook size={30} /></a>
-              <a href="https://www.linkedin.com/in/lionel-naoussi-29a52232b/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600 transition duration-300"><Linkedin size={30} /></a>
-              <a href="https://www.instagram.com/t.n.a.l/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-blue-600 transition duration-300"><Instagram size={30} /></a>
-              {/* Twitter link removed as per previous instruction */}
+            <div>
+              <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Adresse E-mail</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
             </div>
-
-            <h3 className="text-2xl font-bold text-gray-800 mt-10 mb-4">Notre Localisation</h3>
-            <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 text-center">
-              {/* Placeholder for an interactive map (e.g., Google Maps iframe) */}
-              Carte interactive ici
+            <div>
+              <label htmlFor="subject" className="block text-gray-700 text-sm font-bold mb-2">Sujet</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// Blog Page Component
-function BlogPage({ navigateTo }) {
-  const blogPosts = [
-    {
-      title: "Construction Durable : Les Secrets d'un Bâtiment Écologique et Rentable",
-      date: "24 Mai 2025",
-      excerpt: "Révolutionnez vos projets ! Découvrez comment la construction durable ne se contente pas de protéger la planète, mais optimise aussi vos coûts et la valeur de vos infrastructures. Un guide essentiel pour les professionnels du BTP.",
-      image: "https://placehold.co/400x250/007bff/ffffff?text=Bâtiment+Écologique",
-      fullContent: `
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">Construction Durable : Les Secrets d'un Bâtiment Écologique et Rentable</h2>
-        <p class="text-gray-700 mb-4">La construction durable n'est plus une option, mais une nécessité. Face aux défis climatiques et à la raréfaction des ressources, le secteur du BTP se tourne vers des pratiques plus respectueuses de l'environnement, sans pour autant sacrifier la rentabilité. Au contraire, investir dans le durable, c'est investir dans l'avenir et dans des économies à long terme.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Qu'est-ce que la Construction Durable ?</h3>
-        <p class="text-gray-700 mb-4">La construction durable englobe un ensemble de pratiques visant à minimiser l'impact environnemental des bâtiments tout au long de leur cycle de vie, de la conception à la démolition. Cela inclut le choix des matériaux, les techniques de construction, l'efficacité énergétique, la gestion de l'eau et des déchets, et l'intégration dans l'environnement local.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Les Piliers de la Rentabilité Durable :</h3>
-        <ul class="list-disc list-inside text-gray-700 mb-4">
-          <li><strong>Efficacité Énergétique :</strong> Des bâtiments bien isolés, équipés de systèmes de chauffage, ventilation et climatisation (CVC) performants, réduisent drastiquement les factures d'énergie. L'intégration de sources d'énergie renouvelable (panneaux solaires, géothermie) peut même rendre le bâtiment autonome.</li>
-          <li><strong>Choix des Matériaux :</strong> Privilégier les matériaux locaux, recyclés ou à faible empreinte carbone (bois, béton bas-carbone, matériaux biosourcés) réduit les coûts de transport et l'impact environnemental. Leur durabilité minimise également les besoins en maintenance et en remplacement.</li>
-          <li><strong>Gestion de l'Eau :</strong> La récupération des eaux de pluie, les systèmes de plomberie à faible consommation et le traitement des eaux grises permettent de réduire la consommation d'eau potable, générant des économies significatives.</li>
-          <li><strong>Optimisation des Déchets :</strong> Une bonne gestion des déchets de chantier, avec tri et recyclage, diminue les coûts d'élimination et favorise une économie circulaire.</li>
-          <li><strong>Valeur Immobilière Accrue :</strong> Les bâtiments durables sont de plus en plus recherchés par les acheteurs et les locataires, ce qui augmente leur valeur sur le marché et assure un meilleur retour sur investissement.</li>
-          <li><strong>Subventions et Incitations Fiscales :</strong> De nombreux gouvernements et organismes offrent des subventions, des crédits d'impôt ou des prêts à taux réduit pour les projets de construction durable, rendant ces investissements encore plus attractifs.</li>
-        </ul>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Naoussi Industries et la Construction Durable :</h3>
-        <p class="text-gray-700 mb-4">Chez Naoussi Industries, nous sommes à la pointe de la construction durable. Nos experts intègrent dès la phase de conception les principes de l'éco-conception, en utilisant des outils de modélisation avancés pour simuler les performances énergétiques et environnementales de vos futurs bâtiments. Nous collaborons avec des fournisseurs de matériaux certifiés et mettons en œuvre des techniques de construction innovantes pour garantir des ouvrages à la fois robustes, esthétiques et respectueux de la planète.</p>
-        <p class="text-gray-700">Investir dans un bâtiment durable avec Naoussi Industries, c'est choisir une solution qui non seulement préserve notre environnement, mais qui génère également des bénéfices tangibles et durables pour votre entreprise ou votre patrimoine.</p>
-      `,
-    },
-    {
-      title: "Maîtriser le SEO en 2025 : Le Guide Ultime pour Booster Votre Visibilité Digitale",
-      date: "24 Mai 2025",
-      excerpt: "Votre site est invisible ? Apprenez les stratégies SEO les plus efficaces pour dominer les résultats de recherche Google et attirer un trafic qualifié vers votre entreprise. Le succès en ligne commence ici !",
-      image: "https://placehold.co/400x250/8b5cf6/ffffff?text=SEO+Marketing",
-      fullContent: `
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">Maîtriser le SEO en 2025 : Le Guide Ultime pour Booster Votre Visibilité Digitale</h2>
-        <p class="text-gray-700 mb-4">Dans le paysage numérique en constante évolution, le Search Engine Optimization (SEO) reste la pierre angulaire d'une stratégie de marketing digital réussie. En 2025, les algorithmes de Google sont plus intelligents que jamais, privilégiant l'expérience utilisateur, la pertinence du contenu et l'autorité du site. Maîtriser le SEO n'est plus une option, c'est une nécessité pour toute entreprise souhaitant dominer sa niche en ligne.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Les Fondamentaux du SEO en 2025 :</h3>
-        <ul class="list-disc list-inside text-gray-700 mb-4">
-          <li><strong>Recherche de Mots-clés Approfondie :</strong> Au-delà des mots-clés génériques, concentrez-vous sur les intentions de recherche (informationnelle, navigationnelle, transactionnelle) et les mots-clés de longue traîne. Utilisez des outils avancés pour identifier les opportunités inexploitées.</li>
-          <li><strong>Contenu de Haute Qualité et Pertinent :</strong> Créez du contenu qui répond directement aux questions de votre audience, offre une valeur unique et est plus complet et plus précis que celui de vos concurrents. La qualité prime sur la quantité.</li>
-          <li><strong>Optimisation Technique (Core Web Vitals) :</strong> Assurez-vous que votre site est rapide, mobile-friendly et offre une excellente expérience utilisateur. Les Core Web Vitals (Largest Contentful Paint, First Input Delay, Cumulative Layout Shift) sont des facteurs de classement cruciaux.</li>
-          <li><strong>Netlinking Stratégique (Backlinks) :</strong> Obtenez des liens de qualité provenant de sites faisant autorité dans votre secteur. La qualité des backlinks est bien plus importante que leur quantité.</li>
-          <li><strong>SEO Local :</strong> Si vous avez une présence physique, optimisez votre fiche Google My Business et assurez-vous que vos informations de contact sont cohérentes sur toutes les plateformes.</li>
-        </ul>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Tendances SEO à Surveiller en 2025 :</h3>
-        <ul class="list-disc list-inside text-gray-700 mb-4">
-          <li><strong>Recherche Vocale :</strong> L'optimisation pour la recherche vocale nécessite une approche conversationnelle des mots-clés et des réponses directes aux questions.</li>
-          <li><strong>Expérience Utilisateur (UX) :</strong> Google met de plus en plus l'accent sur l'UX. Un site facile à naviguer, esthétique et rapide sera mieux classé.</li>
-          <li><strong>Contenu Vidéo :</strong> Les vidéos continuent de dominer. Optimisez vos vidéos pour le SEO en utilisant des titres, descriptions et tags pertinents sur YouTube et d'autres plateformes.</li>
-          <li><strong>IA et Contenu Généré :</strong> L'IA peut aider à la génération de contenu, mais l'originalité, la profondeur et l'expertise humaine restent indispensables pour un classement élevé.</li>
-          <li><strong>E-A-T (Expertise, Authoritativeness, Trustworthiness) :</strong> Google valorise les contenus créés par des experts reconnus. Mettez en avant votre expertise et votre crédibilité.</li>
-        </ul>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Comment Naoussi Industries peut Booster Votre SEO :</h3>
-        <p class="text-gray-700 mb-4">Chez Naoussi Industries, notre équipe de spécialistes en marketing digital est constamment à jour sur les dernières évolutions du SEO. Nous réalisons des audits complets de votre site, développons des stratégies de mots-clés personnalisées, créons du contenu optimisé et mettons en place des campagnes de netlinking efficaces. Notre objectif est de vous propulser en tête des résultats de recherche, d'augmenter votre trafic qualifié et de maximiser votre retour sur investissement.</p>
-        <p class="text-gray-700">Ne laissez pas vos concurrents prendre le dessus. Contactez Naoussi Industries dès aujourd'hui pour une stratégie SEO qui vous garantit une visibilité durable en 2025 et au-delà.</p>
-      `,
-    },
-    {
-      title: "L'Intelligence Artificielle au Service du Génie Civil : Révolution ou Évolution ?",
-      date: "24 Mai 2025",
-      excerpt: "L'IA transforme le BTP sous nos yeux ! Plongez dans les applications concrètes de l'intelligence artificielle qui optimisent la conception, la planification et la sécurité de vos chantiers. Le futur de la construction est déjà là.",
-      image: "https://placehold.co/400x250/007bff/ffffff?text=IA+Génie+Civil",
-      fullContent: `
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">L'Intelligence Artificielle au Service du Génie Civil : Révolution ou Évolution ?</h2>
-        <p class="text-gray-700 mb-4">L'Intelligence Artificielle (IA) est en train de redéfinir de nombreux secteurs, et le génie civil ne fait pas exception. Loin d'être une simple tendance, l'IA est en passe de devenir un outil indispensable, transformant les méthodes de conception, de construction et de gestion des infrastructures. Mais s'agit-il d'une révolution disruptive ou d'une évolution naturelle de nos pratiques ?</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">L'IA : Un Catalyseur d'Efficacité dans le BTP</h3>
-        <p class="text-gray-700 mb-4">L'intégration de l'IA dans le génie civil se manifeste à plusieurs niveaux, apportant des gains significatifs en termes d'efficacité, de sécurité et de durabilité :</p>
-        <ul class="list-disc list-inside text-gray-700 mb-4">
-          <li><strong>Optimisation de la Conception :</strong> Les algorithmes d'IA peuvent analyser d'énormes volumes de données (géotechniques, climatiques, urbaines) pour proposer des designs optimisés, plus résistants, plus écologiques et plus économiques. La conception générative permet d'explorer des milliers de variantes en un temps record.</li>
-          <li><strong>Planification et Gestion de Projet :</strong> L'IA peut prédire les retards potentiels, optimiser l'allocation des ressources, et améliorer la planification des tâches en identifiant les goulots d'étranglement. Cela se traduit par des projets livrés dans les délais et les budgets.</li>
-          <li><strong>Sécurité sur les Chantiers :</strong> Grâce à la vision par ordinateur et aux capteurs intelligents, l'IA peut détecter les situations dangereuses en temps réel, surveiller le respect des règles de sécurité et même anticiper les risques d'accidents.</li>
-          <li><strong>Maintenance Prédictive :</strong> Les systèmes d'IA analysent les données des capteurs installés sur les infrastructures (ponts, routes, bâtiments) pour prédire les pannes et les besoins en maintenance avant qu'ils ne surviennent, prolongeant ainsi la durée de vie des ouvrages et réduisant les coûts.</li>
-          <li><strong>Robotique et Automatisation :</strong> L'IA pilote des robots de construction capables d'effectuer des tâches répétitives ou dangereuses avec une précision inégalée, augmentant la productivité et la sécurité.</li>
-        </ul>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Révolution ou Évolution ?</h3>
-        <p class="text-gray-700 mb-4">L'IA n'est pas là pour remplacer l'ingénieur, mais pour augmenter ses capacités. C'est une évolution majeure qui permet aux professionnels du génie civil de prendre des décisions plus éclairées, de concevoir des structures plus complexes et plus résilientes, et de gérer des projets avec une efficacité sans précédent. Elle automatise les tâches fastidieuses, libérant du temps pour la créativité et la résolution de problèmes complexes.</p>
-        <p class="text-gray-700">Chez Naoussi Industries, nous embrassons cette évolution. Nos équipes sont formées aux dernières technologies d'IA et de modélisation, nous permettant d'offrir des solutions de génie civil à la pointe de l'innovation, garantissant la performance, la sécurité et la durabilité de vos infrastructures.</p>
-      `,
-    },
-    {
-      title: "Storytelling Visuel : Créez des Contenus Digitaux qui Captivent et Convertissent",
-      date: "24 Mai 2025",
-      excerpt: "Vos messages passent inaperçus ? Découvrez le pouvoir du storytelling visuel pour créer des campagnes mémorables, bâtir une connexion émotionnelle avec votre audience et transformer vos prospects en clients fidèles.",
-      image: "https://placehold.co/400x250/8b5cf6/ffffff?text=Storytelling+Visuel",
-      fullContent: `
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">Storytelling Visuel : Créez des Contenus Digitaux qui Captivent et Convertissent</h2>
-        <p class="text-gray-700 mb-4">Dans un monde digital saturé d'informations, capter l'attention de votre audience est un défi constant. Le storytelling visuel n'est pas une simple tendance, c'est une stratégie puissante qui permet à votre marque de se démarquer, de créer un lien émotionnel fort et de transformer l'engagement en conversion. Oubliez les messages plats, il est temps de raconter votre histoire avec impact.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Pourquoi le Storytelling Visuel est Indispensable ?</h3>
-        <ul class="list-disc list-inside text-gray-700 mb-4">
-          <li><strong>Mémoire et Rétention :</strong> Les humains sont des êtres visuels. Une histoire racontée avec des images, des vidéos ou des infographies est bien plus mémorable qu'un simple texte.</li>
-          <li><strong>Connexion Émotionnelle :</strong> Les visuels ont le pouvoir de susciter des émotions, de l'empathie et de la confiance, des éléments clés pour bâtir une relation durable avec votre audience.</li>
-          <li><strong>Simplification de Messages Complexes :</strong> Des concepts complexes peuvent être expliqués de manière claire et concise grâce à des visuels bien conçus.</li>
-          <li><strong>Viralité et Partage :</strong> Un contenu visuel engageant est plus susceptible d'être partagé sur les réseaux sociaux, augmentant ainsi votre portée organique.</li>
-          <li><strong>Différenciation de la Marque :</strong> Dans un marché concurrentiel, une histoire visuelle unique permet à votre marque de se distinguer et de laisser une impression durable.</li>
-        </ul>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Les Éléments Clés d'un Storytelling Visuel Réussi :</h3>
-        <ul class="list-disc list-inside text-gray-700 mb-4">
-          <li><strong>Identifiez Votre Message Central :</strong> Quelle est l'histoire que vous voulez raconter ? Quel problème résolvez-vous pour votre client ?</li>
-          <li><strong>Connaissez Votre Audience :</strong> À qui vous adressez-vous ? Quels sont leurs besoins, leurs désirs, leurs points de douleur ?</li>
-          <li><strong>Choisissez les Bons Médias :</strong> Photos de haute qualité, illustrations originales, vidéos dynamiques, infographies claires, animations... le choix dépend de votre histoire et de votre plateforme.</li>
-          <li><strong>Structurez Votre Récit :</strong> Comme toute bonne histoire, elle doit avoir un début (le problème), un milieu (la solution, votre marque), et une fin (le bénéfice pour le client).</li>
-          <li><strong>Appel à l'Action Clair :</strong> Que voulez-vous que votre audience fasse après avoir été captivée par votre histoire ?</li>
-        </ul>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Naoussi Industries : Votre Partenaire en Storytelling Visuel</h3>
-        <p class="text-gray-700 mb-4">Chez Naoussi Industries, nous sommes des experts en création de contenu digital qui raconte votre histoire. De la conception graphique à la production vidéo, en passant par le UI/UX design, nous maîtrisons l'art de transformer vos idées en expériences visuelles percutantes. Nous vous aidons à définir votre message, à choisir les meilleurs supports et à créer des campagnes qui non seulement captivent, mais génèrent aussi des résultats concrets pour votre entreprise.</p>
-        <p class="text-700">Prêt à donner vie à votre marque avec des histoires visuelles inoubliables ? Contactez Naoussi Industries dès aujourd'hui pour une consultation personnalisée.</p>
-      `,
-    },
-    {
-      title: "Gestion de Projet BTP : Les 7 Erreurs à Éviter pour une Livraison Réussie",
-      date: "24 Mai 2025",
-      excerpt: "Vos projets prennent du retard ? Évitez les pièges courants de la gestion de projet en BTP grâce à nos conseils d'experts. Assurez une livraison dans les délais et le budget, sans stress !",
-      image: "https://placehold.co/400x250/007bff/ffffff?text=Gestion+Projet+BTP",
-      fullContent: `
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">Gestion de Projet BTP : Les 7 Erreurs à Éviter pour une Livraison Réussie</h2>
-        <p class="text-gray-700 mb-4">La gestion de projet dans le secteur du Bâtiment et des Travaux Publics (BTP) est une discipline complexe, où chaque détail compte. Un projet réussi est le fruit d'une planification rigoureuse, d'une exécution précise et d'une communication fluide. Cependant, de nombreuses erreurs peuvent survenir, entraînant des retards, des dépassements de coûts et une qualité compromise. Voici les 7 erreurs les plus courantes à éviter pour garantir le succès de vos projets.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">1. Manque de Planification Initiale Approfondie :</h3>
-        <p class="text-gray-700 mb-4">Une planification hâtive est la recette du désastre. Ne pas définir clairement les objectifs, le périmètre, les ressources et les délais dès le départ mènera inévitablement à des ajustements coûteux en cours de route. Prenez le temps d'analyser les risques, d'établir un calendrier détaillé et de créer un budget réaliste.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">2. Communication Inefficace :</h3>
-        <p class="text-gray-700 mb-4">La communication est le ciment de tout projet. Un manque de transparence entre les parties prenantes (client, équipe, sous-traitants) peut entraîner des malentendus, des erreurs et des frustrations. Mettez en place des réunions régulières, utilisez des outils de collaboration et assurez-vous que les informations clés circulent efficacement.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">3. Sous-estimation des Risques :</h3>
-        <p class="text-gray-700 mb-4">Ignorer ou sous-estimer les risques potentiels (météo, pénurie de matériaux, problèmes techniques inattendus) est une erreur critique. Identifiez les risques dès le début du projet, évaluez leur impact et développez des plans d'atténuation. Un bon gestionnaire anticipe plutôt que de réagir.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">4. Mauvaise Gestion des Changements :</h3>
-        <p class="text-gray-700 mb-4">Les changements sont inévitables dans le BTP. Cependant, une gestion informelle ou inexistante des demandes de changement peut déséquilibrer le projet. Mettez en place un processus clair pour évaluer, approuver et documenter chaque modification de périmètre, de coût ou de délai.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">5. Négliger la Qualité :</h3>
-        <p class="text-gray-700 mb-4">Sacrifier la qualité pour respecter les délais ou le budget est une erreur coûteuse à long terme. Des défauts de construction peuvent entraîner des réparations coûteuses, des litiges et nuire à votre réputation. Intégrez des contrôles qualité réguliers et assurez-vous que toutes les normes sont respectées.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">6. Surcharge des Ressources :</h3>
-        <p class="text-gray-700 mb-4">Tenter de faire trop avec trop peu de ressources, ou au contraire, surcharger une équipe, conduit à l'épuisement, aux erreurs et à une baisse de productivité. Évaluez précisément les besoins en personnel, équipement et matériaux, et ajustez-les en fonction de l'avancement du projet.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">7. Manque de Suivi et d'Évaluation :</h3>
-        <p class="text-gray-700 mb-4">Un projet ne s'arrête pas à sa livraison. Ne pas suivre les performances après coup, ne pas analyser les succès et les échecs, c'est se priver d'opportunités d'amélioration. Mettez en place des indicateurs de performance clés (KPIs) et effectuez des revues post-projet pour capitaliser sur l'expérience acquise.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Naoussi Industries : Votre Expert en Gestion de Projet BTP</h3>
-        <p class="text-gray-700">Chez Naoussi Industries, nous mettons à votre disposition notre expertise en gestion de projet pour éviter ces pièges. Notre approche méthodique, notre maîtrise des outils de planification et notre communication transparente garantissent la réussite de vos projets, du début à la fin. Contactez-nous pour une gestion de projet sans faille.</p>
-      `,
-    },
-    {
-      title: "UI/UX Design : La Clé d'une Expérience Utilisateur Inoubliable sur Votre Site Web",
-      date: "24 Mai 2025",
-      excerpt: "Votre site ne convertit pas ? Comprenez comment un design UI/UX intuitif et esthétique peut transformer la navigation de vos visiteurs en un parcours fluide, agréable et générateur de ventes. L'engagement client commence par le design.",
-      image: "https://placehold.co/400x250/8b5cf6/ffffff?text=UI+UX+Design",
-      fullContent: `
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">UI/UX Design : La Clé d'une Expérience Utilisateur Inoubliable sur Votre Site Web</h2>
-        <p class="text-gray-700 mb-4">Dans le monde digital actuel, un beau site web ne suffit plus. Pour capter et retenir l'attention de vos visiteurs, et surtout les convertir en clients, vous avez besoin d'une expérience utilisateur (UX) irréprochable, soutenue par une interface utilisateur (UI) intuitive et esthétique. L'UI et l'UX sont les deux faces d'une même pièce, essentielles à la réussite de votre présence en ligne.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Qu'est-ce que l'UI et l'UX Design ?</h3>
-        <ul class="list-disc list-inside text-gray-700 mb-4">
-          <li><strong>UX (User Experience) Design :</strong> Il s'agit de l'ensemble du processus de conception visant à créer des produits qui offrent des expériences significatives et pertinentes aux utilisateurs. L'UX se concentre sur la compréhension des besoins des utilisateurs, leurs comportements, leurs motivations, et la manière dont ils interagissent avec votre produit. C'est le "pourquoi", le "quoi" et le "comment" de l'interaction.</li>
-          <li><strong>UI (User Interface) Design :</strong> C'est la conception visuelle et interactive de l'interface d'un produit. L'UI se concentre sur l'apparence et l'interactivité du produit. Cela inclut les couleurs, la typographie, les icônes, les boutons, les images, et la manière dont l'utilisateur interagit avec ces éléments. C'est l'aspect "look and feel" du produit.</li>
-        </ul>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">L'Impact d'un Bon UI/UX sur Votre Business :</h3>
-        <ul class="list-disc list-inside text-gray-700 mb-4">
-          <li><strong>Augmentation des Conversions :</strong> Un parcours utilisateur fluide et un design engageant réduisent les frictions, incitant les visiteurs à accomplir les actions souhaitées (achat, inscription, contact).</li>
-          <li><strong>Amélioration de la Satisfaction Client :</strong> Une expérience agréable fidélise les utilisateurs, qui sont plus enclins à revenir et à recommander votre site.</li>
-          <li><strong>Réduction du Taux de Rebond :</strong> Un site intuitif et pertinent encourage les visiteurs à explorer davantage, diminuant le nombre de ceux qui quittent rapidement.</li>
-          <li><strong>Renforcement de la Crédibilité :</strong> Un design professionnel et une navigation sans accroc inspirent confiance et positionnent votre marque comme fiable et experte.</li>
-          <li><strong>Avantage Concurrentiel :</strong> Dans un marché saturé, une expérience utilisateur supérieure peut être votre principal différenciateur.</li>
-        </ul>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Naoussi Industries : Votre Expert en UI/UX Design</h3>
-        <p class="text-gray-700 mb-4">Chez Naoussi Industries, nous ne nous contentons pas de créer de beaux designs ; nous concevons des expériences. Notre équipe d'experts UI/UX analyse en profondeur vos objectifs business et les besoins de vos utilisateurs pour créer des interfaces qui sont non seulement visuellement attrayantes, mais aussi hautement fonctionnelles et intuitives. Du wireframing au prototypage, en passant par les tests utilisateurs, nous vous accompagnons à chaque étape pour garantir que votre site web ou application offre une expérience inoubliable.</p>
-        <p class="text-gray-700">Transformez vos visiteurs en clients fidèles grâce à un design UI/UX qui fait la différence. Contactez Naoussi Industries pour une consultation sur mesure.</p>
-      `,
-    },
-    {
-      title: "5 Innovations qui Redéfinissent l'Architecture Moderne",
-      date: "24 Mai 2025",
-      excerpt: "De l'impression 3D à la conception paramétrique, l'architecture d'aujourd'hui est en pleine révolution...",
-      image: "https://placehold.co/400x250/007bff/ffffff?text=Blog+Arch",
-      fullContent: `
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">5 Innovations qui Redéfinissent l'Architecture Moderne</h2>
-        <p class="text-gray-700 mb-4">L'architecture, discipline millénaire, est en constante évolution. Aujourd'hui, grâce aux avancées technologiques et à une prise de conscience environnementale accrue, elle connaît une transformation sans précédent. Des matériaux révolutionnaires aux outils de conception intelligents, voici 5 innovations majeures qui redéfinissent la manière dont nous concevons, construisons et interagissons avec nos espaces.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">1. L'Impression 3D de Bâtiments :</h3>
-        <p class="text-gray-700 mb-4">L'impression 3D, ou fabrication additive, est en train de révolutionner la construction. Elle permet de construire des murs, voire des maisons entières, couche par couche, avec une rapidité et une précision remarquables. Cette technologie réduit les délais de construction, les coûts de main-d'œuvre et la quantité de déchets, tout en offrant une liberté de forme inédite aux architectes. Elle ouvre la voie à des constructions plus abordables et plus personnalisées.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">2. La Conception Paramétrique et Générative :</h3>
-        <p class="text-gray-700 mb-4">Ces approches utilisent des algorithmes pour générer des formes complexes et optimisées en fonction de paramètres prédéfinis (ensoleillement, vent, flux de circulation, etc.). Les architectes ne dessinent plus une forme fixe, mais définissent des règles et des contraintes, laissant l'ordinateur explorer des milliers de solutions. Cela permet de créer des structures à la fois esthétiques, fonctionnelles et ultra-performantes, impossibles à concevoir manuellement.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">3. Les Matériaux Intelligents et Auto-réparants :</h3>
-        <p class="text-gray-700 mb-4">La recherche développe des matériaux capables de réagir à leur environnement. Le béton auto-cicatrisant, par exemple, contient des bactéries qui produisent du calcaire pour combler les fissures. Les vitrages dynamiques peuvent ajuster leur opacité pour réguler la lumière et la chaleur. Ces innovations promettent des bâtiments plus résilients, moins gourmands en énergie et nécessitant moins de maintenance.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">4. La Réalité Virtuelle (RV) et la Réalité Augmentée (RA) :</h3>
-        <p class="text-gray-700 mb-4">La RV permet aux architectes et aux clients de "visiter" un bâtiment avant même sa construction, d'en évaluer les volumes, les lumières et l'ambiance. La RA, quant à elle, superpose des informations numériques au monde réel, aidant les ouvriers sur le chantier à visualiser les plans en 3D ou les inspecteurs à identifier les problèmes. Ces technologies améliorent la collaboration, réduisent les erreurs et facilitent la prise de décision.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">5. Les Bâtiments à Énergie Positive (BEPOS) et Carbone Zéro :</h3>
-        <p class="text-gray-700 mb-4">L'objectif est de construire des bâtiments qui produisent plus d'énergie qu'ils n'en consomment (BEPOS) ou dont l'empreinte carbone est neutre sur l'ensemble de leur cycle de vie. Cela passe par une conception bioclimatique, l'intégration massive d'énergies renouvelables, l'utilisation de matériaux bas-carbone et une gestion intelligente de l'énergie. Ces bâtiments sont l'avenir de l'architecture durable.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Naoussi Industries : Pionnier de l'Architecture de Demain</h3>
-        <p class="text-gray-700">Chez Naoussi Industries, nous intégrons ces innovations au cœur de nos projets. Notre engagement envers l'excellence et la durabilité nous pousse à explorer et à maîtriser ces technologies pour concevoir et construire des bâtiments qui ne sont pas seulement fonctionnels et esthétiques, mais aussi intelligents, résilients et respectueux de l'environnement. Contactez-nous pour bâtir ensemble l'architecture de demain.</p>
-      `,
-    },
-    {
-      title: "Comment le SEO peut Booster Votre Visibilité en Ligne",
-      date: "24 Mai 2025",
-      excerpt: "Comprendre les bases du référencement naturel est crucial pour attirer plus de trafic qualifié vers votre site web...",
-      image: "https://placehold.co/400x250/8b5cf6/ffffff?text=Blog+SEO",
-      fullContent: `
-        <h2 class="text-2xl font-bold text-gray-800 mb-4">Comment le SEO peut Booster Votre Visibilité en Ligne</h2>
-        <p class="text-gray-700 mb-4">Dans le vaste océan d'Internet, avoir un site web est une première étape, mais être trouvé est le véritable défi. C'est là qu'intervient le SEO (Search Engine Optimization), ou référencement naturel. Il ne s'agit pas d'une formule magique, mais d'un ensemble de stratégies et de techniques visant à améliorer la position de votre site dans les résultats des moteurs de recherche comme Google. Un bon SEO signifie plus de visibilité, plus de trafic et, in fine, plus de clients.</p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Qu'est-ce que le SEO et pourquoi est-il Crucial ?</h3>
-        <p class="text-gray-700 mb-4">Le SEO est l'art d'optimiser votre site web pour qu'il apparaisse en bonne position sur les pages de résultats des moteurs de recherche (SERP) pour des requêtes spécifiques. Contrairement à la publicité payante (SEA), le trafic généré par le SEO est "organique", c'est-à-dire gratuit et durable. Pourquoi est-ce si important ?</p>
-        <ul class="list-disc list-inside text-gray-700 mb-4">
-          <li><strong>Crédibilité et Confiance :</strong> Les utilisateurs ont tendance à faire davantage confiance aux résultats organiques qu'aux annonces payantes. Une bonne position renforce votre autorité.</li>
-          <li><strong>Trafic Qualifié :</strong> En ciblant les bons mots-clés, vous attirez des visiteurs qui sont activement à la recherche de vos produits ou services.</li>
-          <li><strong>Coût-Efficacité :</strong> Bien que le SEO demande un investissement initial en temps et en ressources, il offre un excellent retour sur investissement à long terme par rapport aux campagnes publicitaires continues.</li>
-          <li><strong>Expérience Utilisateur Améliorée :</strong> De nombreuses pratiques SEO (vitesse de chargement, adaptabilité mobile) contribuent directement à une meilleure expérience pour vos visiteurs.</li>
-        </ul>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Les Piliers du SEO :</h3>
-        <ul class="list-disc list-inside text-gray-700 mb-4">
-          <li><strong>SEO On-Page :</strong> Concerne les optimisations directement sur votre site. Cela inclut le contenu (qualité, pertinence, mots-clés), les balises HTML (titres, meta descriptions, balises Hn), l'optimisation des images, la structure des URL, et le maillage interne.</li>
-          <li><strong>SEO Off-Page :</strong> Regroupe les facteurs externes à votre site qui influencent votre classement. Le plus important est le netlinking (backlinks), c'est-à-dire les liens entrants provenant d'autres sites. La qualité et la pertinence de ces liens sont primordiales.</li>
-          <li><strong>SEO Technique :</strong> Assure que votre site est techniquement "crawlable" et "indexable" par les moteurs de recherche. Cela comprend la vitesse de chargement, l'optimisation mobile, la structure du site, le fichier robots.txt, le sitemap XML, et la gestion des erreurs (404, redirections).</li>
-        </ul>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Naoussi Industries et Votre Stratégie SEO :</h3>
-        <p class="text-gray-700 mb-4">Chez Naoussi Industries, nous comprenons que chaque entreprise est unique. C'est pourquoi nous développons des stratégies SEO personnalisées, adaptées à vos objectifs et à votre secteur d'activité. Nos experts réalisent des audits approfondis, identifient les mots-clés les plus pertinents, optimisent votre contenu et votre structure technique, et mettent en place des campagnes de netlinking ciblées. Nous suivons de près les performances et ajustons nos stratégies pour vous assurer une visibilité maximale et un trafic qualifié.</p>
-        <p class="text-gray-700">Ne laissez pas votre site se perdre dans les profondeurs de Google. Contactez Naoussi Industries pour une stratégie SEO qui vous propulsera au sommet des résultats de recherche et augmentera considérablement votre présence en ligne.</p>
-      `,
-    },
-  ];
-
-  const handleReadMore = (post) => {
-    navigateTo('article', post); // Pass the entire post object
-  };
-
-  return (
-    <div className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-blue-700 mb-8">Notre Blog</h1>
-        <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-12">
-          Explorez nos articles, conseils et analyses sur les dernières tendances en génie civil et création digitale.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-              <img src={post.image} alt={post.title} className="w-full h-48 object-cover" onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/400x250/cccccc/333333?text=Image+Article"; }} />
-              <div className="p-6">
-                <p className="text-gray-500 text-sm mb-2">{post.date}</p>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{post.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{post.excerpt}</p>
-                <button
-                  onClick={() => handleReadMore(post)}
-                  className="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
-                >
-                  Lire la suite <ChevronRight size={18} className="ml-1" />
-                </button>
-              </div>
+            <div>
+              <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">Votre Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                value={formData.message}
+                onChange={handleChange}
+                className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              ></textarea>
             </div>
-          ))}
-        </div>
-
-        <section className="text-center mt-16 bg-blue-100 p-8 rounded-lg shadow-md">
-          <h2 className="text-2xl font-bold text-blue-700 mb-4">Abonnez-vous à notre Newsletter</h2>
-          <p className="text-gray-700 mb-6">Recevez les dernières actualités et insights directement dans votre boîte de réception.</p>
-          <form className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <input
-              type="email"
-              placeholder="Votre adresse e-mail"
-              className="w-full sm:w-1/2 md:w-1/3 py-3 px-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
             <button
               type="submit"
-              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300"
+              className="bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-full text-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg w-full"
             >
-              S'abonner
+              Envoyer le Message
             </button>
+            {statusMessage && (
+              <p className={`mt-4 text-center ${isSuccess ? 'text-green-600' : 'text-red-600'}`}>
+                {statusMessage}
+              </p>
+            )}
           </form>
-        </section>
+        </div>
+
+        {/* Contact Information */}
+        <div className="bg-blue-50 rounded-xl shadow-lg p-8">
+          <h2 className="text-3xl font-semibold text-blue-700 mb-6">Nos Coordonnées</h2>
+          <div className="space-y-6">
+            <div className="flex items-center text-gray-800">
+              <MapPin size={24} className="mr-4 text-blue-600" />
+              <div>
+                <h3 className="font-semibold text-lg">Adresse</h3>
+                <p>Douala, Cameroun</p>
+              </div>
+            </div>
+            <div className="flex items-center text-gray-800">
+              <Phone size={24} className="mr-4 text-blue-600" />
+              <div>
+                <h3 className="font-semibold text-lg">Téléphone</h3>
+                <p><a href="tel:+237658120586" className="hover:underline">(+237) 658 120 586</a></p>
+              </div>
+            </div>
+            <div className="flex items-center text-gray-800">
+              <Mail size={24} className="mr-4 text-blue-600" />
+              <div>
+                <h3 className="font-semibold text-lg">Email</h3>
+                <p><a href="mailto:contact@naoussiindustries.com" className="hover:underline">contact@naoussiindustries.com</a></p>
+              </div>
+            </div>
+            <div className="flex items-center text-gray-800">
+              {/* WhatsApp Icon with link */}
+              <a href="https://wa.me/237658120586" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-800 hover:text-green-600 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="mr-4 text-green-500">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181 0 6.145 1.24 8.413 3.509 2.268 2.269 3.506 5.235 3.508 8.413 0 6.557-5.336 11.892-11.893 11.892-.073 0-.146 0-.219-.001zm10.602-2.327c-.307 0-1.047-.135-1.747-.463l-.065-.031-1.144.304 3.356-1.104-.04-.023c-1.21-.745-1.92-1.92-1.92-3.143 0-2.613 2.13-4.743 4.746-4.743 1.214 0 2.302.465 3.143 1.292.842.827 1.293 1.914 1.293 3.125 0 2.613-2.13 4.743-4.746 4.743zm-1.8-7.974c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384zm3.333 0c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384zm3.333 0c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384zm3.333 0c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384z"/>
+                </svg>
+                <div>
+                  <h3 className="font-semibold text-lg">WhatsApp</h3>
+                  <p>(+237) 658 120 586</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
 
-// New ArticlePage Component
+// BlogPage Component
+function BlogPage({ navigateTo }) {
+  const articles = [
+    {
+      id: 1,
+      title: "L'impact de l'IA sur l'industrie du BTP",
+      excerpt: "Découvrez comment l'intelligence artificielle révolutionne la construction, de la planification à l'exécution des projets.",
+      image: "https://placehold.co/600x400/cce5ff/007bff?text=IA+BTP",
+      date: "15 Mai 2025",
+      author: "Naoussi Industries",
+      content: `
+        <p class="mb-4">L'intelligence artificielle (IA) est en train de transformer radicalement de nombreux secteurs, et l'industrie du Bâtiment et des Travaux Publics (BTP) ne fait pas exception. L'intégration de l'IA promet d'améliorer l'efficacité, la sécurité et la durabilité des projets de construction.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Optimisation de la planification et de la conception</h3>
+        <p class="mb-4">Les algorithmes d'IA peuvent analyser d'énormes quantités de données pour optimiser la conception des bâtiments, identifier les risques potentiels et prédire les coûts avec une précision accrue. Cela permet de réduire les erreurs et les retards, et d'améliorer la prise de décision dès les premières phases du projet.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Amélioration de la sécurité sur les chantiers</h3>
+        <p class="mb-4">L'IA peut être utilisée pour surveiller les chantiers en temps réel, détecter les comportements à risque et anticiper les accidents. Des systèmes de vision par ordinateur peuvent identifier les travailleurs sans équipement de protection individuelle (EPI) ou les zones dangereuses, alertant ainsi les responsables pour une intervention rapide.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Gestion de projet et maintenance prédictive</h3>
+        <p class="mb-4">Les outils basés sur l'IA peuvent suivre l'avancement des projets, gérer les ressources et optimiser les calendriers. En outre, l'IA permet la maintenance prédictive des équipements et des infrastructures, en analysant les données des capteurs pour anticiper les pannes et planifier les interventions avant qu'elles ne surviennent, prolongeant ainsi la durée de vie des actifs et réduisant les coûts de réparation.</p>
+        <p class="mb-4">En conclusion, l'IA n'est plus une technologie futuriste pour le BTP, mais une réalité qui offre des opportunités immenses pour innover et améliorer les pratiques actuelles. Les entreprises qui sauront l'adopter tireront un avantage concurrentiel significatif.</p>
+      `
+    },
+    {
+      id: 2,
+      title: "Les tendances du développement web en 2025",
+      excerpt: "Explorez les technologies et les approches qui façonneront le paysage du développement web cette année.",
+      image: "https://placehold.co/600x400/cce5ff/007bff?text=Web+Tendances",
+      date: "10 Mai 2025",
+      author: "Naoussi Industries",
+      content: `
+        <p class="mb-4">L'année 2025 marque une nouvelle ère dans le développement web, avec l'émergence de technologies et de pratiques qui redéfinissent la manière dont nous construisons et interagissons avec le web.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">L'essor des WebAssembly (Wasm)</h3>
+        <p class="mb-4">WebAssembly continue de gagner du terrain, permettant aux développeurs d'exécuter du code à haute performance (écrit en C++, Rust, Go, etc.) directement dans le navigateur. Cela ouvre la porte à des applications web plus complexes et gourmandes en ressources, avec des performances quasi-natives.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">L'omniprésence de l'IA et du Machine Learning</h3>
+        <p class="mb-4">L'intégration de l'IA et du Machine Learning dans les applications web devient la norme. Des chatbots intelligents aux systèmes de recommandation personnalisés, l'IA améliore l'expérience utilisateur et automatise des tâches complexes, rendant les applications plus intuitives et réactives.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Le Serverless et les Edge Functions</h3>
+        <p class="mb-4">L'architecture serverless, combinée aux fonctions "Edge" exécutées au plus près de l'utilisateur, réduit la latence et simplifie le déploiement. Cette approche permet aux développeurs de se concentrer sur le code sans se soucier de la gestion des serveurs, offrant une scalabilité et une résilience accrues.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">L'importance croissante de la cybersécurité</h3>
+        <p class="mb-4">Avec l'augmentation des menaces en ligne, la cybersécurité est plus que jamais une priorité. Les développeurs adoptent des pratiques de sécurité "shift-left", intégrant la sécurité dès les premières étapes du développement, et utilisent des outils avancés pour protéger les données et les applications.</p>
+        <p class="mb-4">Ces tendances ne sont que quelques exemples de l'évolution rapide du web. Rester informé et s'adapter à ces changements est crucial pour tout développeur souhaitant rester pertinent en 2025 et au-delà.</p>
+      `
+    },
+    {
+      id: 3,
+      title: "Stratégies de branding pour les PME",
+      excerpt: "Construisez une marque forte et mémorable pour votre petite ou moyenne entreprise grâce à ces conseils pratiques.",
+      image: "https://placehold.co/600x400/cce5ff/007bff?text=Branding+PME",
+      date: "01 Mai 2025",
+      author: "Naoussi Industries",
+      content: `
+        <p class="mb-4">Pour les petites et moyennes entreprises (PME), un branding efficace est essentiel pour se démarquer dans un marché concurrentiel. Une marque forte ne se limite pas à un logo ; elle englobe l'ensemble de l'expérience client et la perception de votre entreprise.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Définissez votre identité de marque</h3>
+        <p class="mb-4">Avant de créer des éléments visuels, il est crucial de définir qui vous êtes en tant qu'entreprise. Quelles sont vos valeurs ? Quelle est votre mission ? Quelle est votre proposition de valeur unique ? Comprendre votre identité vous aidera à créer une marque authentique et cohérente.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Connaissez votre public cible</h3>
+        <p class="mb-4">Un branding réussi résonne avec votre audience. Qui sont vos clients idéaux ? Quels sont leurs besoins, leurs désirs et leurs points faibles ? Adaptez votre message et votre esthétique pour qu'ils parlent directement à ce public.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Créez une identité visuelle cohérente</h3>
+        <p class="mb-4">Votre logo, vos couleurs, vos typographies et vos images doivent être cohérents sur tous les points de contact : site web, réseaux sociaux, cartes de visite, emballages, etc. Cette cohérence renforce la reconnaissance de votre marque et la rend plus mémorable.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Racontez votre histoire</h3>
+        <p class="mb-4">Les gens se connectent aux histoires. Partagez l'histoire de votre entreprise, ce qui vous motive, et comment vous aidez vos clients. Une narration authentique crée un lien émotionnel et fidélise votre audience.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Soyez constant et adaptable</h3>
+        <p class="mb-4">Une fois votre stratégie de branding établie, la constance est clé. Cependant, le marché évolue, et votre marque doit être capable de s'adapter. Évaluez régulièrement l'efficacité de votre branding et n'hésitez pas à l'ajuster si nécessaire.</p>
+        <p class="mb-4">En investissant dans un branding solide, les PME peuvent non seulement attirer de nouveaux clients, mais aussi bâtir une réputation durable et une base de clients fidèles.</p>
+      `
+    },
+    {
+      id: 4,
+      title: "L'importance de l'UX/UI dans les applications mobiles",
+      excerpt: "Découvrez pourquoi une bonne expérience utilisateur et une interface intuitive sont cruciales pour le succès de votre application.",
+      image: "https://placehold.co/600x400/cce5ff/007bff?text=UX/UI+Mobile",
+      date: "20 Avril 2025",
+      author: "Naoussi Industries",
+      content: `
+        <p class="mb-4">Dans le monde saturé des applications mobiles, l'expérience utilisateur (UX) et l'interface utilisateur (UI) ne sont plus de simples options, mais des piliers fondamentaux du succès. Une application peut offrir des fonctionnalités révolutionnaires, mais si elle est difficile à utiliser ou peu attrayante, les utilisateurs ne resteront pas.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">L'UX : Au-delà de la simple utilisation</h3>
+        <p class="mb-4">L'UX, ou User Experience, englobe l'ensemble des interactions d'un utilisateur avec une application. Il s'agit de s'assurer que l'application est non seulement fonctionnelle, mais aussi agréable, efficace et pertinente pour l'utilisateur. Une bonne UX réduit la frustration, augmente la satisfaction et favorise la rétention.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">L'UI : La première impression compte</h3>
+        <p class="mb-4">L'UI, ou User Interface, est l'aspect visuel et interactif de l'application. C'est ce que l'utilisateur voit et avec quoi il interagit : les boutons, les icônes, les couleurs, les typographies. Une UI bien conçue est esthétiquement plaisante, facile à naviguer et en ligne avec l'identité de la marque. Elle crée la première impression et influence directement la perception de l'utilisateur.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Synergie UX/UI pour le succès</h3>
+        <p class="mb-4">L'UX et l'UI sont intrinsèquement liées et doivent travailler en synergie. Une belle interface sans une bonne expérience utilisateur est comme une voiture de sport sans moteur. Inversement, une application très fonctionnelle mais visuellement repoussante aura du mal à attirer et retenir les utilisateurs.</p>
+        <p class="mb-4">Investir dans un design UX/UI de qualité, c'est investir dans la satisfaction de vos utilisateurs, la fidélisation de votre clientèle et, in fine, le succès de votre application mobile.</p>
+      `
+    },
+    {
+      id: 5,
+      title: "La cybersécurité : un enjeu majeur pour les entreprises en 2025",
+      excerpt: "Face à l'augmentation des menaces, la cybersécurité est devenue une priorité absolue pour protéger les données et les systèmes.",
+      image: "https://placehold.co/600x400/cce5ff/007bff?text=Cybersecurity",
+      date: "05 Avril 2025",
+      author: "Naoussi Industries",
+      content: `
+        <p class="mb-4">En 2025, la cybersécurité n'est plus une simple préoccupation technique, mais un enjeu stratégique et économique majeur pour toutes les entreprises, quelle que soit leur taille. Les cyberattaques sont de plus en plus sophistiquées et fréquentes, menaçant la confidentialité des données, l'intégrité des systèmes et la continuité des activités.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">L'évolution des menaces</h3>
+        <p class="mb-4">Les ransomwares, les attaques de phishing, les malwares avancés et les menaces persistantes avancées (APT) sont en constante évolution. Les cybercriminels exploitent les vulnérabilités logicielles, les erreurs humaines et les configurations systèmes faibles pour infiltrer les réseaux et dérober des informations sensibles.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Les conséquences d'une cyberattaque</h3>
+        <p class="mb-4">Les conséquences d'une cyberattaque réussie peuvent être dévastatrices : pertes financières importantes, atteinte à la réputation, interruption des opérations, fuite de données confidentielles et sanctions réglementaires. Pour les entreprises, il est crucial de comprendre que la question n'est plus de savoir *si* elles seront attaquées, mais *quand*.</p>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Stratégies de défense robustes</h3>
+        <p class="mb-4">Pour faire face à ces menaces, les entreprises doivent adopter une approche proactive de la cybersécurité. Cela inclut la mise en œuvre de solutions de sécurité avancées (pare-feu, antivirus, détection d'intrusion), la formation régulière des employés aux bonnes pratiques, la mise à jour des systèmes et des logiciels, et la mise en place de plans de reprise après sinistre.</p>
+        <p class="mb-4">La cybersécurité est un investissement essentiel pour la résilience et la pérennité de toute entreprise à l'ère numérique. Protéger vos actifs numériques, c'est protéger votre avenir.</p>
+      `
+    }
+  ];
+
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-4xl font-bold text-center text-blue-700 mb-12">Notre Blog</h1>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {articles.map(article => (
+          <div key={article.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <img src={article.image} alt={article.title} className="w-full h-48 object-cover" />
+            <div className="p-6">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-2">{article.title}</h2>
+              <p className="text-gray-600 text-sm mb-3">
+                Par <span className="font-medium text-blue-600">{article.author}</span> le {article.date}
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">{article.excerpt}</p>
+              <button
+                onClick={() => navigateTo('article', article)}
+                className="text-blue-600 hover:text-blue-800 flex items-center font-semibold"
+              >
+                Lire l'article <ChevronRight size={16} className="ml-1" />
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ArticlePage Component
 function ArticlePage({ article, navigateTo }) {
   if (!article) {
-    // Handle case where no article is selected (e.g., direct access or refresh)
-    useEffect(() => {
-      navigateTo('blog'); // Redirect to blog page if no article data
-    }, [navigateTo]);
-    return null; // Or a loading spinner
+    return (
+      <div className="container mx-auto px-4 py-16 text-center">
+        <p className="text-xl text-red-600">Article non trouvé.</p>
+        <button
+          onClick={() => navigateTo('blog')}
+          className="mt-6 bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-full text-lg font-semibold transition duration-300"
+        >
+          Retour au Blog
+        </button>
+      </div>
+    );
   }
 
   return (
-    <div className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
-        {/* Back to Blog button */}
-        <button
-          onClick={() => navigateTo('blog')}
-          className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold mb-8 transition duration-300"
-        >
-          <ChevronRight size={18} className="rotate-180 mr-2" /> Retour au Blog
-        </button>
+    <div className="container mx-auto px-4 py-16">
+      <button
+        onClick={() => navigateTo('blog')}
+        className="mb-8 flex items-center text-blue-600 hover:text-blue-800 transition duration-300"
+      >
+        <ChevronRight size={20} className="transform rotate-180 mr-2" /> Retour au Blog
+      </button>
 
-        {/* Article Content */}
-        <article className="bg-white rounded-lg shadow-lg p-8 md:p-12 mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">{article.title}</h1>
-          <p className="text-gray-500 text-sm mb-6">Publié le {article.date}</p>
-          <div className="prose max-w-none text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: article.fullContent }} />
-
-          {/* Call to Action at the end of the article */}
-          <div className="text-center mt-12 pt-8 border-t border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">Prêt à transformer votre vision en réalité ?</h3>
-            <p className="text-lg text-gray-700 mb-6">
-              Que ce soit pour un projet de construction ambitieux ou une stratégie digitale percutante, notre expertise est à votre service.
-            </p>
-            <button
-              onClick={() => navigateTo('contact')}
-              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300"
-            >
-              Discutons de votre projet !
-            </button>
-          </div>
-        </article>
-
-        {/* Optional: Related articles section */}
-        {/* You can add a section here for related blog posts */}
+      <div className="bg-white rounded-xl shadow-lg p-8 lg:p-12">
+        <img src={article.image} alt={article.title} className="w-full h-64 object-cover rounded-lg mb-8" />
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">{article.title}</h1>
+        <p className="text-gray-600 text-sm mb-6">
+          Par <span className="font-medium text-blue-600">{article.author}</span> le {article.date}
+        </p>
+        <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: article.content }}></div>
       </div>
     </div>
   );
