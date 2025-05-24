@@ -1,0 +1,183 @@
+/images/common/naoussi-logo.png
+Description: Le logo officiel de Naoussi Industries. Idéalement, un fichier PNG avec un fond transparent pour une meilleure intégration.
+Dimensions suggérées : 40x40 pixels (ou un format carré avec un bon rapport d'aspect pour s'adapter à cette taille).
+
+/images/home/hero-background.jpg
+Description: Image de fond pour la section héroïque de la page d'accueil. Devrait être une image inspirante et de haute qualité représentant l'essence de l'entreprise (ingénierie, digital, innovation).
+Dimensions suggérées : 1920x1080 pixels (pour un grand écran).
+
+/images/home/civil-icon.png
+Description: Icône représentant le génie civil. Peut être une icône stylisée d'un casque de chantier, d'un gratte-ciel en construction, ou d'outils d'ingénierie.
+Dimensions suggérées : 100x100 pixels.
+
+/images/home/digital-icon.png
+Description: Icône représentant la création de contenu digital. Peut être une icône d'un écran, d'une palette de couleurs, d'un appareil photo, ou d'un nuage de données.
+Dimensions suggérées : 100x100 pixels.
+
+/images/why-choose-us/expertise-icon.png
+Description: Icône pour l'expertise. Peut être une ampoule, un cerveau stylisé, ou un signe d'excellence.
+Dimensions suggérées : 60x60 pixels.
+
+/images/why-choose-us/solutions-icon.png
+Description: Icône pour les solutions. Peut être un puzzle assemblé, un engrenage, ou des éléments se connectant.
+Dimensions suggérées : 60x60 pixels.
+
+/images/why-choose-us/engagement-icon.png
+Description: Icône pour l'engagement. Peut être une poignée de main, un cœur, ou un symbole de partenariat.
+Dimensions suggérées : 60x60 pixels.
+
+/images/why-choose-us/creativity-icon.png
+Description: Icône pour la créativité. Peut être un pinceau, une idée en ébullition, ou un symbole abstrait.
+Dimensions suggérées : 60x60 pixels.
+
+/images/why-choose-us/team-icon.png
+Description: Icône pour l'équipe. Peut être des silhouettes de personnes, un groupe collaboratif.
+Dimensions suggérées : 60x60 pixels.
+
+/images/why-choose-us/approach-icon.png
+Description: Icône pour l'approche. Peut être une boussole, un chemin, ou une flèche directionnelle.
+Dimensions suggérées : 60x60 pixels.
+
+/images/about/history-image.jpg
+Description: Image illustrant l'histoire ou l'évolution de l'entreprise. Peut être une photo d'un ancien projet, d'une équipe au début, ou un concept visuel abstrait du temps.
+Dimensions suggérées : 400x250 pixels.
+
+/images/about/mission-icon.png
+Description: Icône représentant la mission. Peut être une cible, une fusée décollant, ou un drapeau planté.
+Dimensions suggérées : 30x30 pixels.
+
+/images/about/vision-icon.png
+Description: Icône représentant la vision. Peut être des lunettes, une montagne lointaine, ou un télescope.
+Dimensions suggérées : 30x30 pixels.
+
+/images/about/value-innovation.png
+Description: Icône pour la valeur "Innovation". Peut être une ampoule avec un engrenage, ou un circuit imprimé stylisé.
+Dimensions suggérées : 50x50 pixels.
+
+/images/about/value-quality.png
+Description: Icône pour la valeur "Qualité". Peut être un badge d'excellence, une étoile ou un coche (check).
+Dimensions suggérées : 50x50 pixels.
+
+/images/about/value-collaboration.png
+Description: Icône pour la valeur "Collaboration". Peut être des personnes se tenant la main, ou des éléments s'imbriquant.
+Dimensions suggérées : 50x50 pixels.
+
+/images/about/value-integrity.png
+Description: Icône pour la valeur "Intégrité". Peut être une balance, un bouclier, ou une personne avec un cœur.
+Dimensions suggérées : 50x50 pixels.
+
+/images/team/lionel-naoussi.jpg
+Description: Photo de profil de l'Ingénieur Naoussi Lionel. Une photo professionnelle et claire.
+Dimensions suggérées : 150x150 pixels (carré, visage centré).
+
+/images/services/civil/architecture.png
+Description: Icône pour le service "Conception Architecturale". Peut être un plan de bâtiment, un compas et une règle.
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/civil/ouvrages.png
+Description: Icône pour le service "Réalisation d'Ouvrages". Peut être une grue, un chantier, ou une structure solide.
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/civil/academie.png
+Description: Icône pour le service "Architecture Académie". Peut être un livre ouvert, un diplôme, ou un mortier et un parchemin.
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/civil/calcul-structure.png
+Description: Icône pour le service "Calcul de Structure". Peut être une poutre, un schéma de forces, ou une calculatrice.
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/civil/geotechnique.png
+Description: Icône pour le service "Études Géotechniques". Peut être une carotte de sol, un foret, ou un symbole de la terre.
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/civil/hydraulique.png
+Description: Icône pour le service "Analyse Hydraulique". Peut être une goutte d'eau, une vague, ou un tuyau.
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/civil/planification-infrastructures.png
+Description: Icône pour le service "Planification d'Infrastructures". Peut être une carte, une route, ou un plan urbain.
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/civil/permis.png
+Description: Icône pour le service "Assistance en Matière de Permis". Peut être un document avec un tampon, ou une clé.
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/civil/gestion-construction.png
+Description: Icône pour le service "Gestion de la Construction". Peut être un diagramme de Gantt, un tableau de bord, ou une main dirigeant.
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/digital/graphic-design.png
+Description: Icône pour le service "Conception Graphique". Peut être une palette de couleurs, un stylet, ou un logo stylisé.
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/digital/social-media.png
+Description: Icône pour le service "Création de Contenu pour les Réseaux Sociaux". Peut être des logos de réseaux sociaux ou une icône de partage.
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/digital/ui-design.png
+Description: Icône pour le service "Conception d'Interfaces Utilisateurs (UI Design)". Peut être un écran avec des éléments d'interface.
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/digital/ux-design.png
+Description: Icône pour le service "Conception d'Expériences Utilisateurs (UX Design)". Peut être un chemin utilisateur ou un symbole d'interaction.
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/digital/seo.png
+Description: Icône pour le service "Rédaction de Contenu SEO". Peut être une loupe sur un graphique, ou un moteur de recherche.
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/digital/video-production.png
+Description: Icône pour le service "Production Vidéo". Peut être une caméra vidéo, un film, ou un bouton de lecture.
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/digital/email-marketing.png
+Description: Icône pour le service "Contenu de Marketing par E-mail". Peut être une enveloppe avec un symbole "@".
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/digital/web-content.png
+Description: Icône pour le service "Rédaction de Contenu de Site Web". Peut être un document avec des lignes de texte ou un écran d'ordinateur.
+Dimensions suggérées : 50x50 pixels.
+
+/images/services/digital/digital-strategy.png
+Description: Icône pour le service "Stratégie et Conseil en Marketing Digital". Peut être une boussole, un graphique avec une flèche vers le haut.
+Dimensions suggérées : 50x50 pixels.
+
+/images/projects/residential-complex.jpg
+Description: Image pour un projet de "Construction du Complexe Résidentiel 'Harmonie'". Photo d'un complexe résidentiel moderne ou d'un rendu 3D.
+Dimensions suggérées : 600x400 pixels.
+
+/images/projects/cafe-logo-redesign.jpg
+Description: Image pour un projet de "Refonte de l'Identité Visuelle pour 'Café Urbain'". Photo d'un logo de café attrayant, d'une enseigne ou d'un concept de marque.
+Dimensions suggérées : 600x400 pixels.
+
+/images/projects/serenity-bridge.jpg
+Description: Image pour un projet de "Pont de la Rivière 'Sérénité'". Photo d'un pont esthétique et bien conçu.
+Dimensions suggérées : 600x400 pixels.
+
+/images/projects/fitness-boost-campaign.jpg
+Description: Image pour un projet de "Campagne Marketing Digital pour 'Fitness Boost'". Visuel dynamique lié au fitness, avec des éléments de marketing digital.
+Dimensions suggérées : 600x400 pixels.
+
+/images/projects/grand-theater-renovation.jpg
+Description: Image pour un projet de "Rénovation du Bâtiment Historique 'Le Grand Théâtre'". Photo d'un théâtre rénové, ou d'éléments architecturaux historiques et modernes.
+Dimensions suggérées : 600x400 pixels.
+
+/images/projects/artisanat-local-ecommerce.jpg
+Description: Image pour un projet de "Création d'un Site Web E-commerce pour 'Artisanat Local'". Capture d'écran stylisée d'un site e-commerce, ou photos de produits artisanaux bien mis en valeur.
+Dimensions suggérées : 600x400 pixels.
+
+/images/blog/sustainable-civil-engineering.jpg
+Description: Image d'illustration pour l'article de blog sur le génie civil durable. Peut être un bâtiment écologique, des matériaux de construction verts, ou une scène urbaine durable.
+Dimensions suggérées : 400x250 pixels.
+
+/images/blog/visual-storytelling.jpg
+Description: Image d'illustration pour l'article de blog sur le storytelling visuel. Peut être un appareil photo, un écran d'ordinateur avec des graphiques, ou un concept abstrait de narration.
+Dimensions suggérées : 400x250 pixels.
+
+/images/blog/modern-architecture-innovations.jpg
+Description: Image d'illustration pour l'article de blog sur l'architecture moderne. Peut être un design architectural futuriste, un rendu 3D complexe, ou un bâtiment innovant.
+Dimensions suggérées : 400x250 pixels.
+
+/images/blog/seo-visibility.jpg
+Description: Image d'illustration pour l'article de blog sur le SEO. Peut être une loupe sur un graphique, un tableau de bord d'analyse, ou une icône de classement de recherche.
+Dimensions suggérées : 400x250 pixels.
