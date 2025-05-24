@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react'; // Removed useEffect
 import { Menu, X, ChevronRight, Phone, Mail, MapPin, Facebook, Linkedin, Instagram, Quote } from 'lucide-react'; // Added Quote icon
 
 // Tailwind CSS is assumed to be available in the environment.
@@ -287,7 +287,7 @@ function AboutPage() {
             Fondée sur les principes d'excellence et d'innovation, Naoussi Industries a débuté avec une vision claire : transformer les paysages urbains et numériques. Depuis nos humbles débuts, nous avons grandi pour devenir un acteur reconnu dans le génie civil et la création digitale.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            Notre parcours est marqué par une succession de projets réussis, de partenariats solides et d'une volonté inébranlable de dépasser les attentes de nos clients. Nous sommes fiers de notre héritage et enthousiastes à l'idée de bâtir l'avenir.
+            Notre parcours est marqué par une succession de projets réussis, de partenariats solides et d'une volonté inébranlable de dépasser les attentes de nos clients. Nous sommes fières de notre héritage et enthousiastes à l'idée de bâtir l'avenir.
           </p>
         </div>
       </div>
