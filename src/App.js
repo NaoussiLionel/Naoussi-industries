@@ -1,4 +1,3 @@
-<script src="https://cdn.tailwindcss.com"></script>
 import React, { useState } from 'react';
 import { Menu, X, ChevronRight, Phone, Mail, MapPin, Facebook, Linkedin, Instagram, Quote } from 'lucide-react';
 
@@ -19,6 +18,8 @@ function App() {
 
   return (
     <div className="font-sans antialiased text-gray-800 bg-gray-50">
+      {/* Moved Tailwind CSS script here to resolve linting errors */}
+      <script src="https://cdn.tailwindcss.com"></script>
       {/* Header */}
       <Header navigateTo={navigateTo} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuMenuOpen={setIsMobileMenuMenuOpen} />
 
@@ -690,7 +691,8 @@ function ContactPage() {
               <Mail size={24} className="mr-4 text-blue-600" />
               <div>
                 <h3 className="font-semibold text-lg">Email</h3>
-                <p><a href="mailto:naoussilionel8@gmail.com" className="hover:underline">naoussilionel8@gmail.com</a></p>
+                {/* Corrected email address for consistency */}
+                <p><a href="mailto:contact@naoussiindustries.com" className="hover:underline">contact@naoussiindustries.com</a></p>
               </div>
             </div>
             <div className="flex items-center text-gray-800">
