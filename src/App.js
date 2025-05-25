@@ -1,3 +1,4 @@
+<script src="https://cdn.tailwindcss.com"></script>
 import React, { useState } from 'react';
 import { Menu, X, ChevronRight, Phone, Mail, MapPin, Facebook, Linkedin, Instagram, Quote } from 'lucide-react';
 
@@ -101,7 +102,7 @@ function Footer({ navigateTo }) {
             <a href="https://wa.me/237658120586" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition duration-300">
               {/* Using a standard inline SVG for WhatsApp icon */}
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="inline-block">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181 0 6.145 1.24 8.413 3.509 2.268 2.269 3.506 5.235 3.508 8.413 0 6.557-5.336 11.892-11.893 11.892-.073 0-.146 0-.219-.001zm10.602-2.327c-.307 0-1.047-.135-1.747-.463l-.065-.031-1.144.304 3.356-1.104-.04-.023c-1.21-.745-1.92-1.92-1.92-3.143 0-2.613 2.13-4.743 4.746-4.743 1.214 0 2.302.465 3.143 1.292.842.827 1.293 1.914 1.293 3.125 0 2.613-2.13 4.743-4.746 4.743zm-1.8-7.974c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384zm3.333 0c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384zm3.333 0c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384zm3.333 0c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384z" />
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181 0 6.145 1.24 8.413 3.509 2.268 2.269 3.506 5.235 3.508 8.413 0 6.557-5.336 11.892-11.893 11.892-.073 0-.146 0-.219-.001zm10.602-2.327c-.307 0-1.047-.135-1.747-.463l-.065-.031-1.144.304 3.356-1.104-.04-.023c-1.21-.745-1.92-1.92-1.92-3.143 0-2.613 2.13-4.743 4.746-4.743 1.214 0 2.302.465 3.143 1.292.842.827 1.293 1.914 1.293 3.125 0 2.613-2.13 4.743-4.746 4.743zm-1.8-7.974c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384zm3.333 0c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384zm3.333 0c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384zm3.333 0c-.09-.09-.237-.135-.384-.135-.147 0-.294.045-.384.135-.09.09-.135.237-.135.384 0 .147.045.294.135.384.09.09.237.135.384.135.147 0 .294-.045.384-.135.09-.09.135-.237.135-.384 0-.147-.045-.294-.135-.384z"/>
               </svg>
             </a>
           </div>
@@ -146,19 +147,19 @@ function Footer({ navigateTo }) {
 function HomePage({ navigateTo }) {
   const testimonials = [
     {
-      quote: "Naoussi Industries a transformé notre vision en réalité avec un professionnalisme exceptionnel. Leurs solutions en génie civil sont de première classe !",
-      author: "Jean-Pierre Dupont",
-      role: "Directeur Général, BTP Plus"
+      quote: "Collaborer avec Naoussi Industries, c'est découvrir la synergie parfaite entre l'architecture et l'innovation. Sur de nombreux projets, leur vitesse et leur précision ont été sans égales. Mais au-delà de la performance, ce partenariat m'a ouvert les portes des nouvelles technologies, un enrichissement inestimable pour ma pratique. Naoussi Industries ne construit pas seulement des structures, ils bâtissent l'avenir de nos compétences !",
+      author: "Prof. Kégne Jean Bosco",
+      role: "PLET et Architecte"
     },
     {
-      quote: "Le site web qu'ils ont développé pour nous est moderne, intuitif et a considérablement amélioré notre présence en ligne. Un travail remarquable !",
-      author: "Sophie Martin",
-      role: "Fondatrice, Digital Connect"
+      quote: "Quand j'ai lancé VeriTrust, ma vision était floue, un simple rêve. Dès mon premier contact avec Naoussi Industries, tout est devenu clair. Ils n'ont pas seulement éclairé ma vision ; ils l'ont sublimée, l'ont optimisée, lui ont donné vie. Aujourd'hui, ma marque n'est plus un rêve lointain, elle est une réalité vibrante qui respire et prospère grâce à leur génie. Si vous avez une idée, laissez Naoussi Industries la transformer en succès !",
+      author: "Kévin",
+      role: "Créateur de VeriTrust"
     },
     {
-      quote: "Leur équipe de design graphique a su capturer l'essence de notre marque. Nous sommes ravis du nouveau logo et de la charte graphique !",
-      author: "Marc Olivier",
-      role: "PDG, Café du Monde"
+      quote: "Depuis plus de vingt ans, COMING est un acteur majeur dans le froid et la climatisation. Mais l'évolution est constante, et notre image commençait à souffrir du poids des ans. C'était un défi, une question de crédibilité. Naoussi Industries a relevé le gant avec brio ! Ils ont insufflé une nouvelle vie à notre marque, la remettant d'aplomb avec une modernité éclatante. Grâce à eux, nous sommes comme neufs, prêts à conquérir de nouveaux horizons. Un renouveau spectaculaire !",
+      author: "M. Engelbert Ngantsop",
+      role: "CEO de COMING – Complexe des Ingénieurs"
     }
   ];
 
@@ -284,10 +285,10 @@ function AboutPage() {
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold text-gray-800 mb-4">Notre Histoire</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Fondée sur les principes d'excellence et d'innovation, Naoussi Industries a débuté avec une vision claire : transformer les paysages urbains et numériques. Depuis nos humbles débuts, nous avons grandi pour devenir un acteur reconnu dans le génie civil et la création digitale.
+            Fondée en 2023 par **Tedjouong Naoussi Ange Lionel**, Naoussi Industries est une entreprise pionnière qui fusionne l'excellence en **génie civil** avec des **solutions digitales** de pointe. Notre mission est de transformer le paysage urbain et numérique du Cameroun.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            Notre parcours est marqué par une succession de projets réussis, de partenariats solides et d'une volonté inébranlable de dépasser les attentes de nos clients. Nous sommes fières de notre héritage et enthousiastes à l'idée de bâtir l'avenir.
+            Avec notre siège social à **Douala Ndogbong Citadelle** et une antenne à **Bafoussam Kamkop**, nous sommes stratégiquement positionnés pour servir nos clients à travers le pays. Nous offrons des services en partenariat direct et en sous-traitance, garantissant flexibilité et adaptabilité à chaque projet.
           </p>
         </div>
       </div>
@@ -301,12 +302,12 @@ function AboutPage() {
           />
         </div>
         <div className="md:w-1/2">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4">Notre Mission</h2>
+          <h2 className="text-3xl font-semibold text-gray-800 mb-4">Notre Fondateur : Ing. Naoussi Lionel</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Notre mission est de fournir des solutions de pointe qui allient innovation, qualité et durabilité. Que ce soit dans la construction d'infrastructures robustes ou le développement de plateformes numériques intuitives, nous nous engageons à offrir une valeur exceptionnelle.
+            À la tête de Naoussi Industries se trouve **Ing. Naoussi Lionel**, un ingénieur en génie civil diplômé, doté d'une vaste expérience en **architecture fonctionnelle** et en **gestion de projet**. Avec plus de 5 ans d'expérience sur le terrain, il maîtrise parfaitement les rouages et les défis du génie civil.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            Nous visons à être le catalyseur de la réussite de nos clients, en les aidant à concrétiser leurs visions grâce à notre expertise technique et notre approche créative.
+            Passionné par les technologies de l'information depuis son plus jeune âge, Ing. Naoussi Lionel a su transformer cette passion en une ressource génératrice de valeur. Son parcours unique, alliant une expertise solide en construction et une vision aiguisée du digital, est le moteur de l'approche innovante de Naoussi Industries. Il est le garant de notre engagement à offrir des solutions qui non seulement construisent l'avenir, mais le digitalisent avec succès.
           </p>
         </div>
       </div>
@@ -689,7 +690,7 @@ function ContactPage() {
               <Mail size={24} className="mr-4 text-blue-600" />
               <div>
                 <h3 className="font-semibold text-lg">Email</h3>
-                <p><a href="mailto:contact@naoussiindustries.com" className="hover:underline">contact@naoussiindustries.com</a></p>
+                <p><a href="mailto:naoussilionel8@gmail.com" className="hover:underline">naoussilionel8@gmail.com</a></p>
               </div>
             </div>
             <div className="flex items-center text-gray-800">
@@ -885,7 +886,7 @@ function BlogPage({ navigateTo }) {
     {
       id: 8,
       title: "Comment générer des clients grâce à un site web bien conçu ?",
-      excerpt: "Un site web n'est pas qu'une simple vitrine, c'est un puissant outil de conversion. Découvrez les stratégies clés pour transformer vos visiteurs en clients fidèles grâce à un design web optimisé.",
+      excerpt: "Un site web n'est qu'une simple vitrine, c'est un puissant outil de conversion. Découvrez les stratégies clés pour transformer vos visiteurs en clients fidèles grâce à un design web optimisé.",
       image: "https://placehold.co/600x400/cce5ff/007bff?text=Website+Conversion",
       date: "28 Avril 2025",
       author: "Naoussi Industries",
@@ -920,7 +921,7 @@ function BlogPage({ navigateTo }) {
       content: `
         <p class="mb-4">Le secteur du Bâtiment et des Travaux Publics (BTP) au Cameroun est en pleine effervescence, offrant de nombreuses opportunités. Cependant, lancer un chantier nécessite une préparation minutieuse et une connaissance approfondie des spécificités locales. Ignorer ces aspects peut entraîner des retards, des coûts supplémentaires et des problèmes juridiques. Voici les points essentiels à considérer avant de démarrer votre projet.</p>
         <h3 class="text-2xl font-semibold text-gray-800 mb-3">1. La Réglementation et les Permis de Construire</h3>
-        <p class="mb-4">Avant toute chose, il est impératif de se conformer à la réglementation BTP Cameroun. Cela inclut l'obtention du permis de construire, délivré par les autorités municipales après examen de votre dossier architectural et technique. Les délais peuvent varier, il est donc crucial d'anticiper cette étape. Des études de sol, des plans architecturaux détaillés et des plans d'ingénierie (structure, fluides) sont généralement requis.</p>
+        <p class="mb-4">Avant toute chose, il est impératif de se conformer à la réglementation BTP Cameroun. Cela inclus l'obtention du permis de construire, délivré par les autorités municipales après examen de votre dossier architectural et technique. Les délais peuvent varier, il est donc crucial d'anticiper cette étape. Des études de sol, des plans architecturaux détaillés et des plans d'ingénierie (structure, fluides) sont généralement requis.</p>
         <h3 class="text-2xl font-semibold text-gray-800 mb-3">2. L'Étude de Faisabilité et le Budget Prévisionnel</h3>
         <p class="mb-4">Une étude de faisabilité approfondie est la première pierre angulaire de votre projet. Elle doit inclure une analyse technique (géotechnique, topographie), économique (estimation des coûts, rentabilité) et juridique. Un budget prévisionnel réaliste, incluant toutes les dépenses (matériaux, main-d'œuvre, permis, imprévus), est indispensable pour éviter les mauvaises surprises.</p>
         <h3 class="text-2xl font-semibold text-gray-800 mb-3">3. Le Choix des Professionnels Qualifiés</h3>
@@ -955,7 +956,7 @@ function BlogPage({ navigateTo }) {
         <p class="mb-4">Les réseaux sociaux sont une mine d'informations sur les tendances du marché, les attentes des consommateurs et les stratégies de vos concurrents. En analysant les conversations et les données démographiques, les entreprises peuvent affiner leurs offres, identifier de nouvelles opportunités et rester compétitives.</p>
         <h3 class="text-2xl font-semibold text-gray-800 mb-3">Construire une Image de Marque Forte et Authentique</h3>
         <p class="mb-4">Les réseaux sociaux permettent aux entreprises de raconter leur histoire, de montrer les coulisses de leur activité et de mettre en avant leurs valeurs. Une stratégie social media authentique et transparente humanise la marque, la rend plus accessible et crée un lien émotionnel avec son audience.</p>
-        <p class="mb-4">En conclusion, pour toute entreprise camerounaise soucieuse de sa croissance en 2025, une stratégie social media robuste n'est plus une option, mais une composante essentielle de son plan de développement. Confiez-nous votre stratégie digitale complète pour exploiter pleinement le potentiel des réseaux sociaux et propulser votre entreprise vers de nouveaux sommets.</p>
+        <p class="mb-4">En conclusion, le marketing digital est le levier de croissance le plus puissant pour les PME en 2025. C'est la clé de votre visibilité en ligne Cameroun, de votre crédibilité et de votre capacité à générer des ventes. Ne laissez pas votre entreprise à la traîne. Boostez votre entreprise avec notre accompagnement marketing.</p>
       `
     }
   ];
@@ -965,9 +966,9 @@ function BlogPage({ navigateTo }) {
       <h1 className="text-4xl font-bold text-center text-blue-700 mb-12">Notre Blog</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {articles.map(article => (
+        {articles.map((article) => (
           <div key={article.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-            <img src={article.image} alt={article.title} className="w-full h-48 object-cover" />
+            <img src={article.image} alt={article.title} className="w-full h-56 object-cover" />
             <div className="p-6">
               <h2 className="text-2xl font-semibold text-gray-800 mb-2">{article.title}</h2>
               <p className="text-gray-600 text-sm mb-3">
@@ -975,10 +976,10 @@ function BlogPage({ navigateTo }) {
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">{article.excerpt}</p>
               <button
-                onClick={() => navigateTo('article', article)}
-                className="text-blue-600 hover:text-blue-800 flex items-center font-semibold"
+                onClick={() => navigateTo('article', article)} // Pass the specific article object
+                className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-semibold"
               >
-                Lire l'article <ChevronRight size={16} className="ml-1" />
+                Lire la suite <ChevronRight size={16} className="ml-1" />
               </button>
             </div>
           </div>
@@ -993,10 +994,10 @@ function ArticlePage({ article, navigateTo }) {
   if (!article) {
     return (
       <div className="container mx-auto px-4 py-16 text-center">
-        <p className="text-xl text-red-600">Article non trouvé.</p>
+        <p className="text-xl text-gray-600">Article non trouvé.</p>
         <button
           onClick={() => navigateTo('blog')}
-          className="mt-6 bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-full text-lg font-semibold transition duration-300"
+          className="mt-8 bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-full text-lg font-semibold transition duration-300"
         >
           Retour au Blog
         </button>
