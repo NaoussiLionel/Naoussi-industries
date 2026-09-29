@@ -29,6 +29,24 @@ const divisions = [
   }
 ];
 
+const offers = [
+  {division:"Design", title:"Identité & communication", text:"Construire une image professionnelle et cohérente.", items:["Identité visuelle","Supports de communication","Contenus graphiques"]},
+  {division:"Design", title:"Branding & développement", text:"Développer une marque au-delà du simple logo.", items:["Direction artistique","Système visuel","Déclinaisons de marque"]},
+  {division:"Design", title:"Design sur mesure", text:"Une intervention adaptée à la complexité du projet.", items:["Projet personnalisé","Direction créative","Livrables adaptés"]},
+  {division:"Digital", title:"Site vitrine", text:"Une présence web professionnelle, claire et pensée pour convertir.", items:["Architecture du contenu","Design responsive","Mise en ligne"]},
+  {division:"Digital", title:"Expérience digitale", text:"Une solution digitale plus complète pour structurer votre activité.", items:["UX / UI","Fonctionnalités métier","Optimisation"]},
+  {division:"Digital", title:"Solution sur mesure", text:"Pour les projets qui nécessitent une approche technique spécifique.", items:["Cadrage technique","Développement","Évolution du produit"]},
+  {division:"Architecture & ingénierie", title:"Conception", text:"Transformer une intention en projet réalisable.", items:["Conception","Plans & documentation","Coordination"]},
+  {division:"Architecture & ingénierie", title:"Études techniques", text:"Sécuriser les décisions techniques du projet.", items:["Analyse technique","Calculs & vérifications","Documentation"]},
+  {division:"Architecture & ingénierie", title:"Projet sur mesure", text:"Un accompagnement adapté aux contraintes du projet.", items:["Cadrage","Études spécifiques","Accompagnement technique"]}
+];
+
+const portfolio = [
+  {number:"01", type:"IDENTITÉ • COMMUNICATION", title:"Brothers Farming & Industry", text:"Identité visuelle et supports de communication pour une entreprise agro-pastorale basée à Bafoussam.", status:"Étude de cas"},
+  {number:"02", type:"DIGITAL • WEB", title:"Naoussi Industries", text:"Conception de l'écosystème web de Naoussi Industries : positionnement, expérience, contenu et présence digitale.", status:"Projet interne"},
+  {number:"03", type:"ARCHITECTURE • INGÉNIERIE", title:"Projets techniques", text:"Une sélection de travaux de conception et d'ingénierie présentés progressivement, avec un niveau de détail adapté à chaque projet.", status:"Sélection en cours"}
+];
+
 const process = [
   ["01","Comprendre","Nous clarifions votre besoin, votre objectif et le résultat attendu."],
   ["02","Structurer","Nous transformons l'idée en une solution claire, chiffrée et réalisable."],
@@ -63,7 +81,7 @@ function App() {
           </button>
 
           <nav className={open ? "nav-links open" : "nav-links"}>
-            {["Accueil","Expertise","Méthode","À propos"].map(item => (
+            {["Accueil","Identité","Offres","Portfolio","À propos"].map(item => (
               <button key={item} className={active===item ? "active":""} onClick={() => go(item)}>{item}</button>
             ))}
             <button className="nav-cta" onClick={() => go("Contact")}>Démarrer un projet <ArrowRight size={16}/></button>
@@ -86,7 +104,7 @@ function App() {
             </p>
             <div className="hero-actions">
               <button className="btn btn-dark" onClick={() => go("Contact")}>Parler de votre projet <ArrowRight size={18}/></button>
-              <button className="text-link" onClick={() => go("Expertise")}>Découvrir notre expertise <ArrowRight size={17}/></button>
+              <button className="text-link" onClick={() => go("Offres")}>Voir nos offres <ArrowRight size={17}/></button>
             </div>
             <div className="hero-note"><span className="dot"></span> Douala, Cameroun • projets locaux et internationaux</div>
           </div>
@@ -94,11 +112,11 @@ function App() {
           <div className="hero-orbit orbit-2"></div>
         </section>
 
-        <section id="expertise" className="section expertise">
+        <section id="identité" className="section expertise">
           <div className="container">
             <div className="section-head">
               <div>
-                <p className="kicker">NOS DIVISIONS</p>
+                <p className="kicker">NOTRE IDENTITÉ</p>
                 <h2>Trois expertises.<br/><span>Une seule vision.</span></h2>
               </div>
               <p className="section-intro">Nous réunissons plusieurs métiers pour éviter les silos et construire des solutions qui fonctionnent ensemble.</p>
@@ -112,13 +130,59 @@ function App() {
                   <p className="card-label">{label}</p>
                   <h3>{title}</h3>
                   <p>{text}</p>
-                  <button onClick={() => go("Contact")}>Parlons-en <ArrowRight size={16}/></button>
+                  <button onClick={() => go("Offres")}>Voir les offres <ArrowRight size={16}/></button>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
+        
+        <section id="offres" className="section offers">
+          <div className="container">
+            <div className="section-head">
+              <div><p className="kicker">NOS OFFRES</p><h2>Des packs clairs.<br/><span>Des solutions adaptées.</span></h2></div>
+              <p className="section-intro">Chaque division s'organise autour de trois niveaux d'intervention. Le troisième niveau est adapté à la complexité réelle du projet.</p>
+            </div>
+            <div className="offer-groups">
+              {["Design","Digital","Architecture & ingénierie"].map(group => (
+                <div className="offer-group" key={group}>
+                  <div className="offer-group-title"><span>{group}</span><i></i></div>
+                  <div className="offer-grid">
+                    {offers.filter(o => o.division===group).map((offer,index) => (
+                      <article className="offer-card" key={offer.title}>
+                        <div className="offer-top"><span>PACK {String(index+1).padStart(2,"0")}</span><span>{group}</span></div>
+                        <h3>{offer.title}</h3><p>{offer.text}</p>
+                        <ul>{offer.items.map(item => <li key={item}><CheckCircle2 size={15}/>{item}</li>)}</ul>
+                        <button onClick={() => go("Contact")}>Demander ce pack <ArrowRight size={15}/></button>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="portfolio" className="section portfolio">
+          <div className="container">
+            <div className="section-head">
+              <div><p className="kicker">PORTFOLIO</p><h2>Ce que nous<br/><span>construisons.</span></h2></div>
+              <p className="section-intro">Le portfolio présente progressivement nos projets sous forme de cas concrets : contexte, approche, livrables et résultat.</p>
+            </div>
+            <div className="portfolio-grid">
+              {portfolio.map(project => (
+                <article className="portfolio-card" key={project.number}>
+                  <div className="portfolio-visual"><span>{project.number}</span><div className="portfolio-cross"></div></div>
+                  <div className="portfolio-info">
+                    <p className="card-label">{project.type}</p><h3>{project.title}</h3><p>{project.text}</p>
+                    <div className="portfolio-meta"><span>{project.status}</span><ArrowRight size={16}/></div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
         <section id="méthode" className="section method">
           <div className="container">
             <div className="method-layout">
@@ -197,7 +261,9 @@ function App() {
           <div>
             <h4>Navigation</h4>
             <button onClick={() => go("Accueil")}>Accueil</button>
-            <button onClick={() => go("Expertise")}>Expertise</button>
+            <button onClick={() => go("Identité")}>Identité</button>
+            <button onClick={() => go("Offres")}>Offres</button>
+            <button onClick={() => go("Portfolio")}>Portfolio</button>
             <button onClick={() => go("Méthode")}>Méthode</button>
             <button onClick={() => go("À propos")}>À propos</button>
             <button onClick={() => go("Questions")}>FAQ</button>
