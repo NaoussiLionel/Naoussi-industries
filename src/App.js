@@ -8,23 +8,23 @@ import "./index.css";
 const divisions = [
   {
     number:"01",
-    title:"Design & Branding",
-    label:"Identité • Communication • Contenu",
-    text:"Des identités visuelles cohérentes et des supports qui donnent à votre entreprise une présence claire, professionnelle et mémorable.",
+    title:"Design graphique & identité visuelle",
+    label:"Identité visuelle • Branding • Communication",
+    text:"Nous créons des identités visuelles, supports de communication et contenus qui renforcent la présence des entreprises au Cameroun et à l’international.",
     icon:PenTool
   },
   {
     number:"02",
-    title:"Digital & Web",
-    label:"Sites • Applications • Solutions",
-    text:"Nous concevons des expériences digitales simples à utiliser, pensées pour présenter votre activité et transformer l’attention en opportunités.",
+    title:"Création de sites web & digital",
+    label:"Sites web • Applications • Solutions digitales",
+    text:"Nous concevons des sites web et solutions digitales rapides, clairs et orientés conversion pour les entreprises, marques et projets.",
     icon:Monitor
   },
   {
     number:"03",
-    title:"Architecture & Ingénierie",
+    title:"Architecture & ingénierie",
     label:"Conception • Études • Technique",
-    text:"Des solutions techniques structurées pour les projets de construction, d'architecture et d'ingénierie, avec une attention particulière aux détails.",
+    text:"Des prestations de conception, études et ingénierie pour accompagner les projets de construction et d’architecture avec une approche technique structurée.",
     icon:Building2
   }
 ];
@@ -79,16 +79,16 @@ function App() {
         <section id="accueil" className="hero">
           <div className="hero-grid"></div>
           <div className="container hero-content">
-            <div className="eyebrow"><span></span> ARCHITECTURE • DESIGN • DIGITAL</div>
+            <div className="eyebrow"><span></span> DESIGN • DIGITAL • ARCHITECTURE • INGÉNIERIE</div>
             <h1>Nous transformons<br/><em>les idées</em> en solutions.</h1>
             <p className="hero-copy">
-              Naoussi Industries rassemble création, technologie et ingénierie pour aider les entreprises et les porteurs de projets à construire une présence solide et des solutions concrètes.
+              Naoussi Industries est une entreprise multidisciplinaire basée à Douala, au Cameroun. Nous réunissons design graphique, identité visuelle, création de sites web, digital, architecture et ingénierie pour transformer les projets en solutions concrètes.
             </p>
             <div className="hero-actions">
               <button className="btn btn-dark" onClick={() => go("Contact")}>Parler de votre projet <ArrowRight size={18}/></button>
               <button className="text-link" onClick={() => go("Expertise")}>Découvrir notre expertise <ArrowRight size={17}/></button>
             </div>
-            <div className="hero-note"><span className="dot"></span> Basés au Cameroun • projets locaux et internationaux</div>
+            <div className="hero-note"><span className="dot"></span> Douala, Cameroun • projets locaux et internationaux</div>
           </div>
           <div className="hero-orbit orbit-1"></div>
           <div className="hero-orbit orbit-2"></div>
@@ -155,6 +155,25 @@ function App() {
           </div>
         </section>
 
+
+        <section id="questions" className="section faq">
+          <div className="container">
+            <div className="section-head">
+              <div>
+                <p className="kicker">QUESTIONS FRÉQUENTES</p>
+                <h2>Ce que vous devez<br/><span>savoir sur Naoussi Industries.</span></h2>
+              </div>
+              <p className="section-intro">Des réponses simples pour comprendre nos services et savoir comment démarrer un projet.</p>
+            </div>
+            <div className="faq-grid">
+              <article><h3>Quels services propose Naoussi Industries au Cameroun ?</h3><p>Nous proposons du design graphique et de l’identité visuelle, la création de sites web et de solutions digitales, ainsi que des prestations d’architecture et d’ingénierie.</p></article>
+              <article><h3>Où intervient Naoussi Industries ?</h3><p>Nous sommes basés à Douala, au Cameroun, et pouvons accompagner des projets locaux ou internationaux à distance selon leur nature.</p></article>
+              <article><h3>Comment démarrer un projet ?</h3><p>Contactez-nous avec votre besoin, votre objectif et, si possible, votre délai. Nous clarifions ensuite le périmètre, les livrables et la prochaine étape.</p></article>
+              <article><h3>Naoussi Industries travaille-t-elle uniquement avec des entreprises ?</h3><p>Nous accompagnons les entreprises, entrepreneurs, institutions et porteurs de projets qui recherchent une solution professionnelle en design, digital, architecture ou ingénierie.</p></article>
+            </div>
+          </div>
+        </section>
+
         <section id="contact" className="contact">
           <div className="container contact-inner">
             <div>
@@ -174,7 +193,7 @@ function App() {
         <div className="container footer-grid">
           <div>
             <div className="footer-brand"><span className="brand-mark">N</span><span>NAOUSSI <b>INDUSTRIES</b></span></div>
-            <p>Architecture, design & digital.<br/>Des idées transformées en solutions.</p>
+            <p>Design, digital, architecture & ingénierie.<br/>Des idées transformées en solutions.</p>
           </div>
           <div>
             <h4>Navigation</h4>
@@ -182,6 +201,7 @@ function App() {
             <button onClick={() => go("Expertise")}>Expertise</button>
             <button onClick={() => go("Méthode")}>Méthode</button>
             <button onClick={() => go("À propos")}>À propos</button>
+            <button onClick={() => go("Questions")}>FAQ</button>
           </div>
           <div>
             <h4>Contact</h4>
