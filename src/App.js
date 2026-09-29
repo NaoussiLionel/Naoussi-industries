@@ -58,7 +58,7 @@ function App() {
       <header className="header">
         <div className="container nav">
           <button className="brand" onClick={() => go("Accueil")} aria-label="Naoussi Industries">
-            <img className="brand-logo" src="/ni white logo.svg" alt="Naoussi Industries" />
+            <img className="brand-logo" src="/ni black logo.svg" alt="Naoussi Industries" />
           </button>
 
           <nav className={open ? "nav-links open" : "nav-links"}>
@@ -190,7 +190,7 @@ function App() {
       <footer>
         <div className="container footer-grid">
           <div>
-            <div className="footer-brand"><img className="brand-logo" src="/ni white logo.svg" alt="Naoussi Industries" /></div>
+            <div className="footer-brand"><img className="brand-logo" src="/ni black logo.svg" alt="Naoussi Industries" /></div>
             <p>Design, digital, architecture & ingénierie.<br/>Des idées transformées en solutions.</p>
           </div>
           <div>
