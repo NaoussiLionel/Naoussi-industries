@@ -58,8 +58,7 @@ function App() {
       <header className="header">
         <div className="container nav">
           <button className="brand" onClick={() => go("Accueil")} aria-label="Naoussi Industries">
-            <span className="brand-mark">N</span>
-            <span>NAOUSSI <b>INDUSTRIES</b></span>
+            <img className="brand-logo" src="/ni white logo.svg" alt="Naoussi Industries" />
           </button>
 
           <nav className={open ? "nav-links open" : "nav-links"}>
@@ -154,7 +153,6 @@ function App() {
             <div className="about-stamp"><span>CREATE</span><strong>BUILD</strong><span>EVOLVE</span></div>
           </div>
         </section>
-
 
         <section id="questions" className="section faq">
           <div className="container">
