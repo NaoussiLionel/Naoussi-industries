@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {
-  ArrowRight, Menu, X, PenTool, Monitor, Building2, Layers3,
+  ArrowRight, Menu, X, PenTool, Monitor, Building2,
   CheckCircle2, MessageCircle, Mail, MapPin, Instagram, Linkedin
 } from "lucide-react";
 import "./index.css";
