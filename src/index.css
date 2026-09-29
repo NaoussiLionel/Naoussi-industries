@@ -27,3 +27,4 @@ footer{background:#0b0b0c;color:#fff;padding:70px 0 20px}.footer-grid{display:gr
 @media (max-width: 760px) {
   .faq-grid { grid-template-columns:1fr; }
 }
+\n.brand-logo{width:150px;height:36px;object-fit:contain;object-position:left center}.footer-brand .brand-logo{width:170px;height:40px}@media(max-width:700px){.brand-logo{width:135px;height:32px}.footer-brand .brand-logo{width:155px;height:36px}}\n
