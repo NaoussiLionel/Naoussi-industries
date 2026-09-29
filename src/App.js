@@ -192,7 +192,7 @@ function App() {
       <footer>
         <div className="container footer-grid">
           <div>
-            <div className="footer-brand"><span className="brand-mark">N</span><span>NAOUSSI <b>INDUSTRIES</b></span></div>
+            <div className="footer-brand"><img className="brand-logo" src="/ni white logo.svg" alt="Naoussi Industries" /></div>
             <p>Design, digital, architecture & ingénierie.<br/>Des idées transformées en solutions.</p>
           </div>
           <div>
